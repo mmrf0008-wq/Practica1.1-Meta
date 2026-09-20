@@ -11,6 +11,7 @@ public class Configuracion {
     ArrayList<String> algoritmos;
     ArrayList<Long> semillas;
     Integer parametros;
+    Integer indiceSemilla;
 
 
     public Configuracion(String ruta){
@@ -62,7 +63,10 @@ public class Configuracion {
     public String getArchivo(int i) {
         return archivos.get(i);
     }
-     public Long getSemilla() {
-        return semillas.get(0);
+     public long getSemilla() {
+        return semillas.get(indiceSemilla);
+    }
+    public void setIndiceSemilla(int i){
+        this.indiceSemilla =i;
     }
 }

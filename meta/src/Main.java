@@ -5,6 +5,7 @@ public class Main {
 
         int archivoLeer =4;
         int algoritmo=1;
+
         /*String ruta = "C:\\Users\\Maitena\\Desktop\\Apuntes\\3º\\meta\\Practica1-Meta\\src\\config.txt";*/
         String rutaRelativa = "src/config.txt";
         System.out.println("Ruta actual de ejecución: " + new java.io.File(".").getAbsolutePath());
@@ -12,6 +13,8 @@ public class Main {
 
         ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(archivoLeer));
         Algoritmos algoritmos= new Algoritmos();
+
+        config.setIndiceSemilla(2);
 
 
         //comando terminal sacar logs  javac *.java && java Main >> log.txt
@@ -23,7 +26,7 @@ public class Main {
                 algoritmos.greedy(archivosDatos.getMatriz1());
                 break;
             case "greedyAleatorio":
-                System.out.println("Nombre del archivo: " + config.getArchivo(archivoLeer));
+                System.out.println("Nombre del archivo: " + config.getArchivo(archivoLeer) + " Algoritmo greedyAleatorio . Semilla "+config.getSemilla() );
                 algoritmos.greedyAleatorio(archivosDatos.getMatriz1(), config.getSemilla());
         }
     }

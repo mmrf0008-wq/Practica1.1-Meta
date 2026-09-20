@@ -164,7 +164,7 @@ public class Algoritmos {
 
         // Creamos un vector solucion de la misma forma que antes
         ArrayList<Candidato> vSolucion = new ArrayList<>(); //vector solucion del greedy, partimos de el para sacar el vsolAlea
-       
+
         double sumatorio = 0;
         //suma de las distancias de las ciudades con respecto a la primer columna
         for(int i = 0; i < n; i++) {
@@ -184,8 +184,13 @@ public class Algoritmos {
         int k = 5;
 
         java.util.Random rand = new java.util.Random(semilla);
+      //  System.out.println("SEMILLA " + semilla + " ran es " + );
 
-        //en bucle
+        double costeTotal = 0.0;
+        double minDistancia = 0;
+        int siguienteCiudad=0;
+        //empezamos a rellenar el vector solucion aleatoriamente
+
         while(!vSolucion.isEmpty()) {
             // Para cuando quedan menos soluciones que k
             if(vSolucion.size() < k){
@@ -199,7 +204,11 @@ public class Algoritmos {
 
             //el valor seleccionado del vector será nuestra solucion para agregar al vector
             vsolAlea.add(seleccionado.ciudad);
+            costeTotal+= seleccionado.sumaDistancia;
         }
+
+        int primeraCiudad = vsolAlea.get(0);
+        costeTotal += matrizEuclidea[matrizEuclidea.length-1][primeraCiudad];
         
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
