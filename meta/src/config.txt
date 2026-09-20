@@ -1,0 +1,4 @@
+Archivos=a280.tsp ch130.tsp d18512.tsp pr144.tsp u1060.tsp
+Semilla=7970158
+Algoritmos=greedy
+Parametros=5
