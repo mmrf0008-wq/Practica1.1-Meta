@@ -35,12 +35,7 @@ public class Algoritmos {
         }
     }
 
-    /**
-     * Calcula la distancia euclidea entre dos ciudades dadas sus coordenadas
-     * @param matriz x2 ciudad 1
-     * @param matriz3 y2 ciudad 2
-     * @return distancia euclidea
-     */
+
 
     private double distancia_euclidea(double x1, double y1, double x2, double y2){
         double dx = x1 - x2;
@@ -76,7 +71,7 @@ public class Algoritmos {
      * @param matriz Matriz de distancias euclideas a imprimir
      */
 
-    private void printMatriz(double matriz[][]){
+    private void printMatriz(int matriz[][]){
         for(int l = 0; l < matriz.length; l++){
             for(int m = 0; m < matriz.length; m++){
                 System.out.print(" " + matriz[l][m]);
@@ -87,10 +82,9 @@ public class Algoritmos {
 
 
     public ArrayList<Integer> greedy(double matriz[][]){
-// Diagnóstico para ver los datos reales leídos
-    System.out.println("[VERIFICACION] Ciudad 0 X: " + matriz[0][1] + " Y: " + matriz[0][2]);
-    System.out.println("[VERIFICACION] Ciudad 1 X: " + matriz[1][1] + " Y: " + matriz[1][2]);
+
         MedidorTiempos.empezarContador();
+
         int n = matriz.length;
         double matrizEuclidea[][] = new double[n][n];
         calculoMatrizEuclidea(matrizEuclidea,matriz);
@@ -120,14 +114,18 @@ public class Algoritmos {
         ciudadesOrdenadas.add(actual);
         visitado[actual] = true;
         double costeTotal = 0.0;
+        double minDistancia = 0;
+        int siguienteCiudad=0;
+
         for (int i = 1; i < n; ++i) {
-            double minDistancia = Double.MAX_VALUE;
-            int siguienteCiudad = -1;
+            minDistancia = Double.MAX_VALUE;
+            siguienteCiudad = -1;
 
             // Ciudad más cercana a la ciudad actual que no haya sido visitada
             for (int j = 0; j < n; ++j) {
-                if (!visitado[j] && matrizEuclidea[actual][j] < minDistancia) {
+                if (!visitado[j] && (matrizEuclidea[actual][j] < minDistancia)) {
                     minDistancia = matrizEuclidea[actual][j];
+                   // System.out.println("minDistancia " + minDistancia + " actual " + actual + " matrizEuclidea "+ matrizEuclidea[actual][j]);
                     siguienteCiudad = j;
 
                 }
@@ -137,7 +135,7 @@ public class Algoritmos {
             if (siguienteCiudad != -1) {
                 ciudadesOrdenadas.add(siguienteCiudad);
                 visitado[siguienteCiudad] = true;
-                costeTotal = minDistancia;
+                costeTotal += minDistancia;
                 actual = siguienteCiudad;
             }
         }
@@ -151,7 +149,9 @@ public class Algoritmos {
         System.out.println("Coste total: " + costeTotal);
         // System.out.println("Minimo encontrado: " + ciudadesOrdenadas.get(0));
         System.out.println("Total ciudades leídas: " + matriz.length);
-System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
+        System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
+        System.out.println(" minima distnacia " + minDistancia);
+
         return ciudadesOrdenadas;
     }
 
@@ -167,9 +167,9 @@ System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: "
        
         double sumatorio = 0;
         //suma de las distancias de las ciudades con respecto a la primer columna
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++) {
             sumatorio = 0;
-            for(int j = 0; j < n; j++){
+            for(int j = 0; j < n; j++) {
                 sumatorio += matrizEuclidea[i][j];
             }
             // Guardamos el candidato con su sumatoria de distancias y su ciudad correspondiente en el vector de soluciones
@@ -186,9 +186,9 @@ System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: "
         java.util.Random rand = new java.util.Random(semilla);
 
         //en bucle
-        while(!vSolucion.isEmpty()){
+        while(!vSolucion.isEmpty()) {
             // Para cuando quedan menos soluciones que k
-            if(vSolucion.size() < k) {
+            if(vSolucion.size() < k){
                 k = vSolucion.size();
             }
 
@@ -202,6 +202,12 @@ System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: "
         }
         
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
+
+        System.out.println("Coste total: " + costeTotal);
+        // System.out.println("Minimo encontrado: " + ciudadesOrdenadas.get(0));
+        System.out.println("Total ciudades leídas: " + matriz.length);
+        System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
+        System.out.println(" minima distnacia " + minDistancia);
 
         //se devuelve la solucion
         return vsolAlea;

@@ -4,59 +4,58 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class ArchivoDatos {
-
-    private double[][] matriz1;
+    private double matriz1[][];
     private String nombre; //nombre de ficheros de la matriz
+    private int matriz2[][];
 
-    public ArchivoDatos(String ruta) throws IOException {
+    public ArchivoDatos(String ruta) {
         String linea;
         FileReader file = null;
 
-        try (BufferedReader buffer = new BufferedReader(new FileReader(ruta))){
-            
-            int dimension = 0;
+        try {
+            file = new FileReader(ruta);
+            BufferedReader buffer = new BufferedReader(file);
+
+            int dimension=0;
             //sacamos la dimensión
             boolean parar = false;
+            while( ((linea = buffer.readLine())!= null) && !parar){
 
-            while (((linea = buffer.readLine())!= null) && !parar){
 
-                    String[] split = linea.split(":");
-                    if (split[0].trim().equalsIgnoreCase("DIMENSION")) {
-                        dimension = Integer.parseInt(split[1].trim());
-                        parar = true;
-                    }
-            }
-
-            parar = false;
-            while ((linea = buffer.readLine()) != null  && !parar ) {
-                if (linea.trim().toUpperCase().startsWith("NODE_COORD_SECTION")) {
+                String[] split = linea.split(":");
+                if (split[0].equals("DIMENSION") || split[0].equals("DIMENSION ")) {
+                    String a[] = split[1].split(" ");
+                    dimension = Integer.parseInt(a[1]);
                     parar = true;
                 }
             }
 
+            linea = buffer.readLine();
+
             //inicializamos las matrices al numero de filas y columnas indicado
             matriz1 = new double[dimension][3];
 
+            int k=0;
             //rellenamos las matrices con el contenido del doc
-            int i = 0;
-            while( i < dimension && (linea = buffer.readLine()) != null){
-                linea = linea.trim();
-                if (linea.isEmpty() || linea.equalsIgnoreCase("EOF")) {
-                    continue;
-                }
-
-                String[] split = linea.trim().split("\\s+");
-                    
-                if (split.length >= 3) {
-                    matriz1[i][0] = (int) Double.parseDouble(split[0]);
-                    matriz1[i][1] = (int) Double.parseDouble(split[1]);
-                    matriz1[i][2] = (int) Double.parseDouble(split[2]);
-                    i++;
+            for(int i =0; i < dimension; i++){
+                linea = buffer.readLine();
+                String split[] = linea.split(" ");
+                int errores =0;
+                for( int j =0; j < split.length; j++){
+                    //como el archivo no tiene la misma cantidad de espacios en el doc para separar hacemos esto
+                    try{
+                        matriz1[i][j-errores] = Double.parseDouble(split[j]);
+                    }catch (NumberFormatException e ){
+                        errores++;
+                    }
                 }
             }
-            
+
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException("Error al leer el archivo: " + e.getMessage());
+            throw new RuntimeException(e);
         }
     }
 
