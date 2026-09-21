@@ -3,31 +3,44 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        int archivoLeer =1;
-        int algoritmo=1;
+        int archivoLeer =0;
+
 
         /*String ruta = "C:\\Users\\Maitena\\Desktop\\Apuntes\\3º\\meta\\Practica1-Meta\\src\\config.txt";*/
         String rutaRelativa = "src/config.txt";
         System.out.println("Ruta actual de ejecución: " + new java.io.File(".").getAbsolutePath());
         Configuracion config = new Configuracion(rutaRelativa);
 
-        ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(archivoLeer));
+        int algoritmo=config.parametros;
         Algoritmos algoritmos= new Algoritmos();
 
-        config.setIndiceSemilla(0);
+
 
 
         //comando terminal sacar logs  javac *.java && java Main >> log.txt
-   
-        switch(config.getAlgoritmos(algoritmo)){
-            case "greedy":
-                
-                System.out.println("Nombre del archivo: " + config.getArchivo(archivoLeer));
-                algoritmos.greedy(archivosDatos.getMatriz1());
+        switch(algoritmo) {
+            case 0:
+
+                for (int i = 0; i < config.archivos.size(); i++) {
+                    ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
+                    System.out.println("-------------------GREEDY -------------------");
+                    System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
+                    algoritmos.greedy(archivosDatos.getMatriz1());
+
+                }
                 break;
-            case "greedyAleatorio":
-                System.out.println("Nombre del archivo: " + config.getArchivo(archivoLeer) + " Algoritmo greedyAleatorio . Semilla "+config.getSemilla() );
-                algoritmos.greedyAleatorio(archivosDatos.getMatriz1(), config.getSemilla());
+            case 1:
+
+                for (int i = 0; i < config.archivos.size(); i++) {
+                    ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
+                    System.out.println("-------------------GREEDY ALEATORIO -------------------");
+                    System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
+                    for (int j = 0; j < config.semillas.size(); j++) {
+                        System.out.println("********************* SEMILLA " + j + " *********************");
+                        algoritmos.greedyAleatorio(archivosDatos.getMatriz1(), config.getSemilla(j));
+                    }
+                }
+                break;
         }
     }
 }

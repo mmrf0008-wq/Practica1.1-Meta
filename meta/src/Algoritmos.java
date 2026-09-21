@@ -125,7 +125,7 @@ public class Algoritmos {
             for (int j = 0; j < n; ++j) {
                 if (!visitado[j] && (matrizEuclidea[actual][j] < minDistancia)) {
                     minDistancia = matrizEuclidea[actual][j];
-                    System.out.println("minDistancia " + minDistancia + " actual " + actual + " j: "+j );
+                    //System.out.println("minDistancia " + minDistancia + " actual " + actual + " j: "+j );
                     siguienteCiudad = j;
 
                 }
@@ -145,19 +145,23 @@ public class Algoritmos {
         costeTotal += matrizEuclidea[actual][primeraCiudad];
 
         MedidorTiempos.finalizarYMostrar("Greedy");
-        
+
         // Devolvemos la ruta de las ciudades ordenadas
         System.out.println("Coste total: " + costeTotal);
         // System.out.println("Minimo encontrado: " + ciudadesOrdenadas.get(0));
-        System.out.println("Total ciudades leídas: " + matriz.length);
-        System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
-        System.out.println(" minima distnacia " + minDistancia);
+        //System.out.println("Total ciudades leídas: " + matriz.length);
+        //System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
+        //System.out.println(" minima distnacia " + minDistancia);
 
 
-        System.out.println("vector solucion en greedy");
+        /*System.out.println("vector solucion en greedy");
         for(int i =0; i < ciudadesOrdenadas.size(); i++){
             System.out.print(" " + ciudadesOrdenadas.get(i));
-        }
+        }*/
+
+        matrizEuclidea = null;
+        vectorSolucion = null;
+
         return ciudadesOrdenadas;
     }
 
@@ -206,9 +210,9 @@ public class Algoritmos {
 
             }
             else {
-                System.out.println("coste total " + costeTotal);
+                //System.out.println("coste total " + costeTotal);
                 costeTotal += matrizEuclidea[pos][i];
-                System.out.println("ciudad 1: " + vectorgreedy.get(pos) + " -ciudad 2: " + i + " distancia " + matrizEuclidea[pos][i] + " coste total " + costeTotal);
+                //System.out.println("ciudad 1: " + vectorgreedy.get(pos) + " -ciudad 2: " + i + " distancia " + matrizEuclidea[pos][i] + " coste total " + costeTotal);
                 i = vectorgreedy.get(pos);
             }
 
@@ -222,21 +226,21 @@ public class Algoritmos {
         }
 
         int primeraCiudad = vsolAlea.get(0);
-        System.out.println("primer ciudad " + primeraCiudad);
+       // System.out.println("primer ciudad " + primeraCiudad);
         costeTotal += matrizEuclidea[matrizEuclidea.length-1][primeraCiudad];
         
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
         System.out.println("Coste total: " + costeTotal);
         // System.out.println("Minimo encontrado: " + ciudadesOrdenadas.get(0));
-        System.out.println("Total ciudades leídas: " + matriz.length);
-        System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
-        System.out.println(" minima distnacia " + minDistancia);
+      //  System.out.println("Total ciudades leídas: " + matriz.length);
+        //System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
+        //System.out.println(" minima distnacia " + minDistancia);
 
-        System.out.println("vector solucion en greedy");
+        /*System.out.println("vector solucion en greedy");
         for(int j =0; j < vsolAlea.size(); j++){
             System.out.print(" " + vsolAlea.get(j));
-        }
+        }*/
 
         //se devuelve la solucion
         return vsolAlea;

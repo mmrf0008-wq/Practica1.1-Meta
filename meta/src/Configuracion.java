@@ -63,8 +63,8 @@ public class Configuracion {
     public String getArchivo(int i) {
         return archivos.get(i);
     }
-     public long getSemilla() {
-        return semillas.get(indiceSemilla);
+     public long getSemilla(int i ) {
+        return semillas.get(i);
     }
     public void setIndiceSemilla(int i){
         this.indiceSemilla =i;
