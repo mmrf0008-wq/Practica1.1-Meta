@@ -3,7 +3,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        int archivoLeer =4;
+        int archivoLeer =1;
         int algoritmo=1;
 
         /*String ruta = "C:\\Users\\Maitena\\Desktop\\Apuntes\\3º\\meta\\Practica1-Meta\\src\\config.txt";*/
@@ -14,7 +14,7 @@ public class Main {
         ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(archivoLeer));
         Algoritmos algoritmos= new Algoritmos();
 
-        config.setIndiceSemilla(2);
+        config.setIndiceSemilla(0);
 
 
         //comando terminal sacar logs  javac *.java && java Main >> log.txt

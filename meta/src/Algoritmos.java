@@ -1,8 +1,8 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static java.lang.Math.pow;
-import static java.lang.Math.sqrt;
+import static java.lang.Math.*;
 
 public class Algoritmos {
     public String nombre;
@@ -125,7 +125,7 @@ public class Algoritmos {
             for (int j = 0; j < n; ++j) {
                 if (!visitado[j] && (matrizEuclidea[actual][j] < minDistancia)) {
                     minDistancia = matrizEuclidea[actual][j];
-                   // System.out.println("minDistancia " + minDistancia + " actual " + actual + " matrizEuclidea "+ matrizEuclidea[actual][j]);
+                    System.out.println("minDistancia " + minDistancia + " actual " + actual + " j: "+j );
                     siguienteCiudad = j;
 
                 }
@@ -136,6 +136,7 @@ public class Algoritmos {
                 ciudadesOrdenadas.add(siguienteCiudad);
                 visitado[siguienteCiudad] = true;
                 costeTotal += minDistancia;
+                //System.out.println(" min distancia " + minDistancia);
                 actual = siguienteCiudad;
             }
         }
@@ -152,6 +153,11 @@ public class Algoritmos {
         System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
         System.out.println(" minima distnacia " + minDistancia);
 
+
+        System.out.println("vector solucion en greedy");
+        for(int i =0; i < ciudadesOrdenadas.size(); i++){
+            System.out.print(" " + ciudadesOrdenadas.get(i));
+        }
         return ciudadesOrdenadas;
     }
 
@@ -165,19 +171,10 @@ public class Algoritmos {
         // Creamos un vector solucion de la misma forma que antes
         ArrayList<Candidato> vSolucion = new ArrayList<>(); //vector solucion del greedy, partimos de el para sacar el vsolAlea
 
-        double sumatorio = 0;
-        //suma de las distancias de las ciudades con respecto a la primer columna
-        for(int i = 0; i < n; i++) {
-            sumatorio = 0;
-            for(int j = 0; j < n; j++) {
-                sumatorio += matrizEuclidea[i][j];
-            }
-            // Guardamos el candidato con su sumatoria de distancias y su ciudad correspondiente en el vector de soluciones
-            vSolucion.add(new Candidato(sumatorio, i));
-        }
+        ArrayList<Integer> vectorgreedy = greedy(matriz);
+        int a =0;
+        int b=0;
 
-        // Ordenamos menor mayor
-        Collections.sort(vSolucion);
 
         ArrayList<Integer> vsolAlea = new ArrayList<>(); //vector solucion de greedyAleatorio (vsolAlea = vector solucion Aleatorio)
         //se elige aleatoriamente un numero del 0-5
@@ -188,26 +185,44 @@ public class Algoritmos {
 
         double costeTotal = 0.0;
         double minDistancia = 0;
-        int siguienteCiudad=0;
-        //empezamos a rellenar el vector solucion aleatoriamente
+        int pos =0;
 
-        while(!vSolucion.isEmpty()) {
+        //empezamos a rellenar el vector solucion aleatoriamente
+        int i =0;
+        boolean primera =true;
+        while(!vectorgreedy.isEmpty()) {
             // Para cuando quedan menos soluciones que k
-            if(vSolucion.size() < k){
-                k = vSolucion.size();
+            if(vectorgreedy.size() < k){
+                k = vectorgreedy.size();
             }
 
-            int pos = rand.nextInt(k);
+            pos = rand.nextInt(k);
+
+            //calculamos el coste
+
+            if(primera){ //mierda para que se ejecute una sola vez
+                primera =false;
+                i = vectorgreedy.get(pos);
+
+            }
+            else {
+                System.out.println("coste total " + costeTotal);
+                costeTotal += matrizEuclidea[pos][i];
+                System.out.println("ciudad 1: " + vectorgreedy.get(pos) + " -ciudad 2: " + i + " distancia " + matrizEuclidea[pos][i] + " coste total " + costeTotal);
+                i = vectorgreedy.get(pos);
+            }
 
             //se elimina la solucion del vector vsolucion
-            Candidato seleccionado = vSolucion.remove(pos);
+            Integer seleccionado = vectorgreedy.remove(pos);
 
             //el valor seleccionado del vector será nuestra solucion para agregar al vector
-            vsolAlea.add(seleccionado.ciudad);
-            costeTotal+= seleccionado.sumaDistancia;
+            vsolAlea.add(seleccionado);
+
+
         }
 
         int primeraCiudad = vsolAlea.get(0);
+        System.out.println("primer ciudad " + primeraCiudad);
         costeTotal += matrizEuclidea[matrizEuclidea.length-1][primeraCiudad];
         
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
@@ -217,6 +232,11 @@ public class Algoritmos {
         System.out.println("Total ciudades leídas: " + matriz.length);
         System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
         System.out.println(" minima distnacia " + minDistancia);
+
+        System.out.println("vector solucion en greedy");
+        for(int j =0; j < vsolAlea.size(); j++){
+            System.out.print(" " + vsolAlea.get(j));
+        }
 
         //se devuelve la solucion
         return vsolAlea;
