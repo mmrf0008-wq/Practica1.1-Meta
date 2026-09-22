@@ -3,9 +3,6 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        int archivoLeer =0;
-
-
         /*String ruta = "C:\\Users\\Maitena\\Desktop\\Apuntes\\3º\\meta\\Practica1-Meta\\src\\config.txt";*/
         String rutaRelativa = "src/config.txt";
         System.out.println("Ruta actual de ejecución: " + new java.io.File(".").getAbsolutePath());
@@ -13,9 +10,6 @@ public class Main {
 
         int algoritmo=config.parametros;
         Algoritmos algoritmos= new Algoritmos();
-
-
-
 
         //comando terminal sacar logs  javac *.java && java Main >> log.txt
         switch(algoritmo) {
@@ -30,17 +24,21 @@ public class Main {
                 }
                 break;
             case 1:
-
-                for (int i = 0; i < config.archivos.size(); i++) {
+                int i=4;
+                //for (int i = 0; i < config.archivos.size(); i++) {
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
                     System.out.println("-------------------GREEDY ALEATORIO -------------------");
                     System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
+
                     for (int j = 0; j < config.semillas.size(); j++) {
                         System.out.println("********************* SEMILLA " + j + " *********************");
-                        algoritmos.greedyAleatorio(archivosDatos.getMatriz1(), config.getSemilla(j));
+                        algoritmos.greedyAleatorio(archivosDatos.getMatriz1(), config.getSemilla(j), config.getK());
                     }
-                }
+                //}
                 break;
+            case 2:
+                break;
+
         }
     }
 }

@@ -35,7 +35,6 @@ public class ArchivoDatos {
             //inicializamos las matrices al numero de filas y columnas indicado
             matriz1 = new double[dimension][3];
 
-            int k=0;
             //rellenamos las matrices con el contenido del doc
             for(int i =0; i < dimension; i++){
                 linea = buffer.readLine();

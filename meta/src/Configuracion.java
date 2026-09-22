@@ -12,6 +12,7 @@ public class Configuracion {
     ArrayList<Long> semillas;
     Integer parametros;
     Integer indiceSemilla;
+    Integer k;
 
 
     public Configuracion(String ruta){
@@ -48,6 +49,10 @@ public class Configuracion {
                         break;
                     case "Parametros":
                         parametros = Integer.parseInt(split[1]);
+                        break;
+                    case "K":
+                        k = Integer.parseInt(split[1]);
+                        break;
                 }
             }
         } catch (FileNotFoundException e) {
@@ -58,15 +63,17 @@ public class Configuracion {
     }
 
     public String getAlgoritmos(int i) {
-        return algoritmos.get(i);
+    return algoritmos.get(i);
     }
     public String getArchivo(int i) {
-        return archivos.get(i);
+    return archivos.get(i);
     }
-     public long getSemilla(int i ) {
-        return semillas.get(i);
+    public long getSemilla(int i ) {
+    return semillas.get(i);
     }
+    public int getK(){return k;}
     public void setIndiceSemilla(int i){
         this.indiceSemilla =i;
     }
+
 }

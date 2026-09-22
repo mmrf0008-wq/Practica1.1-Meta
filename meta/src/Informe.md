@@ -1,9 +1,7 @@
 # Informe Metaheuristica 
 
-### Alumnos: Paloma Martinez Tristante, Maitena Rosa Fiedler 
-
-
-### 1. Metaheurista Utilizada 
+### Alumnos: Paloma Martinez Tristante, Maitena Rosa Fiedler
+## 1. Metaheurista Utilizada 
 
 ##### Representación de la solución
 

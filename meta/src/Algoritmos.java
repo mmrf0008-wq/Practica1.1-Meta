@@ -147,48 +147,28 @@ public class Algoritmos {
         MedidorTiempos.finalizarYMostrar("Greedy");
 
         // Devolvemos la ruta de las ciudades ordenadas
-        System.out.println("Coste total: " + costeTotal);
-        // System.out.println("Minimo encontrado: " + ciudadesOrdenadas.get(0));
-        //System.out.println("Total ciudades leídas: " + matriz.length);
-        //System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
-        //System.out.println(" minima distnacia " + minDistancia);
+        System.out.println("\t Coste total: " + costeTotal);
 
-
-        /*System.out.println("vector solucion en greedy");
-        for(int i =0; i < ciudadesOrdenadas.size(); i++){
-            System.out.print(" " + ciudadesOrdenadas.get(i));
-        }*/
-
-        matrizEuclidea = null;
-        vectorSolucion = null;
 
         return ciudadesOrdenadas;
     }
 
 
-    public ArrayList<Integer> greedyAleatorio(double matriz[][], long semilla){
+    public ArrayList<Integer> greedyAleatorio(double matriz[][], long semilla, int k ){
         MedidorTiempos.empezarContador();
+
+        java.util.Random rand = new java.util.Random(semilla);
+
         int n = matriz.length;
         double matrizEuclidea[][] = new double[n][n];
         calculoMatrizEuclidea(matrizEuclidea,matriz);
 
-        // Creamos un vector solucion de la misma forma que antes
-        ArrayList<Candidato> vSolucion = new ArrayList<>(); //vector solucion del greedy, partimos de el para sacar el vsolAlea
-
         ArrayList<Integer> vectorgreedy = greedy(matriz);
-        int a =0;
-        int b=0;
-
 
         ArrayList<Integer> vsolAlea = new ArrayList<>(); //vector solucion de greedyAleatorio (vsolAlea = vector solucion Aleatorio)
-        //se elige aleatoriamente un numero del 0-5
-        int k = 5;
 
-        java.util.Random rand = new java.util.Random(semilla);
-      //  System.out.println("SEMILLA " + semilla + " ran es " + );
 
         double costeTotal = 0.0;
-        double minDistancia = 0;
         int pos =0;
 
         //empezamos a rellenar el vector solucion aleatoriamente
@@ -204,10 +184,9 @@ public class Algoritmos {
 
             //calculamos el coste
 
-            if(primera){ //mierda para que se ejecute una sola vez
+            if(primera){
                 primera =false;
                 i = vectorgreedy.get(pos);
-
             }
             else {
                 //System.out.println("coste total " + costeTotal);
@@ -231,7 +210,7 @@ public class Algoritmos {
         
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
-        System.out.println("Coste total: " + costeTotal);
+        System.out.println("\t Coste total: " + costeTotal);
         // System.out.println("Minimo encontrado: " + ciudadesOrdenadas.get(0));
       //  System.out.println("Total ciudades leídas: " + matriz.length);
         //System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
@@ -245,4 +224,19 @@ public class Algoritmos {
         //se devuelve la solucion
         return vsolAlea;
     }
+        public void DontLookbits(){
+            //recibir solucion greedy aleatorio
+
+            //crear vector igual tamaño que solucion, vector mascara
+            //0- puede cambiar 1-el valor es fijo. Comienza to_do en 0
+
+            //verificamos en bucle los cambios
+                // si ninguno provoca mejora v[i]=1
+                //un movimiento genera solucion vecina con mejor coste v[i]=0
+
+
+            //
+        }
+
 }
+
