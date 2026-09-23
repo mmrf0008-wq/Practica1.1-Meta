@@ -37,33 +37,10 @@ public class Algoritmos {
 
 
 
-    private double distancia_euclidea(double x1, double y1, double x2, double y2){
-        double dx = x1 - x2;
-        double dy = y1 - y2;
+    private double distancia_euclidea(double [][]matriz, int i, int j ){
+        double dx = matriz[i][0] - matriz[j][0];
+        double dy = matriz[i][1] - matriz[j][1];
         return sqrt(dx*dx + dy*dy);
-    }
-
-    /**
-     * Calcula la matriz de distancias euclideas entre todas las ciudades
-     * @param matrizEuclidea Matriz de distancias euclideas a llenar
-     * @param matriz Matriz de coordenadas de las ciudades
-     */
-
-    private void calculoMatrizEuclidea(double matrizEuclidea[][], double  matriz[][]){
-        int n = matriz.length;
-        for(int i =0; i < n; i++){
-            matrizEuclidea[i][i] = 0.0;
-
-            for(int j = i + 1; j < n; j++){
-
-                double distancia = distancia_euclidea(matriz[i][1], matriz[i][2], matriz[j][1], matriz[j][2]);
-                
-                // Casillas simetricas
-                matrizEuclidea[i][j] = distancia;
-                matrizEuclidea[j][i] = distancia;
-            }
-
-        }
     }
 
     /**
@@ -86,8 +63,8 @@ public class Algoritmos {
         MedidorTiempos.empezarContador();
 
         int n = matriz.length;
-        double matrizEuclidea[][] = new double[n][n];
-        calculoMatrizEuclidea(matrizEuclidea,matriz);
+
+
         
         ArrayList<Candidato> vectorSolucion = new ArrayList<>();
 
@@ -96,7 +73,7 @@ public class Algoritmos {
         for(int i = 0; i < n; i++){
             sumatorio = 0;
             for(int j = 0; j < n; j++){
-                sumatorio += matrizEuclidea[i][j];
+                sumatorio += distancia_euclidea(matriz, i, j );
             }
             // Guardamos el candidato con su sumatoria de distancias y su ciudad correspondiente en el vector de soluciones
             vectorSolucion.add(new Candidato(sumatorio, i));
@@ -123,12 +100,13 @@ public class Algoritmos {
 
             // Ciudad más cercana a la ciudad actual que no haya sido visitada
             for (int j = 0; j < n; ++j) {
-                if (!visitado[j] && (matrizEuclidea[actual][j] < minDistancia)) {
-                    minDistancia = matrizEuclidea[actual][j];
+                if (!visitado[j] && (distancia_euclidea(matriz, actual, j)  < minDistancia)) {
+                    minDistancia = distancia_euclidea(matriz, actual, j);
                     //System.out.println("minDistancia " + minDistancia + " actual " + actual + " j: "+j );
                     siguienteCiudad = j;
 
                 }
+
             }
 
             // La añadimos a la lista de ciudades ordenadas y marcamos como visitada
@@ -142,7 +120,8 @@ public class Algoritmos {
         }
         
         int primeraCiudad = ciudadesOrdenadas.get(0);
-        costeTotal += matrizEuclidea[actual][primeraCiudad];
+
+        costeTotal += distancia_euclidea(matriz, actual, primeraCiudad);
 
         MedidorTiempos.finalizarYMostrar("Greedy");
 
@@ -158,10 +137,6 @@ public class Algoritmos {
         MedidorTiempos.empezarContador();
 
         java.util.Random rand = new java.util.Random(semilla);
-
-        int n = matriz.length;
-        double matrizEuclidea[][] = new double[n][n];
-        calculoMatrizEuclidea(matrizEuclidea,matriz);
 
         ArrayList<Integer> vectorgreedy = greedy(matriz);
 
@@ -190,7 +165,7 @@ public class Algoritmos {
             }
             else {
                 //System.out.println("coste total " + costeTotal);
-                costeTotal += matrizEuclidea[pos][i];
+                costeTotal += distancia_euclidea(matriz, pos, i);
                 //System.out.println("ciudad 1: " + vectorgreedy.get(pos) + " -ciudad 2: " + i + " distancia " + matrizEuclidea[pos][i] + " coste total " + costeTotal);
                 i = vectorgreedy.get(pos);
             }
@@ -206,7 +181,7 @@ public class Algoritmos {
 
         int primeraCiudad = vsolAlea.get(0);
        // System.out.println("primer ciudad " + primeraCiudad);
-        costeTotal += matrizEuclidea[matrizEuclidea.length-1][primeraCiudad];
+        costeTotal +=  distancia_euclidea(matriz, matriz.length-1, primeraCiudad);
         
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
