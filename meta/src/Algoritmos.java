@@ -1,3 +1,4 @@
+import java.awt.image.AreaAveragingScaleFilter;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -175,42 +176,56 @@ public class Algoritmos {
 
             //el valor seleccionado del vector será nuestra solucion para agregar al vector
             vsolAlea.add(seleccionado);
-
-
         }
 
-        int primeraCiudad = vsolAlea.get(0);
-       // System.out.println("primer ciudad " + primeraCiudad);
+        int primeraCiudad = vsolAlea.getFirst();
+
         costeTotal +=  distancia_euclidea(matriz, matriz.length-1, primeraCiudad);
         
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
         System.out.println("\t Coste total: " + costeTotal);
-        // System.out.println("Minimo encontrado: " + ciudadesOrdenadas.get(0));
-      //  System.out.println("Total ciudades leídas: " + matriz.length);
-        //System.out.println("Última ciudad (índice " + (matriz.length - 1) + ") -> X: " + matriz[matriz.length - 1][1] + " Y: " + matriz[matriz.length - 1][2]);
-        //System.out.println(" minima distnacia " + minDistancia);
 
-        /*System.out.println("vector solucion en greedy");
-        for(int j =0; j < vsolAlea.size(); j++){
-            System.out.print(" " + vsolAlea.get(j));
-        }*/
 
         //se devuelve la solucion
         return vsolAlea;
     }
-        public void DontLookbits(){
+        public void DontLookbits(double [][] matriz, ArrayList<Integer> solucion ){
             //recibir solucion greedy aleatorio
+            ArrayList<Integer> vsolGA = solucion;
+            int n = vsolGA.size();
 
             //crear vector igual tamaño que solucion, vector mascara
+            int vmascara[] = new int[n];
+
+            for(int i =0; i < n; i++){
+                vmascara[i] = 0; //ponemos todos los bits en 0
+            }
             //0- puede cambiar 1-el valor es fijo. Comienza to_do en 0
 
             //verificamos en bucle los cambios
                 // si ninguno provoca mejora v[i]=1
                 //un movimiento genera solucion vecina con mejor coste v[i]=0
 
-
-            //
+            double minimo=0;
+            double distancia =0;
+            int ultimo =-1;
+            for (int i =0; i < n ; i++){
+                minimo =0;
+                for(int j = i +1; j != i && vmascara[i]==0; j++){
+                    distancia = distancia_euclidea(matriz, i, j);
+                    if(minimo > distancia){
+                        minimo = distancia;
+                        ultimo = j;
+                    }
+                    if(j +1 == n){ //volvemos al inicio
+                        j=0;
+                    }
+                }
+                if(minimo < distancia_euclidea(matriz, i, i+1)) { //si la distancia nueva encontrada supone una mejora
+                    //hacemos trueque
+                }
+            }
         }
 
 }
