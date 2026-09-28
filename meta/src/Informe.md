@@ -1,27 +1,33 @@
 # Informe Metaheuristica 
 
-### Alumnos: Paloma Martinez Tristante, Maitena Rosa Fiedler
-## 1. Metaheurista Utilizada 
+#### Alumnos: Paloma Martinez Tristante, Maitena Rosa Fiedler
 
-##### Representación de la solución
-
-#### Evalución de la solución 
-
-#### Exploración del entorno 
-
-#### Movimiento en el entorno 
-
-#### Descripción pseudocodigo
+## 1- Clases creadas
+- Configurador 
+- Algoritmos 
+- MedidorTiempos
 
 
-###  2. Analisis de los resultados 
+## 2- Parámetros de configuración 
+- Archivos
+  - a280.tsp
+  - ch130.tsp
+  - d18512.tsp
+  - pr144.tsp
+  - u1060.tsp
+- Semillas
+  - 79701583
+  - 97031587
+  - 38150797
 
-#### Ejecuciones de las metaheuristicas utilizadas 
 
-#### Calculos estadisticos 
+## 3- Algoritmos 
+### Algoritmo greedy
+### Algoritmo greedy aleatorio 
 
-#### Graficas comparativas de los algoritmos 
 
 
-### 3. Conclusiones 
+### . Conclusiones 
+
+### . Gráficas comparativas
 

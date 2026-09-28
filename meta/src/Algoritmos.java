@@ -6,7 +6,7 @@ import java.util.Collections;
 import static java.lang.Math.*;
 
 public class Algoritmos {
-    public String nombre;
+    private double matriz[][];
 
     private class Candidato implements Comparable<Candidato> {
         double sumaDistancia;
@@ -38,18 +38,14 @@ public class Algoritmos {
 
 
 
-    private double distancia_euclidea(double [][]matriz, int i, int j ){
-        double dx = matriz[i][0] - matriz[j][0];
-        double dy = matriz[i][1] - matriz[j][1];
+    private double distancia_euclidea(int i, int j ){
+        double dx = matriz[i][1] - matriz[j][1];
+        double dy = matriz[i][2] - matriz[j][2];
         return sqrt(dx*dx + dy*dy);
     }
 
-    /**
-     * Imprime la matriz de distancias euclideas
-     * @param matriz Matriz de distancias euclideas a imprimir
-     */
 
-    private void printMatriz(int matriz[][]){
+    private void printMatriz(){
         for(int l = 0; l < matriz.length; l++){
             for(int m = 0; m < matriz.length; m++){
                 System.out.print(" " + matriz[l][m]);
@@ -59,7 +55,7 @@ public class Algoritmos {
     }
 
 
-    public ArrayList<Integer> greedy(double matriz[][]){
+    public ArrayList<Integer> greedy(){
 
         MedidorTiempos.empezarContador();
 
@@ -74,7 +70,7 @@ public class Algoritmos {
         for(int i = 0; i < n; i++){
             sumatorio = 0;
             for(int j = 0; j < n; j++){
-                sumatorio += distancia_euclidea(matriz, i, j );
+                sumatorio += distancia_euclidea( i, j );
             }
             // Guardamos el candidato con su sumatoria de distancias y su ciudad correspondiente en el vector de soluciones
             vectorSolucion.add(new Candidato(sumatorio, i));
@@ -88,7 +84,7 @@ public class Algoritmos {
         boolean[] visitado = new boolean[n];
 
         // Ciudad con menor sumatoria de distancias
-        int actual = vectorSolucion.get(0).ciudad; 
+        int actual = vectorSolucion.getFirst().ciudad;
         ciudadesOrdenadas.add(actual);
         visitado[actual] = true;
         double costeTotal = 0.0;
@@ -101,8 +97,8 @@ public class Algoritmos {
 
             // Ciudad más cercana a la ciudad actual que no haya sido visitada
             for (int j = 0; j < n; ++j) {
-                if (!visitado[j] && (distancia_euclidea(matriz, actual, j)  < minDistancia)) {
-                    minDistancia = distancia_euclidea(matriz, actual, j);
+                if (!visitado[j] && (distancia_euclidea( actual, j)  < minDistancia)) {
+                    minDistancia = distancia_euclidea( actual, j);
                     //System.out.println("minDistancia " + minDistancia + " actual " + actual + " j: "+j );
                     siguienteCiudad = j;
 
@@ -120,9 +116,9 @@ public class Algoritmos {
             }
         }
         
-        int primeraCiudad = ciudadesOrdenadas.get(0);
+        int primeraCiudad = ciudadesOrdenadas.getFirst();
 
-        costeTotal += distancia_euclidea(matriz, actual, primeraCiudad);
+        costeTotal += distancia_euclidea( actual, primeraCiudad);
 
         MedidorTiempos.finalizarYMostrar("Greedy");
 
@@ -134,23 +130,20 @@ public class Algoritmos {
     }
 
 
-    public ArrayList<Integer> greedyAleatorio(double matriz[][], long semilla, int k ){
+    public ArrayList<Integer> greedyAleatorio( long semilla, int k, double costeTotal){
         MedidorTiempos.empezarContador();
 
         java.util.Random rand = new java.util.Random(semilla);
 
-        ArrayList<Integer> vectorgreedy = greedy(matriz);
-
+        ArrayList<Integer> vectorgreedy = greedy();
         ArrayList<Integer> vsolAlea = new ArrayList<>(); //vector solucion de greedyAleatorio (vsolAlea = vector solucion Aleatorio)
 
-
-        double costeTotal = 0.0;
         int pos =0;
-
-        //empezamos a rellenar el vector solucion aleatoriamente
         int i =0;
         boolean primera =true;
-        while(!vectorgreedy.isEmpty()) {
+
+
+        while(!vectorgreedy.isEmpty()) {     //empezamos a rellenar el vector solucion aleatoriamente
             // Para cuando quedan menos soluciones que k
             if(vectorgreedy.size() < k){
                 k = vectorgreedy.size();
@@ -166,7 +159,7 @@ public class Algoritmos {
             }
             else {
                 //System.out.println("coste total " + costeTotal);
-                costeTotal += distancia_euclidea(matriz, pos, i);
+                costeTotal += distancia_euclidea( pos, i);
                 //System.out.println("ciudad 1: " + vectorgreedy.get(pos) + " -ciudad 2: " + i + " distancia " + matrizEuclidea[pos][i] + " coste total " + costeTotal);
                 i = vectorgreedy.get(pos);
             }
@@ -180,8 +173,8 @@ public class Algoritmos {
 
         int primeraCiudad = vsolAlea.getFirst();
 
-        costeTotal +=  distancia_euclidea(matriz, matriz.length-1, primeraCiudad);
-        
+        costeTotal +=  distancia_euclidea( matriz.length-1, primeraCiudad);
+        System.out.println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
         System.out.println("\t Coste total: " + costeTotal);
@@ -190,43 +183,83 @@ public class Algoritmos {
         //se devuelve la solucion
         return vsolAlea;
     }
-        public void DontLookbits(double [][] matriz, ArrayList<Integer> solucion ){
-            //recibir solucion greedy aleatorio
-            ArrayList<Integer> vsolGA = solucion;
+    public void DontLookbits( ArrayList<Integer> solucion, double costeAnterior ){
+            MedidorTiempos.empezarContador();
+
+            ArrayList<Integer> vsolGA = solucion;           //recibir solucion greedy aleatorio
             int n = vsolGA.size();
+            double distancia=0.0;
+            double actual=0.0;
+            double minimo =0.0;
+            int ultimo= -1;
+            int j=0;
+            double ganancia =0.0;
 
-            //crear vector igual tamaño que solucion, vector mascara
-            int vmascara[] = new int[n];
 
-            for(int i =0; i < n; i++){
-                vmascara[i] = 0; //ponemos todos los bits en 0
-            }
-            //0- puede cambiar 1-el valor es fijo. Comienza to_do en 0
+            int[] vmascara = new int[n];        //crear vector igual tamaño que solucion, vector mascara
 
-            //verificamos en bucle los cambios
-                // si ninguno provoca mejora v[i]=1
-                //un movimiento genera solucion vecina con mejor coste v[i]=0
+           for(int iterador =0; iterador < n-1; iterador++){
+               if(vmascara[iterador]==1 ){             //si la ciudad se descarto continuamos con la siguiente
+                   continue;
+               }
 
-            double minimo=0;
-            double distancia =0;
-            int ultimo =-1;
-            for (int i =0; i < n ; i++){
-                minimo =0;
-                for(int j = i +1; j != i && vmascara[i]==0; j++){
-                    distancia = distancia_euclidea(matriz, i, j);
-                    if(minimo > distancia){
+                minimo = distancia_euclidea(vsolGA.get(iterador), vsolGA.get(iterador+1));
+                actual = minimo;
+                j =iterador+1;
+                ultimo =-1;
+
+
+                while(j != iterador ){
+                    distancia = distancia_euclidea( vsolGA.get(iterador), vsolGA.get(j));
+
+                    if(distancia < minimo){
+                      //  System.out.println("la ciudad " + j + " tiene distancia "+ distancia + " y la distancia de la ciudad en " + iterador + " es " + minimo);
                         minimo = distancia;
                         ultimo = j;
                     }
-                    if(j +1 == n){ //volvemos al inicio
+                    j++;
+                    if(j==n){
                         j=0;
                     }
                 }
-                if(minimo < distancia_euclidea(matriz, i, i+1)) { //si la distancia nueva encontrada supone una mejora
-                    //hacemos trueque
+                if(actual > minimo && ultimo != -1){ //comprobamos si hay mejoras
+                    vmascara[iterador] =0;
+                    vmascara[ultimo] =0;
+                    cambio(vsolGA, iterador, ultimo);
+                    calculoNuevoCoste();
+
                 }
+                else{
+                    System.out.println("iterador " + iterador + " cambia a 1 ");
+                    vmascara[iterador] = 1; //no hay mejoras
+
+                    for(int i =0; i < n; i++){
+                        System.out.print(" " +vmascara[i]);
+                    }
+                    System.out.println();
+                }
+
             }
+            System.out.println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+            MedidorTiempos.finalizarYMostrar("Don't look bit");
+
+            System.out.println("\t Coste total: " + costeAnterior);
         }
+        private void cambio(ArrayList<Integer> vsolGA, int iterador, int ultimo){
+                int a = vsolGA.get(iterador);
+                int b=  vsolGA.get(ultimo);
+
+                vsolGA.set(iterador, b);
+                vsolGA.set(ultimo, a);
+
+        }
+        private void calculoNuevoCoste(){
+
+        }
+        public void setMatriz(double matriz[][]){
+            this.matriz = matriz;
+        }
+
 
 }
 

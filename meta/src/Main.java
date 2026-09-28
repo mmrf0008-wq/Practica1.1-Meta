@@ -11,6 +11,7 @@ public class Main {
 
         int algoritmo=config.parametros;
         Algoritmos algoritmos= new Algoritmos();
+        double costeTotal=0.0;
         ArrayList<Integer> solucion = new ArrayList<>() ;
 
         //comando terminal sacar logs  javac *.java && java Main >> log.txt
@@ -21,7 +22,8 @@ public class Main {
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
                     System.out.println("-------------------GREEDY -------------------");
                     System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
-                    algoritmos.greedy(archivosDatos.getMatriz1());
+                    algoritmos.setMatriz(archivosDatos.getMatriz1());
+                    algoritmos.greedy();
 
                 }
                 break;
@@ -34,22 +36,26 @@ public class Main {
 
                     for (int j = 0; j < config.semillas.size(); j++) {
                         System.out.println("********************* SEMILLA " + j + " *********************");
-                         algoritmos.greedyAleatorio(archivosDatos.getMatriz1(), config.getSemilla(j), config.getK());
+                        algoritmos.setMatriz(archivosDatos.getMatriz1());
+                         algoritmos.greedyAleatorio( config.getSemilla(j), config.getK(), costeTotal);
                     }
                 }
                 break;
             case 2: //dont look bit
-                for (int i = 0; i < config.archivos.size(); i++) {
+               // for (int i = 0; i < config.archivos.size(); i++) {
+                int i = 5;
+
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
-                    System.out.println("-------------------GREEDY ALEATORIO -------------------");
+                    System.out.println("-------------------Dont look bit -------------------");
                     System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
 
                     for (int j = 0; j < config.semillas.size(); j++) {
                         System.out.println("********************* SEMILLA " + j + " *********************");
-                        solucion=  algoritmos.greedyAleatorio(archivosDatos.getMatriz1(), config.getSemilla(j), config.getK());
-                        algoritmos.DontLookbits(archivosDatos.getMatriz1(),solucion );
+                        algoritmos.setMatriz(archivosDatos.getMatriz1());
+                        solucion=  algoritmos.greedyAleatorio( config.getSemilla(j), config.getK(), costeTotal);
+                        algoritmos.DontLookbits(solucion, costeTotal );
                     }
-                }
+                //}
                 break;
 
         }
