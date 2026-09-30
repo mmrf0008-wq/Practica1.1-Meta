@@ -1,5 +1,3 @@
-import java.awt.image.AreaAveragingScaleFilter;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -7,6 +5,7 @@ import static java.lang.Math.*;
 
 public class Algoritmos {
     private double matriz[][];
+
 
     private class Candidato implements Comparable<Candidato> {
         double sumaDistancia;
@@ -158,9 +157,7 @@ public class Algoritmos {
                 i = vectorgreedy.get(pos);
             }
             else {
-                //System.out.println("coste total " + costeTotal);
                 costeTotal += distancia_euclidea( pos, i);
-                //System.out.println("ciudad 1: " + vectorgreedy.get(pos) + " -ciudad 2: " + i + " distancia " + matrizEuclidea[pos][i] + " coste total " + costeTotal);
                 i = vectorgreedy.get(pos);
             }
 
@@ -174,86 +171,138 @@ public class Algoritmos {
         int primeraCiudad = vsolAlea.getFirst();
 
         costeTotal +=  distancia_euclidea( matriz.length-1, primeraCiudad);
-        System.out.println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
-        System.out.println("\t Coste total: " + costeTotal);
+       Log.print("\t Coste total: " + costeTotal);
 
 
         //se devuelve la solucion
         return vsolAlea;
     }
     public void DontLookbits( ArrayList<Integer> solucion, double costeAnterior ){
-            MedidorTiempos.empezarContador();
+        MedidorTiempos.empezarContador();
 
-            ArrayList<Integer> vsolGA = solucion;           //recibir solucion greedy aleatorio
-            int n = vsolGA.size();
-            double distancia=0.0;
-            double actual=0.0;
-            double minimo =0.0;
-            int ultimo= -1;
-            int j=0;
-            double ganancia =0.0;
-
+        //recibir solucion greedy aleatorio
+        int n = solucion.size();
 
             int[] vmascara = new int[n];        //crear vector igual tamaño que solucion, vector mascara
 
-           for(int iterador =0; iterador < n-1; iterador++){
-               if(vmascara[iterador]==1 ){             //si la ciudad se descarto continuamos con la siguiente
-                   continue;
-               }
-
-                minimo = distancia_euclidea(vsolGA.get(iterador), vsolGA.get(iterador+1));
-                actual = minimo;
-                j =iterador+1;
-                ultimo =-1;
+        System.out.println();
+        Log.print("las distnacias son");
+        for(int i =0; i <solucion.size()-1; i++){
+            System.out.println("i(" + i + ") i+1 (" + (i+1) + ")= " + distancia_euclidea(i,i+1) + " ID CIUDAD I " + solucion.get(i) + " ID CIUDAD J " + solucion.get((i+1)));
+        }
 
 
-                while(j != iterador ){
-                    distancia = distancia_euclidea( vsolGA.get(iterador), vsolGA.get(j));
+            //la i y la j son ciclicas
+            int i =0;
+            int j =0;
+            boolean mejora = true;              // mejora true: hay ciudades que pueden ser movidas.    mejora=false: vmascara =1 entera
+        boolean haymejora=false;
+           //la i es ciclica
+        //la j es ciclica
+        //la condicion de parada es que no pueda mover mas (matriz entera en 1)
 
-                    if(distancia < minimo){
-                      //  System.out.println("la ciudad " + j + " tiene distancia "+ distancia + " y la distancia de la ciudad en " + iterador + " es " + minimo);
-                        minimo = distancia;
-                        ultimo = j;
-                    }
-                    j++;
-                    if(j==n){
-                        j=0;
-                    }
-                }
-                if(actual > minimo && ultimo != -1){ //comprobamos si hay mejoras
-                    vmascara[iterador] =0;
-                    vmascara[ultimo] =0;
-                    cambio(vsolGA, iterador, ultimo);
-                    calculoNuevoCoste();
-
-                }
-                else{
-                    System.out.println("iterador " + iterador + " cambia a 1 ");
-                    vmascara[iterador] = 1; //no hay mejoras
-
-                    for(int i =0; i < n; i++){
-                        System.out.print(" " +vmascara[i]);
-                    }
-                    System.out.println();
-                }
-
+        while(mejora){
+            mejora=false;
+            haymejora=false;
+            if(i==n) i=0;
+            Log.print("---------------------------------------");
+            if(vmascara[i]==1){
+                Log.print("mascara en " + i + " vmascara =  " + vmascara[i]+ " =1");
+                i++;
+                continue; //descartamos aquellas que no tengan mejoras
             }
-            System.out.println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
-            MedidorTiempos.finalizarYMostrar("Don't look bit");
+            mejora=true;
+            j= (i + 1) % n;
+            Log.print("j = " + j + " i= "+ i);
 
-            System.out.println("\t Coste total: " + costeAnterior);
+            while(j != i ){
+                if(factorizacion(solucion,i,j, n)){ //si hay mejora hacemos cambio
+                    Log.print("mascara en i: " + i + " y en j: " + j + " =0 ");
+                    vmascara[i]=0;
+                    vmascara[j] =0;
+                    cambio(solucion, i, j);
+                    haymejora=true;
+
+                    break;
+                }
+                j++;
+                if(j==n) j=0;
+                Log.print("---------------------------------------");
+            }
+            if(!haymejora){
+                Log.print("no hubo mejora en i: " + i );
+                vmascara[i]=1;
+                Log.print("vmascara[" + i +"]=1");
+            }
+            i++;
         }
-        private void cambio(ArrayList<Integer> vsolGA, int iterador, int ultimo){
-                int a = vsolGA.get(iterador);
-                int b=  vsolGA.get(ultimo);
 
-                vsolGA.set(iterador, b);
-                vsolGA.set(ultimo, a);
+
+        System.out.println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        MedidorTiempos.finalizarYMostrar("Don't look bit");
+
+        System.out.println("\t Coste total: " + costeAnterior);
+        }
+
+        private boolean factorizacion( ArrayList<Integer>solucion,int i, int j, int n ){
+
+            if (i == j || (i + 1) % n == j || (j + 1) % n == i){
+                Log.print("los nodos son contiguos, no se realiza el 2-opt");
+                return false;
+            }
+            double nuevoCoste = 0;
+                    //calculamos el nuevo coste
+            if(i>=1) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(i-1));
+            if(i==0) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(n-1));
+
+            if(i < (n-1)){
+                nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(i+1));
+               // System.out.println("coste" + distancia_euclidea(solucion.get(j), solucion.get(i+1)));
+            }
+            if(i == n-1) nuevoCoste += distancia_euclidea(solucion.get(j),solucion.getFirst());
+
+            if(j>= 1) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(j-1));
+            if(j==0) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(n-1));
+
+            if(j<n-1) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(j+1));
+            if(j== n-1) nuevoCoste += distancia_euclidea(solucion.get(i),solucion.getFirst());
+
+            /*********************************************************************************/
+
+            double costeAnterior =0;
+            if(i>=1) costeAnterior += distancia_euclidea(solucion.get(i),solucion.get(i-1));
+            if(i==0) costeAnterior += distancia_euclidea(solucion.get(i),solucion.get(n-1));
+
+            if(i<n-1) costeAnterior += distancia_euclidea(solucion.get(i),solucion.get(i+1));
+            if(i==n-1) costeAnterior+= distancia_euclidea(solucion.get(i),solucion.getFirst());
+
+            if(j>=1) costeAnterior += distancia_euclidea(solucion.get(j),solucion.get(j-1));
+            if(j==0) costeAnterior += distancia_euclidea(solucion.get(j),solucion.get(n-1));
+
+            if(j < n-1) costeAnterior += distancia_euclidea(solucion.get(j),solucion.get(j+1));
+            if( j == n-1) costeAnterior += distancia_euclidea(solucion.get(j),solucion.getFirst());
+
+            Log.print("coste anterior " + costeAnterior + " costenuevo " + nuevoCoste + " i:"+ i + " j: " + j);
+
+            if (costeAnterior <= nuevoCoste) {
+                Log.print("devuelve false");
+                return false; // no hubo mejora
+            }
+            else{
+                Log.print("DEVUELVE TRUE ");
+                return true;
+            }
 
         }
-        private void calculoNuevoCoste(){
+        private void cambio(ArrayList<Integer> vsolGA, int i, int j){
+                int a = vsolGA.get(i);
+                int b=  vsolGA.get(j);
+
+                vsolGA.set(i, b);
+                vsolGA.set(j, a);
 
         }
         public void setMatriz(double matriz[][]){
