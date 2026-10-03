@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="16c3eeb4-ca8b-4f6c-93bb-971c770161ba" name="Changes" comment="" />
+    <list default="true" id="16c3eeb4-ca8b-4f6c-93bb-971c770161ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta/src/Algoritmos.java" beforeDir="false" afterPath="$PROJECT_DIR$/meta/src/Algoritmos.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +16,69 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000002688150883" />
+      <entry key="S5" value="1.0099134817786424" />
+      <entry key="S10" value="1.1997209592987659" />
+      <entry key="S30" value="2.979618433913636" />
+      <entry key="S60" value="4.761694274557903" />
+      <entry key="M2" value="6.462201075950375" />
+      <entry key="M5" value="8.194331123985496" />
+      <entry key="M10" value="9.006369104555956" />
+      <entry key="M15" value="9.314806260394914" />
+      <entry key="M30" value="9.645279618611767" />
+      <entry key="H1" value="9.819461511072202" />
+      <entry key="H2" value="9.908916896038896" />
+      <entry key="H4" value="9.954252516763585" />
+      <entry key="D1" value="9.992346605912688" />
+      <entry key="W1" value="9.998905949567357" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.9714785E-316" />
+      <entry key="MS500" value="7.227005916836752E-64" />
+      <entry key="S2" value="1.652551695548132E-16" />
+      <entry key="S5" value="5.862346046036855E-7" />
+      <entry key="S10" value="0.0011778926100220709" />
+      <entry key="S30" value="0.2435404566367561" />
+      <entry key="S60" value="0.9739777723856309" />
+      <entry key="M2" value="1.9669788805680664" />
+      <entry key="M5" value="3.0087598963425757" />
+      <entry key="M10" value="3.4686606936035607" />
+      <entry key="M15" value="3.6373135375372803" />
+      <entry key="M30" value="3.8142877532517567" />
+      <entry key="H1" value="3.906024767217679" />
+      <entry key="H2" value="3.9527291760769736" />
+      <entry key="H4" value="3.976293352718951" />
+      <entry key="D1" value="3.9960389613179217" />
+      <entry key="W1" value="3.999433893643763" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9201876506248751" />
+      <entry key="MS500" value="0.9835020740262483" />
+      <entry key="S2" value="0.9958517893489321" />
+      <entry key="S5" value="1.0071331591087778" />
+      <entry key="S10" value="1.1891596204108466" />
+      <entry key="S30" value="3.181770585249408" />
+      <entry key="S60" value="5.688190979860115" />
+      <entry key="M2" value="8.39069184435083" />
+      <entry key="M5" value="11.181998673676862" />
+      <entry key="M10" value="12.463265139504738" />
+      <entry key="M15" value="12.943981503187418" />
+      <entry key="M30" value="13.455344007742275" />
+      <entry key="H1" value="13.723334747948135" />
+      <entry key="H2" value="13.860560178347844" />
+      <entry key="H4" value="13.93000036932768" />
+      <entry key="D1" value="13.988294294110052" />
+      <entry key="W1" value="13.998326795441379" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="3Jb4aLaOXsCaeWgRZWXajn0jwrg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,11 +87,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Maitena/Desktop/Apuntes/3º/meta/Practica1.1-Meta/meta",
+    "last_opened_file_path": "/home/paloma/Escritorio/Metaheuristica/Practica1.1-Meta",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -47,8 +123,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
       </set>
     </attachedChunks>
   </component>
@@ -66,6 +142,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
