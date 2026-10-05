@@ -196,9 +196,9 @@ public class Algoritmos {
 
 
             //la i y la j son ciclicas
-            int i =0;
-            int j =0;
-            boolean mejora = true;              // mejora true: hay ciudades que pueden ser movidas.    mejora=false: vmascara =1 entera
+        int i =0;
+        int j =0;
+        boolean mejora = true;              // mejora true: hay ciudades que pueden ser movidas.    mejora=false: vmascara =1 entera
         boolean haymejora=false;
            //la i es ciclica
         //la j es ciclica
