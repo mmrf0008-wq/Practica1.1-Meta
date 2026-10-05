@@ -1,0 +1,108 @@
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	 Coste total: 43132.496067405984
+Iniciando algoritmo 2-OPT con DLB. Tamaño de solución: 280, Límite iteraciones: 10000
+--- Inicio de iteración global. Iteraciones actuales: 0 ---
+Evaluando posición i = 0 (DLB activo)
+i 0j 0 son adyacentes 
+i 0j 1 son adyacentes 
+    [Evaluando Factorización] i=0, j=2
+    -> Coste anterior: 219.81871453211977 | Coste nuevo: 238.3646825036185 (i=0, j=2)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=3
+    -> Coste anterior: 213.39650943026385 | Coste nuevo: 236.48527528198883 (i=0, j=3)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=4
+    -> Coste anterior: 216.51833160109229 | Coste nuevo: 242.75149062275312 (i=0, j=4)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=5
+    -> Coste anterior: 232.51833160109229 | Coste nuevo: 251.8553937113851 (i=0, j=5)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=6
+    -> Coste anterior: 203.83204010007705 | Coste nuevo: 228.0925497572748 (i=0, j=6)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=7
+    -> Coste anterior: 187.83204010007705 | Coste nuevo: 236.9734287716696 (i=0, j=7)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=8
+    -> Coste anterior: 194.4068754210906 | Coste nuevo: 231.41769930674639 (i=0, j=8)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=9
+    -> Coste anterior: 194.4068754210906 | Coste nuevo: 243.31934279709915 (i=0, j=9)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=10
+    -> Coste anterior: 200.51833160109229 | Coste nuevo: 251.62790874062242 (i=0, j=10)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=11
+    -> Coste anterior: 240.51833160109229 | Coste nuevo: 250.92952633530558 (i=0, j=11)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=12
+    -> Coste anterior: 224.51833160109229 | Coste nuevo: 289.1699637714149 (i=0, j=12)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=13
+    -> Coste anterior: 192.51833160109229 | Coste nuevo: 284.9624974994598 (i=0, j=13)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=14
+    -> Coste anterior: 208.51833160109229 | Coste nuevo: 277.4075451022731 (i=0, j=14)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=15
+    -> Coste anterior: 264.5183316010923 | Coste nuevo: 313.0445433898369 (i=0, j=15)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=16
+    -> Coste anterior: 256.5183316010923 | Coste nuevo: 272.6417515258306 (i=0, j=16)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=17
+    -> Coste anterior: 202.4068754210906 | Coste nuevo: 269.60541204962044 (i=0, j=17)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=18
+    -> Coste anterior: 215.2512856248025 | Coste nuevo: 258.37250591158283 (i=0, j=18)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=19
+    -> Coste anterior: 205.3627418048042 | Coste nuevo: 270.7797869465491 (i=0, j=19)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=20
+    -> Coste anterior: 234.20715200851612 | Coste nuevo: 298.5868838930259 (i=0, j=20)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=21
+    -> Coste anterior: 237.52086050750088 | Coste nuevo: 302.4794162874162 (i=0, j=21)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=22
+    -> Coste anterior: 213.77316559703132 | Coste nuevo: 346.1281754255315 (i=0, j=22)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=23
+    -> Coste anterior: 213.77316559703132 | Coste nuevo: 387.5281940626247 (i=0, j=23)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=24
+    -> Coste anterior: 248.65064223641807 | Coste nuevo: 371.3701169463395 (i=0, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=25
+    -> Coste anterior: 293.9054762323571 | Coste nuevo: 341.2399449251207 (i=0, j=25)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=26
+    -> Coste anterior: 300.55872315246893 | Coste nuevo: 299.3064512981953 (i=0, j=26)
+    -> Resultado: TRUE (Mejora detectada)
+Mejora 2-OPT encontrada entre i=0 y j=26. Iteración global: 1
+Iteraciones actuales 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	 Coste total: 43265.84446203414
+Iniciando algoritmo 2-OPT con DLB. Tamaño de solución: 280, Límite iteraciones: 10000
+--- Inicio de iteración global. Iteraciones actuales: 0 ---
+Evaluando posición i = 0 (DLB activo)
+i 0j 0 son adyacentes 
+i 0j 1 son adyacentes 
+    [Evaluando Factorización] i=0, j=2
+    -> Coste anterior: 200.99655168313487 | Coste nuevo: 189.8731828077456 (i=0, j=2)
+    -> Resultado: TRUE (Mejora detectada)
+Mejora 2-OPT encontrada entre i=0 y j=2. Iteración global: 1
+Iteraciones actuales 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	 Coste total: 43603.38163136597
+Iniciando algoritmo 2-OPT con DLB. Tamaño de solución: 280, Límite iteraciones: 10000
+--- Inicio de iteración global. Iteraciones actuales: 0 ---
+Evaluando posición i = 0 (DLB activo)
+i 0j 0 son adyacentes 
+i 0j 1 son adyacentes 
+    [Evaluando Factorización] i=0, j=2
+    -> Coste anterior: 219.2666530556684 | Coste nuevo: 189.34523762075577 (i=0, j=2)
+    -> Resultado: TRUE (Mejora detectada)
+Mejora 2-OPT encontrada entre i=0 y j=2. Iteración global: 1
+Iteraciones actuales 1

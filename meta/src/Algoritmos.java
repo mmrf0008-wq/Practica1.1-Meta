@@ -44,24 +44,12 @@ public class Algoritmos {
     }
 
 
-    private void printMatriz(){
-        for(int l = 0; l < matriz.length; l++){
-            for(int m = 0; m < matriz.length; m++){
-                System.out.print(" " + matriz[l][m]);
-            }
-            System.out.println("");
-        }
-    }
-
-
     public ArrayList<Integer> greedy(){
 
         MedidorTiempos.empezarContador();
 
         int n = matriz.length;
 
-
-        
         ArrayList<Candidato> vectorSolucion = new ArrayList<>();
 
         double sumatorio = 0;
@@ -98,7 +86,6 @@ public class Algoritmos {
             for (int j = 0; j < n; ++j) {
                 if (!visitado[j] && (distancia_euclidea( actual, j)  < minDistancia)) {
                     minDistancia = distancia_euclidea( actual, j);
-                    //System.out.println("minDistancia " + minDistancia + " actual " + actual + " j: "+j );
                     siguienteCiudad = j;
 
                 }
@@ -110,7 +97,6 @@ public class Algoritmos {
                 ciudadesOrdenadas.add(siguienteCiudad);
                 visitado[siguienteCiudad] = true;
                 costeTotal += minDistancia;
-                //System.out.println(" min distancia " + minDistancia);
                 actual = siguienteCiudad;
             }
         }
@@ -122,7 +108,7 @@ public class Algoritmos {
         MedidorTiempos.finalizarYMostrar("Greedy");
 
         // Devolvemos la ruta de las ciudades ordenadas
-        System.out.println("\t Coste total: " + costeTotal);
+        Log.print("\t Coste total: " + costeTotal);
 
 
         return ciudadesOrdenadas;
@@ -183,89 +169,83 @@ public class Algoritmos {
     public void DontLookbits( ArrayList<Integer> solucion, double costeAnterior ){
         MedidorTiempos.empezarContador();
 
-        //recibir solucion greedy aleatorio
+                    // recibir solucion greedy aleatorio
         int n = solucion.size();
 
-            int[] vmascara = new int[n];        //crear vector igual tamaño que solucion, vector mascara
+        int[] vmascara = new int[n];        // crear vector igual tamaño que solucion, vector mascara
 
-        System.out.println();
-        Log.print("las distnacias son");
-        for(int i =0; i <solucion.size()-1; i++){
-            Log.print("i(" + i + ") i+1 (" + (i+1) + ")= " + distancia_euclidea(i,i+1) + " ID CIUDAD I " + solucion.get(i) + " ID CIUDAD J " + solucion.get((i+1)));
-        }
+        Log.print("=================================================");
+        Log.print("=== INICIO BÚSQUEDA LOCAL CON DON'T LOOK BITS ===");
+        Log.print("Tamaño del problema (n): " + n);
+        Log.print("Solución inicial: " + solucion);
+        Log.print("=================================================");
 
+        Log.print("");
 
-            //la i y la j son ciclicas
-        int i =0;
-        int j =0;
-        boolean mejora = true;              // mejora true: hay ciudades que pueden ser movidas.    mejora=false: vmascara =1 entera
-        boolean haymejora=false;
-           //la i es ciclica
-        //la j es ciclica
-        //la condicion de parada es que no pueda mover mas (matriz entera en 1)
+            // la i y la j son ciclicas
+        int i = 0;
+        int j;
+        boolean mejora = true;              // mejora true: hay ciudades que pueden ser movidas. mejora=false: vmascara =1 entera
+        boolean haymejora = false;
 
-        while(mejora){
-            mejora=false;
-            haymejora=false;
-            if(i==n) i=0;
+        while(mejora){          // la condicion de parada es que no pueda mover mas (matriz entera en 1)
+            mejora = false;
+            haymejora = false;
+            if(i == n) i = 0;
+
             Log.print("---------------------------------------");
-            if(vmascara[i]==1){
-                Log.print("mascara en " + i + " vmascara =  " + vmascara[i]+ " =1");
+            Log.print("[EVALUANDO NODO BASE i = " + i + "]");
+
+            if(vmascara[i] == 1){
+                Log.print("Máscara activada (DLB=1) en i = " + i + ". Nodo omitido.");
                 i++;
-                continue; //descartamos aquellas que no tengan mejoras
+                continue; // descartamos aquellas que no tengan mejoras
             }
-            mejora=true;
-            j= (i + 1) % n;
-            Log.print("j = " + j + " i= "+ i);
+
+            mejora = true;
+            j = (i + 1) % n;
+            Log.print("Nodo activo (DLB=0). Iniciando exploración del vecindario con j = " + j + " para i = " + i);
 
             while(j != i && !haymejora){
-                if(factorizacion(solucion,i,j, n)){ //si hay mejora hacemos cambio
-                    Log.print("mascara en i: " + i + " y en j: " + j + " =0 ");
-                    vmascara[i]=0;
-                    vmascara[j] =0;
+                Log.print("  -> Comprobando par (i=" + i + ", j=" + j + ")");
+
+                if(factorizacion(solucion, i, j, n)){ // si hay mejora hacemos cambio
+                    Log.print("  [¡MEJORA ENCONTRADA!] Aplicando movimiento 2-opt entre i=" + i + " y j=" + j);
+                    Log.print("  Reactivando bits en máscara (DLB=0) para i: " + i + " y j: " + j);
+
+                    vmascara[i] = 0;
+                    vmascara[j] = 0;
                     cambio(solucion, i, j);
-                    haymejora=true;
+                    haymejora = true;
+
+                    Log.print("  Nueva solución tras el cambio: " + solucion);
                 }
                 j++;
-                if(j==n) j=0;
+                if(j == n) j = 0;
                 Log.print("---------------------------------------");
             }
+
             if(!haymejora){
-                Log.print("no hubo mejora en i: " + i );
-                vmascara[i]=1;
-                Log.print("vmascara[" + i +"]=1");
+                Log.print("[FIN VECINDARIO] No se encontraron mejoras para i = " + i);
+                vmascara[i] = 1;
+                Log.print("Desactivando nodo: vmascara[" + i + "] = 1");
             }
             i++;
         }
 
+        Log.print("=================================================");
+        Log.print("=== BÚSQUEDA FINALIZADA: ÓPTIMO LOCAL ALCANZADO ===");
+        Log.print("Solución final: " + solucion);
+        Log.print("=================================================");
 
-        System.out.println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("Don't look bit");
 
-        System.out.println("\t Coste total: " + costeAnterior);
-        }
-
-        private boolean factorizacion( ArrayList<Integer>solucion,int i, int j, int n ){
-
-            if (i == j || (i + 1) % n == j || (j + 1) % n == i){
-                Log.print("los nodos son contiguos, no se realiza el 2-opt");
-                return false;
-            }
-            double []costes = calculoCoste(i,j,solucion,n);
-
-            Log.print("coste anterior " + costes[1] + " costenuevo " + costes[0] + " i:"+ i + " j: " + j);
+        Log.print("\t Coste total: " + costeAnterior);
 
 
-            if (costes[1] <= costes[0]) {
-                Log.print("devuelve false");
-                return false; // no hubo mejora
-            }
-            else{
-                Log.print("DEVUELVE TRUE ");
-                return true;
-            }
 
-        }
+    }
 
     /**
      *
@@ -327,7 +307,6 @@ public class Algoritmos {
         }
 
 
-
     public ArrayList<Integer> pdlb( ArrayList<Integer> solucion, int limitIteracc, double costeActual) {
         MedidorTiempos.empezarContador();
 
@@ -336,69 +315,92 @@ public class Algoritmos {
         boolean[] dlb = new boolean[tamS]; // Para marcar las casillas de las posiciones
         boolean mejorGlo = true;
         int iteraccActuales = 0;
-        double mejoraActual=0;
-        double mejora=0;
+        double mejoraActual = 0;
+        double mejora = 0;
 
-        Log.print("Iniciando algoritmo 2-OPT con DLB. Tamaño de solución: " + tamS + ", Límite iteraciones: " + limitIteracc);
+        Log.print("=================================================");
+        Log.print("=== INICIO ALGORITMO 2-OPT CON DLB (PDLB) ===");
+        Log.print("Tamaño solución (tamS): " + tamS + " | Límite iteraciones: " + limitIteracc);
+        Log.print("Solución inicial: " + solucion);
+        Log.print("=================================================");
 
         while (mejorGlo && iteraccActuales < limitIteracc) {
             mejorGlo = false;
+            Log.print("\n-------------------------------------------------");
             Log.print("--- Inicio de iteración global. Iteraciones actuales: " + iteraccActuales + " ---");
+            Log.print("-------------------------------------------------");
+
             boolean mejorLocalAc = false; // La utilizamos para saber si hay algún movimiento de mejora en i
             boolean haymejora = false; // La utilizamos para salir del bucle de j
 
             // Recorremos todas las posiciones de i, sin/hasta superar el limite de iter.
             for (int i = 0; i < tamS && iteraccActuales < limitIteracc && !mejorLocalAc ; ++i) {
                 if (dlb[i]) { // Solo analizamos las que estén en false
+                    Log.print("[i = " + i + "] Omitido -> Marcado en DLB (dlb[" + i + "] = true)");
                     continue;
                 }
 
-
-                Log.print("Evaluando posición i = " + i + " (DLB activo)");
+                Log.print("[EVALUANDO POSICIÓN BASE i = " + i + "] (DLB activo)");
 
                 // Recorremos todas las posiciones de j, sin/hasta superar el limite de iter.
                 for (int j = 0; j < tamS && iteraccActuales < limitIteracc && !haymejora; ++j) {
                     if (adyacentes(i, j, tamS)) {
-                        Log.print("i " + i  + "j " + j + " son adyacentes ");
+                        Log.print("  -> Par (i=" + i + ", j=" + j + ") omitido por ser adyacentes");
                         continue;
                     }
+
+                    Log.print("  -> Probando movimiento 2-OPT entre i=" + i + " y j=" + j);
 
                     // Aqui hay que hacer los cambios de ciudades
                     if (factorizacion(solucion, i, j, tamS)) {
                         cambio(solucion, i, j);
 
-                        Log.print("Mejora 2-OPT encontrada entre i=" + i + " y j=" + j + ". Iteración global: " + (iteraccActuales + 1));
+                        Log.print("  [¡MEJORA ENCONTRADA!] Entre i=" + i + " y j=" + j + ". Iteración global: " + (iteraccActuales + 1));
+                        Log.print("  Nueva solución tras cambio: " + solucion);
 
                         // Encontramos mejora, asi que actualizamos todas las variables
                         //costeActual = nuevoCoste;
                         mejorLocalAc = true;
-                        double []coste = calculoCoste(i,j,solucion, tamS);
+                        double []coste = calculoCoste(i, j, solucion, tamS);
+
+                        Log.print("  Cálculo de coste -> Nuevo: " + coste[0] + " | Anterior: " + coste[1]);
+
                         if(coste[1] < coste[0]){
                             mejoraActual = coste[1];
+                            Log.print("  Mejora actual registrada: " + mejoraActual);
                         }
 
                         iteraccActuales++;
-                        Log.print("Iteraciones actuales " + iteraccActuales);
+                        Log.print("  Iteraciones acumuladas: " + iteraccActuales);
                         haymejora = true;
+                    } else {
+                        Log.print("  -> Sin mejora en par (i=" + i + ", j=" + j + ")");
                     }
                 }
+
                 if(mejoraActual < mejora){ //se ha encontrado una mejora global, se para la ejecucion
-                    mejorGlo=true;
-                }
-                if (!mejorLocalAc) {
-                    dlb[i] = true; // Si no mejora ningun movimiento de i
-                    Log.print("Sin mejora para i = " + i + ". Posición marcada en DLB (dlb[" + i + "] = true)");
+                    mejorGlo = true;
+                    Log.print("[MEJORA GLOBAL] mejoraActual (" + mejoraActual + ") < mejora (" + mejora + "). Marcando mejorGlo = true");
                 }
 
+                if (!mejorLocalAc) {
+                    dlb[i] = true; // Si no mejora ningun movimiento de i
+                    Log.print("[DLB ACTUALIZADO] Sin mejora para i = " + i + ". Posición marcada en DLB (dlb[" + i + "] = true)");
+                }
             }
         }
 
-        System.out.println("Fin de ejecución del bucle principal. Motivo de salida -> mejorGlo: " + mejorGlo + ", Iteraciones alcanzadas: " + iteraccActuales + "/" + limitIteracc);
+        Log.print("\n=================================================");
+        Log.print("=== FIN DE BÚSQUEDA / ÓPTIMO LOCAL ALCANZADO ===");
+        Log.print("Solución final: " + solucion);
+        Log.print("=================================================");
 
-        System.out.println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        Log.print("Fin de ejecución del bucle principal. Motivo de salida -> mejorGlo: " + mejorGlo + ", Iteraciones alcanzadas: " + iteraccActuales + "/" + limitIteracc);
+
+        Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("PDLB");
-        System.out.println("Coste final: " + costeActual);
-        System.out.println("Iteraciones: " + iteraccActuales);
+        Log.print("Coste final: " + costeActual);
+        Log.print("Iteraciones: " + iteraccActuales);
 
         return solucion;
     }
@@ -417,6 +419,27 @@ public class Algoritmos {
         }
 
         return false;
+    }private boolean factorizacion( ArrayList<Integer> solucion, int i, int j, int n ){
+
+        Log.print("    [Evaluando Factorización] i=" + i + ", j=" + j);
+
+        if (i == j || (i + 1) % n == j || (j + 1) % n == i){
+            Log.print("    -> Los nodos son contiguos o iguales (i=" + i + ", j=" + j + "), no se realiza el 2-opt.");
+            return false;
+        }
+
+        double []costes = calculoCoste(i, j, solucion, n);
+
+        Log.print("    -> Coste anterior: " + costes[1] + " | Coste nuevo: " + costes[0] + " (i=" + i + ", j=" + j + ")");
+
+        if (costes[1] <= costes[0]) {
+            Log.print("    -> Resultado: FALSE (El coste no disminuye)");
+            return false; // no hubo mejora
+        }
+        else{
+            Log.print("    -> Resultado: TRUE (Mejora detectada)");
+            return true;
+        }
     }
 
 }
