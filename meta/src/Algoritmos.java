@@ -191,7 +191,7 @@ public class Algoritmos {
         System.out.println();
         Log.print("las distnacias son");
         for(int i =0; i <solucion.size()-1; i++){
-            System.out.println("i(" + i + ") i+1 (" + (i+1) + ")= " + distancia_euclidea(i,i+1) + " ID CIUDAD I " + solucion.get(i) + " ID CIUDAD J " + solucion.get((i+1)));
+            Log.print("i(" + i + ") i+1 (" + (i+1) + ")= " + distancia_euclidea(i,i+1) + " ID CIUDAD I " + solucion.get(i) + " ID CIUDAD J " + solucion.get((i+1)));
         }
 
 
@@ -218,15 +218,13 @@ public class Algoritmos {
             j= (i + 1) % n;
             Log.print("j = " + j + " i= "+ i);
 
-            while(j != i ){
+            while(j != i && !haymejora){
                 if(factorizacion(solucion,i,j, n)){ //si hay mejora hacemos cambio
                     Log.print("mascara en i: " + i + " y en j: " + j + " =0 ");
                     vmascara[i]=0;
                     vmascara[j] =0;
                     cambio(solucion, i, j);
                     haymejora=true;
-
-                    break;
                 }
                 j++;
                 if(j==n) j=0;
@@ -253,15 +251,41 @@ public class Algoritmos {
                 Log.print("los nodos son contiguos, no se realiza el 2-opt");
                 return false;
             }
-            double nuevoCoste = 0;
-                    //calculamos el nuevo coste
+            double []costes = calculoCoste(i,j,solucion,n);
+
+            Log.print("coste anterior " + costes[1] + " costenuevo " + costes[0] + " i:"+ i + " j: " + j);
+
+
+            if (costes[1] <= costes[0]) {
+                Log.print("devuelve false");
+                return false; // no hubo mejora
+            }
+            else{
+                Log.print("DEVUELVE TRUE ");
+                return true;
+            }
+
+        }
+
+    /**
+     *
+     * @param i
+     * @param j
+     * @param solucion
+     * @param n
+     * @return coste[1]  coste Actual , coste[0] costeAnterior
+     */
+        public double[] calculoCoste(int i , int j, ArrayList<Integer> solucion, int n ){
+
+            double []costes = new double[2];
+            double nuevoCoste =0;
+            double costeAnterior=0;
+
+            //calculamos el nuevo coste
             if(i>=1) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(i-1));
             if(i==0) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(n-1));
 
-            if(i < (n-1)){
-                nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(i+1));
-               // System.out.println("coste" + distancia_euclidea(solucion.get(j), solucion.get(i+1)));
-            }
+            if(i < (n-1)) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(i+1));
             if(i == n-1) nuevoCoste += distancia_euclidea(solucion.get(j),solucion.getFirst());
 
             if(j>= 1) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(j-1));
@@ -272,7 +296,7 @@ public class Algoritmos {
 
             /*********************************************************************************/
 
-            double costeAnterior =0;
+
             if(i>=1) costeAnterior += distancia_euclidea(solucion.get(i),solucion.get(i-1));
             if(i==0) costeAnterior += distancia_euclidea(solucion.get(i),solucion.get(n-1));
 
@@ -285,17 +309,10 @@ public class Algoritmos {
             if(j < n-1) costeAnterior += distancia_euclidea(solucion.get(j),solucion.get(j+1));
             if( j == n-1) costeAnterior += distancia_euclidea(solucion.get(j),solucion.getFirst());
 
-            Log.print("coste anterior " + costeAnterior + " costenuevo " + nuevoCoste + " i:"+ i + " j: " + j);
+            costes[0] = nuevoCoste;
+            costes[1] = costeAnterior;
 
-            if (costeAnterior <= nuevoCoste) {
-                Log.print("devuelve false");
-                return false; // no hubo mejora
-            }
-            else{
-                Log.print("DEVUELVE TRUE ");
-                return true;
-            }
-
+            return  costes;
         }
         private void cambio(ArrayList<Integer> vsolGA, int i, int j){
                 int a = vsolGA.get(i);
@@ -311,120 +328,79 @@ public class Algoritmos {
 
 
 
-    public ArrayList<Integer> pdlb( ArrayList<Integer> solIni) {
+    public ArrayList<Integer> pdlb( ArrayList<Integer> solucion, int limitIteracc, double costeActual) {
         MedidorTiempos.empezarContador();
 
-        ArrayList<Integer> solucion = new ArrayList<>(solIni);
         int tamS = solucion.size();
-        double costeActual = calcularCoste(solucion);
+
         boolean[] dlb = new boolean[tamS]; // Para marcar las casillas de las posiciones
         boolean mejorGlo = true;
         int iteraccActuales = 0;
-        int limitIteracc = 10000;
+        double mejoraActual=0;
+        double mejora=0;
+
+        Log.print("Iniciando algoritmo 2-OPT con DLB. Tamaño de solución: " + tamS + ", Límite iteraciones: " + limitIteracc);
 
         while (mejorGlo && iteraccActuales < limitIteracc) {
             mejorGlo = false;
+            Log.print("--- Inicio de iteración global. Iteraciones actuales: " + iteraccActuales + " ---");
+            boolean mejorLocalAc = false; // La utilizamos para saber si hay algún movimiento de mejora en i
+            boolean haymejora = false; // La utilizamos para salir del bucle de j
 
             // Recorremos todas las posiciones de i, sin/hasta superar el limite de iter.
-            for (int i = 0; i < tamS && iteraccActuales < limitIteracc; ++i) {
-                if (dlb[i] == true) { // Solo analizamos las que estén en false
+            for (int i = 0; i < tamS && iteraccActuales < limitIteracc && !mejorLocalAc ; ++i) {
+                if (dlb[i]) { // Solo analizamos las que estén en false
                     continue;
                 }
 
-                boolean mejorLocalAc = false; // La utilizamos para saber si hay algún movimiento de mejora en i
-                boolean haymejora = false; // La utilizamos para salir del bucle de j
+
+                Log.print("Evaluando posición i = " + i + " (DLB activo)");
 
                 // Recorremos todas las posiciones de j, sin/hasta superar el limite de iter.
                 for (int j = 0; j < tamS && iteraccActuales < limitIteracc && !haymejora; ++j) {
                     if (adyacentes(i, j, tamS)) {
+                        Log.print("i " + i  + "j " + j + " son adyacentes ");
                         continue;
                     }
 
                     // Aqui hay que hacer los cambios de ciudades
-                    double nuevoCoste = calcularFactorizacion(solucion, costeActual, i, j);
-                    if (nuevoCoste < costeActual) {
-                        intercambiar2OPT(solucion, i, j);
-                        // Encontramos mejora, asi que actualizamos todas las variables
-                        costeActual = nuevoCoste;
-                        mejorLocalAc = true;
-                        mejorGlo = true;
-                        ++iteraccActuales;
-                        haymejora = true;
+                    if (factorizacion(solucion, i, j, tamS)) {
+                        cambio(solucion, i, j);
 
+                        Log.print("Mejora 2-OPT encontrada entre i=" + i + " y j=" + j + ". Iteración global: " + (iteraccActuales + 1));
+
+                        // Encontramos mejora, asi que actualizamos todas las variables
+                        //costeActual = nuevoCoste;
+                        mejorLocalAc = true;
+                        double []coste = calculoCoste(i,j,solucion, tamS);
+                        if(coste[1] < coste[0]){
+                            mejoraActual = coste[1];
+                        }
+
+                        iteraccActuales++;
+                        Log.print("Iteraciones actuales " + iteraccActuales);
+                        haymejora = true;
                     }
                 }
-
-                if(!mejorLocalAc) {
-                    dlb[i] = true; // Si no mejora ningun movimiento de i
+                if(mejoraActual < mejora){ //se ha encontrado una mejora global, se para la ejecucion
+                    mejorGlo=true;
                 }
+                if (!mejorLocalAc) {
+                    dlb[i] = true; // Si no mejora ningun movimiento de i
+                    Log.print("Sin mejora para i = " + i + ". Posición marcada en DLB (dlb[" + i + "] = true)");
+                }
+
             }
         }
-        System.out.printf("Coste final: " + costeActual);
-        System.out.printf("Iteraciones: " + iteraccActuales);
-        MedidorTiempos.finalizarYMostrar("DLB: ");
+
+        System.out.println("Fin de ejecución del bucle principal. Motivo de salida -> mejorGlo: " + mejorGlo + ", Iteraciones alcanzadas: " + iteraccActuales + "/" + limitIteracc);
+
+        System.out.println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        MedidorTiempos.finalizarYMostrar("PDLB");
+        System.out.println("Coste final: " + costeActual);
+        System.out.println("Iteraciones: " + iteraccActuales);
+
         return solucion;
-    }
-
-
-    /**
-     * @brief Esta función calcula el coste total de la solucion.
-     * @param solucion La solucion que vamos a evaluar.
-     * @return Devuelve el coste total.
-     */
-
-    private double calcularCoste(ArrayList<Integer> solucion) {
-        double costeT = 0.0;
-        int tam = solucion.size();
-
-        for(int i = 0; i < tam; ++i) {
-            int ciudadAc = solucion.get(i);
-            int ciudadSig = solucion.get((i+1) % tam); // Si estamos en el utimo pasa al primero
-            costeT += distancia_euclidea(ciudadAc, ciudadSig);
-        }
-        return costeT;
-    }
-
-    /**
-     * @brief Esta función calcula el coste que supone el intercambio de ciudades.
-     * @param solucion
-     * @param costeActual
-     * @param i
-     * @param j
-     * @return
-     */
-
-    private double calcularFactorizacion(ArrayList<Integer> solucion, double costeActual, int i, int j) {
-        int tam = solucion.size();
-        int posAn = (i - 1 + tam) % tam;
-        int posSig = (j + 1) % tam;
-        int ciudadAnt = solucion.get(posAn);
-        int ciudadSig = solucion.get(posSig);
-        int ciudadI = solucion.get(i);
-        int ciudadJ = solucion.get(j);
-
-        // Intercambiamos los arcos a cambiar, para calcular el coste que produce dicho cambio
-        double arcoElimi = distancia_euclidea(ciudadAnt, ciudadI) + distancia_euclidea(ciudadJ, ciudadSig);
-        double arcoNuevo = distancia_euclidea(ciudadAnt, ciudadJ) + distancia_euclidea(ciudadI, ciudadSig);
-        // Calculamos el coste del intercambio
-        double costeFac = costeActual - arcoElimi + arcoNuevo;
-
-        return costeFac;
-    }
-
-    /**
-     * @brief Esta función realiza el intercambio de ciudades.
-     * @param solucion
-     * @param i
-     * @param j
-     */
-
-    private void intercambiar2OPT(ArrayList<Integer> solucion, int i, int j) {
-        while (i < j) {
-            int ciudadAux = solucion.get(i);
-            solucion.set(i, solucion.get(j)); // Intercambiamos la primera ciudad con la segunda
-            solucion.set(j, ciudadAux);
-            ++i; --j;
-        }
     }
 
     private boolean adyacentes (int i, int j, int tam) {

@@ -13,7 +13,7 @@ public class Configuracion {
     Integer parametros;
     Integer indiceSemilla;
     Integer k;
-
+    Integer limitIteraciones;
 
     public Configuracion(String ruta){
         archivos= new ArrayList<>();
@@ -53,6 +53,9 @@ public class Configuracion {
                     case "K":
                         k = Integer.parseInt(split[1]);
                         break;
+                    case "limitIterac":
+                        limitIteraciones = Integer.parseInt(split[1]);
+                        break;
                 }
             }
         } catch (FileNotFoundException e) {
@@ -75,5 +78,6 @@ public class Configuracion {
     public void setIndiceSemilla(int i){
         this.indiceSemilla =i;
     }
+    public int  getLimitIteraciones(){return this.limitIteraciones;}
 
 }
