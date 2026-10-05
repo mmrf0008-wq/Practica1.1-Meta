@@ -13,6 +13,7 @@ public class Main {
         Algoritmos algoritmos= new Algoritmos();
         double costeTotal=0.0;
         ArrayList<Integer> solucion = new ArrayList<>() ;
+        Log.inicializar();
 
         //comando terminal sacar logs  javac *.java && java Main >> log.txt
         switch(algoritmo) {

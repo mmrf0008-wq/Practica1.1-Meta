@@ -2,6 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class ArchivoDatos {
     private double matriz1[][];
@@ -61,6 +66,22 @@ public class ArchivoDatos {
     public double[][] getMatriz1() {
         return matriz1;
     }
+    public static void escrituraFichero(String contenido){
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
+        String timestamp = LocalDateTime.now().format(formato);
 
+        // 2. Construir el nombre dinámico del archivo
+        String nombreArchivo = "mensaje_" + timestamp + ".txt";
+        Path ruta = Paths.get(nombreArchivo);
+
+
+        try {
+            // Escribe el archivo. Al tener un nombre único, siempre se creará uno nuevo
+            Files.writeString(ruta, contenido);
+            System.out.println("Se ha creado un nuevo archivo: " + ruta.toAbsolutePath());
+        } catch (IOException e) {
+            System.err.println("Error al crear el archivo: " + e.getMessage());
+        }
+    }
 }
 

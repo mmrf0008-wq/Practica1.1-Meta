@@ -1,0 +1,81 @@
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	 Coste total: 43132.496067405984
+Iniciando algoritmo 2-OPT con DLB. Tamaño de solución: 280, Límite iteraciones: 10000
+--- Inicio de iteración global. Iteraciones actuales: 0 ---
+Evaluando posición i = 0 (DLB activo)
+i 0j 0 son adyacentes 
+i 0j 1 son adyacentes 
+coste anterior 219.81871453211977 costenuevo 238.3646825036185 i:0 j: 2
+devuelve false
+coste anterior 213.39650943026385 costenuevo 236.48527528198883 i:0 j: 3
+devuelve false
+coste anterior 216.51833160109229 costenuevo 242.75149062275312 i:0 j: 4
+devuelve false
+coste anterior 232.51833160109229 costenuevo 251.8553937113851 i:0 j: 5
+devuelve false
+coste anterior 203.83204010007705 costenuevo 228.0925497572748 i:0 j: 6
+devuelve false
+coste anterior 187.83204010007705 costenuevo 236.9734287716696 i:0 j: 7
+devuelve false
+coste anterior 194.4068754210906 costenuevo 231.41769930674639 i:0 j: 8
+devuelve false
+coste anterior 194.4068754210906 costenuevo 243.31934279709915 i:0 j: 9
+devuelve false
+coste anterior 200.51833160109229 costenuevo 251.62790874062242 i:0 j: 10
+devuelve false
+coste anterior 240.51833160109229 costenuevo 250.92952633530558 i:0 j: 11
+devuelve false
+coste anterior 224.51833160109229 costenuevo 289.1699637714149 i:0 j: 12
+devuelve false
+coste anterior 192.51833160109229 costenuevo 284.9624974994598 i:0 j: 13
+devuelve false
+coste anterior 208.51833160109229 costenuevo 277.4075451022731 i:0 j: 14
+devuelve false
+coste anterior 264.5183316010923 costenuevo 313.0445433898369 i:0 j: 15
+devuelve false
+coste anterior 256.5183316010923 costenuevo 272.6417515258306 i:0 j: 16
+devuelve false
+coste anterior 202.4068754210906 costenuevo 269.60541204962044 i:0 j: 17
+devuelve false
+coste anterior 215.2512856248025 costenuevo 258.37250591158283 i:0 j: 18
+devuelve false
+coste anterior 205.3627418048042 costenuevo 270.7797869465491 i:0 j: 19
+devuelve false
+coste anterior 234.20715200851612 costenuevo 298.5868838930259 i:0 j: 20
+devuelve false
+coste anterior 237.52086050750088 costenuevo 302.4794162874162 i:0 j: 21
+devuelve false
+coste anterior 213.77316559703132 costenuevo 346.1281754255315 i:0 j: 22
+devuelve false
+coste anterior 213.77316559703132 costenuevo 387.5281940626247 i:0 j: 23
+devuelve false
+coste anterior 248.65064223641807 costenuevo 371.3701169463395 i:0 j: 24
+devuelve false
+coste anterior 293.9054762323571 costenuevo 341.2399449251207 i:0 j: 25
+devuelve false
+coste anterior 300.55872315246893 costenuevo 299.3064512981953 i:0 j: 26
+DEVUELVE TRUE 
+Mejora 2-OPT encontrada entre i=0 y j=26. Iteración global: 1
+Iteraciones actuales 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	 Coste total: 43265.84446203414
+Iniciando algoritmo 2-OPT con DLB. Tamaño de solución: 280, Límite iteraciones: 10000
+--- Inicio de iteración global. Iteraciones actuales: 0 ---
+Evaluando posición i = 0 (DLB activo)
+i 0j 0 son adyacentes 
+i 0j 1 son adyacentes 
+coste anterior 200.99655168313487 costenuevo 189.8731828077456 i:0 j: 2
+DEVUELVE TRUE 
+Mejora 2-OPT encontrada entre i=0 y j=2. Iteración global: 1
+Iteraciones actuales 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	 Coste total: 43603.38163136597
+Iniciando algoritmo 2-OPT con DLB. Tamaño de solución: 280, Límite iteraciones: 10000
+--- Inicio de iteración global. Iteraciones actuales: 0 ---
+Evaluando posición i = 0 (DLB activo)
+i 0j 0 son adyacentes 
+i 0j 1 son adyacentes 
+coste anterior 219.2666530556684 costenuevo 189.34523762075577 i:0 j: 2
+DEVUELVE TRUE 
+Mejora 2-OPT encontrada entre i=0 y j=2. Iteración global: 1
+Iteraciones actuales 1
