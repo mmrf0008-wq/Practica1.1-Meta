@@ -310,5 +310,138 @@ public class Algoritmos {
         }
 
 
+
+    public ArrayList<Integer> pdlb( ArrayList<Integer> solIni) {
+        MedidorTiempos.empezarContador();
+
+        ArrayList<Integer> solucion = new ArrayList<>(solIni);
+        int tamS = solucion.size();
+        double costeActual = calcularCoste(solucion);
+        boolean[] dlb = new boolean[tamS]; // Para marcar las casillas de las posiciones
+        boolean mejorGlo = true;
+        int iteraccActuales = 0;
+        int limitIteracc = 10000;
+
+        while (mejorGlo && iteraccActuales < limitIteracc) {
+            mejorGlo = false;
+
+            // Recorremos todas las posiciones de i, sin/hasta superar el limite de iter.
+            for (int i = 0; i < tamS && iteraccActuales < limitIteracc; ++i) {
+                if (dlb[i] == true) { // Solo analizamos las que estén en false
+                    continue;
+                }
+
+                boolean mejorLocalAc = false; // La utilizamos para saber si hay algún movimiento de mejora en i
+                boolean haymejora = false; // La utilizamos para salir del bucle de j
+
+                // Recorremos todas las posiciones de j, sin/hasta superar el limite de iter.
+                for (int j = 0; j < tamS && iteraccActuales < limitIteracc && !haymejora; ++j) {
+                    if (adyacentes(i, j, tamS)) {
+                        continue;
+                    }
+
+                    // Aqui hay que hacer los cambios de ciudades
+                    double nuevoCoste = calcularFactorizacion(solucion, costeActual, i, j);
+                    if (nuevoCoste < costeActual) {
+                        intercambiar2OPT(solucion, i, j);
+                        // Encontramos mejora, asi que actualizamos todas las variables
+                        costeActual = nuevoCoste;
+                        mejorLocalAc = true;
+                        mejorGlo = true;
+                        ++iteraccActuales;
+                        haymejora = true;
+
+                    }
+                }
+
+                if(!mejorLocalAc) {
+                    dlb[i] = true; // Si no mejora ningun movimiento de i
+                }
+            }
+        }
+        System.out.printf("Coste final: " + costeActual);
+        System.out.printf("Iteraciones: " + iteraccActuales);
+        MedidorTiempos.finalizarYMostrar("DLB: ");
+        return solucion;
+    }
+
+
+    /**
+     * @brief Esta función calcula el coste total de la solucion.
+     * @param solucion La solucion que vamos a evaluar.
+     * @return Devuelve el coste total.
+     */
+
+    private double calcularCoste(ArrayList<Integer> solucion) {
+        double costeT = 0.0;
+        int tam = solucion.size();
+
+        for(int i = 0; i < tam; ++i) {
+            int ciudadAc = solucion.get(i);
+            int ciudadSig = solucion.get((i+1) % tam); // Si estamos en el utimo pasa al primero
+            costeT += distancia_euclidea(ciudadAc, ciudadSig);
+        }
+        return costeT;
+    }
+
+    /**
+     * @brief Esta función calcula el coste que supone el intercambio de ciudades.
+     * @param solucion
+     * @param costeActual
+     * @param i
+     * @param j
+     * @return
+     */
+
+    private double calcularFactorizacion(ArrayList<Integer> solucion, double costeActual, int i, int j) {
+        int tam = solucion.size();
+        int posAn = (i - 1 + tam) % tam;
+        int posSig = (j + 1) % tam;
+        int ciudadAnt = solucion.get(posAn);
+        int ciudadSig = solucion.get(posSig);
+        int ciudadI = solucion.get(i);
+        int ciudadJ = solucion.get(j);
+
+        // Intercambiamos los arcos a cambiar, para calcular el coste que produce dicho cambio
+        double arcoElimi = distancia_euclidea(ciudadAnt, ciudadI) + distancia_euclidea(ciudadJ, ciudadSig);
+        double arcoNuevo = distancia_euclidea(ciudadAnt, ciudadJ) + distancia_euclidea(ciudadI, ciudadSig);
+        // Calculamos el coste del intercambio
+        double costeFac = costeActual - arcoElimi + arcoNuevo;
+
+        return costeFac;
+    }
+
+    /**
+     * @brief Esta función realiza el intercambio de ciudades.
+     * @param solucion
+     * @param i
+     * @param j
+     */
+
+    private void intercambiar2OPT(ArrayList<Integer> solucion, int i, int j) {
+        while (i < j) {
+            int ciudadAux = solucion.get(i);
+            solucion.set(i, solucion.get(j)); // Intercambiamos la primera ciudad con la segunda
+            solucion.set(j, ciudadAux);
+            ++i; --j;
+        }
+    }
+
+    private boolean adyacentes (int i, int j, int tam) {
+        if (i == j) {
+            return true;
+        }
+
+        if (((i + 1) % tam) == j) {
+            return true;
+        }
+
+        if (((j + 1) % tam) == i) {
+            return true;
+        }
+
+        return false;
+    }
+
 }
 

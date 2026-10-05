@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="16c3eeb4-ca8b-4f6c-93bb-971c770161ba" name="Changes" comment="" />
+    <list default="true" id="16c3eeb4-ca8b-4f6c-93bb-971c770161ba" name="Changes" comment="Propuesta dlb">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +15,69 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000006077719275" />
+      <entry key="MS500" value="1.0652066792685033" />
+      <entry key="S2" value="2.0820757636983105" />
+      <entry key="S5" value="3.7383775548857963" />
+      <entry key="S10" value="5.188369691036331" />
+      <entry key="S30" value="7.176170226041621" />
+      <entry key="S60" value="8.995931102205361" />
+      <entry key="M2" value="11.444212823635725" />
+      <entry key="M5" value="14.470628458005503" />
+      <entry key="M10" value="16.017834079435488" />
+      <entry key="M15" value="16.62321510853767" />
+      <entry key="M30" value="17.28189991154523" />
+      <entry key="H1" value="17.633110310020932" />
+      <entry key="H2" value="17.814540754108794" />
+      <entry key="H4" value="17.90675977518538" />
+      <entry key="D1" value="17.984388442238828" />
+      <entry key="W1" value="17.997768018015496" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="3.163170648210604E-120" />
+      <entry key="S2" value="1.3441449571390292E-30" />
+      <entry key="S5" value="1.3557757817450679E-12" />
+      <entry key="S10" value="1.7912817765278327E-6" />
+      <entry key="S30" value="0.02800639347959347" />
+      <entry key="S60" value="0.33028745670673665" />
+      <entry key="M2" value="1.1454370180883429" />
+      <entry key="M5" value="2.423573185359687" />
+      <entry key="M10" value="3.113121870461811" />
+      <entry key="M15" value="3.38431107112999" />
+      <entry key="M30" value="3.679240874155107" />
+      <entry key="H1" value="3.8362541975991182" />
+      <entry key="H2" value="3.9172676978960137" />
+      <entry key="H4" value="3.958416727029203" />
+      <entry key="D1" value="3.993039103905113" />
+      <entry key="W1" value="3.9990048404389458" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9726555344809905" />
+      <entry key="MS500" value="1.0591985415888128" />
+      <entry key="S2" value="2.0784722844334445" />
+      <entry key="S5" value="3.7354490524876334" />
+      <entry key="S10" value="5.18617661962202" />
+      <entry key="S30" value="7.1984041100337" />
+      <entry key="S60" value="9.309561364786747" />
+      <entry key="M2" value="12.566945401485897" />
+      <entry key="M5" value="16.877091567233123" />
+      <entry key="M10" value="19.120336544825555" />
+      <entry key="M15" value="19.99991341318769" />
+      <entry key="M30" value="20.957046609700967" />
+      <entry key="H1" value="21.467241220654763" />
+      <entry key="H2" value="21.73072720207614" />
+      <entry key="H4" value="21.864630904402603" />
+      <entry key="D1" value="21.977335916377523" />
+      <entry key="W1" value="21.996759751342974" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="3Jb4aLaOXsCaeWgRZWXajn0jwrg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,11 +86,25 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Maitena/Desktop/Apuntes/3º/meta/Practica1.1-Meta/meta",
+    "last_opened_file_path": "/home/paloma/Escritorio/Metaheuristica/Practica1.1-Meta",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -47,8 +125,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
       </set>
     </attachedChunks>
   </component>
@@ -66,6 +144,21 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Propuesta dlb" />
+    <option name="LAST_COMMIT_MESSAGE" value="Propuesta dlb" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
