@@ -399,7 +399,9 @@ public class Algoritmos {
 
         Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("PDLB");
+        System.out.printf("Coste total: " + costeActual);
         Log.print("Coste final: " + costeActual);
+        System.out.printf("Iteraciones: " + iteraccActuales);
         Log.print("Iteraciones: " + iteraccActuales);
 
         return solucion;
@@ -419,7 +421,9 @@ public class Algoritmos {
         }
 
         return false;
-    }private boolean factorizacion( ArrayList<Integer> solucion, int i, int j, int n ){
+    }
+
+    private boolean factorizacion( ArrayList<Integer> solucion, int i, int j, int n ){
 
         Log.print("    [Evaluando Factorización] i=" + i + ", j=" + j);
 
