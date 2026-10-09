@@ -317,79 +317,49 @@ public class Algoritmos {
         int iteraccActuales = 0;
         double mejoraActual = 0;
         double mejora = 0;
-
-        Log.print("=================================================");
-        Log.print("=== INICIO ALGORITMO 2-OPT CON DLB (PDLB) ===");
-        Log.print("Tamaño solución (tamS): " + tamS + " | Límite iteraciones: " + limitIteracc);
-        Log.print("Solución inicial: " + solucion);
-        Log.print("=================================================");
+        int i=0;
+        int j =0;
+        boolean mejorLocalAc = false;
+        boolean haymejora = false;
 
         while (mejorGlo && iteraccActuales < limitIteracc) {
             mejorGlo = false;
-            Log.print("\n-------------------------------------------------");
-            Log.print("--- Inicio de iteración global. Iteraciones actuales: " + iteraccActuales + " ---");
-            Log.print("-------------------------------------------------");
-
-            boolean mejorLocalAc = false; // La utilizamos para saber si hay algún movimiento de mejora en i
-            boolean haymejora = false; // La utilizamos para salir del bucle de j
-
-            // Recorremos todas las posiciones de i, sin/hasta superar el limite de iter.
-            for (int i = 0; i < tamS && iteraccActuales < limitIteracc && !mejorLocalAc ; ++i) {
-                if (dlb[i]) { // Solo analizamos las que estén en false
-                    Log.print("[i = " + i + "] Omitido -> Marcado en DLB (dlb[" + i + "] = true)");
+                if (dlb[i]) {
                     continue;
                 }
-
-                Log.print("[EVALUANDO POSICIÓN BASE i = " + i + "] (DLB activo)");
-
-                // Recorremos todas las posiciones de j, sin/hasta superar el limite de iter.
-                for (int j = 0; j < tamS && iteraccActuales < limitIteracc && !haymejora; ++j) {
+                mejorGlo = true;
+                j=(i + 1) % tamS;
+                while( j != i && iteraccActuales < limitIteracc && !haymejora) {
                     if (adyacentes(i, j, tamS)) {
-                        Log.print("  -> Par (i=" + i + ", j=" + j + ") omitido por ser adyacentes");
+                        j++;
+                        if(j==tamS) j=0;
                         continue;
                     }
-
-                    Log.print("  -> Probando movimiento 2-OPT entre i=" + i + " y j=" + j);
-
-                    // Aqui hay que hacer los cambios de ciudades
                     if (factorizacion(solucion, i, j, tamS)) {
                         cambio(solucion, i, j);
 
-                        Log.print("  [¡MEJORA ENCONTRADA!] Entre i=" + i + " y j=" + j + ". Iteración global: " + (iteraccActuales + 1));
-                        Log.print("  Nueva solución tras cambio: " + solucion);
-
-                        // Encontramos mejora, asi que actualizamos todas las variables
-                        //costeActual = nuevoCoste;
                         mejorLocalAc = true;
                         double []coste = calculoCoste(i, j, solucion, tamS);
 
-                        Log.print("  Cálculo de coste -> Nuevo: " + coste[0] + " | Anterior: " + coste[1]);
-
                         if(coste[1] < coste[0]){
-                            mejoraActual = coste[1];
-                            Log.print("  Mejora actual registrada: " + mejoraActual);
+                            mejoraActual+= coste[1];
                         }
-
                         iteraccActuales++;
-                        Log.print("  Iteraciones acumuladas: " + iteraccActuales);
                         haymejora = true;
-                    } else {
-                        Log.print("  -> Sin mejora en par (i=" + i + ", j=" + j + ")");
                     }
-                }
+                    j++;
+                    if(j== tamS)j=0;
 
-                if(mejoraActual < mejora){ //se ha encontrado una mejora global, se para la ejecucion
-                    mejorGlo = true;
-                    Log.print("[MEJORA GLOBAL] mejoraActual (" + mejoraActual + ") < mejora (" + mejora + "). Marcando mejorGlo = true");
                 }
-
                 if (!mejorLocalAc) {
-                    dlb[i] = true; // Si no mejora ningun movimiento de i
-                    Log.print("[DLB ACTUALIZADO] Sin mejora para i = " + i + ". Posición marcada en DLB (dlb[" + i + "] = true)");
+                    dlb[i] = true;
                 }
-            }
-        }
+                i++;
+                haymejora=false;
+                if(i== tamS) i =0;
+                mejorLocalAc =false;
 
+        }
         Log.print("\n=================================================");
         Log.print("=== FIN DE BÚSQUEDA / ÓPTIMO LOCAL ALCANZADO ===");
         Log.print("Solución final: " + solucion);
@@ -399,12 +369,12 @@ public class Algoritmos {
 
         Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("PDLB");
-        System.out.printf("Coste total: " + costeActual);
-        Log.print("Coste final: " + costeActual);
+        System.out.printf("Coste total: " + mejoraActual);
+        Log.print("Coste final: " + mejoraActual);
         System.out.printf("Iteraciones: " + iteraccActuales);
-        Log.print("Iteraciones: " + iteraccActuales);
-
-        return solucion;
+        Log.print("\nIteraciones: " + iteraccActuales);
+        System.out.println();
+        return  solucion;
     }
 
     private boolean adyacentes (int i, int j, int tam) {
@@ -412,11 +382,7 @@ public class Algoritmos {
             return true;
         }
 
-        if (((i + 1) % tam) == j) {
-            return true;
-        }
-
-        if (((j + 1) % tam) == i) {
+        if (((i + 1) % tam) == j || ((j + 1) % tam) == i) {
             return true;
         }
 

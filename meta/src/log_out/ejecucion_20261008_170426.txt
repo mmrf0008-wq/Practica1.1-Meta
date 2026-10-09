@@ -1,0 +1,2998 @@
+	 Coste total: 3316.971569888492
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	 Coste total: 43132.496067405984
+    [Evaluando Factorización] i=0, j=2
+    -> Coste anterior: 219.81871453211977 | Coste nuevo: 238.3646825036185 (i=0, j=2)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=3
+    -> Coste anterior: 213.39650943026385 | Coste nuevo: 236.48527528198883 (i=0, j=3)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=4
+    -> Coste anterior: 216.51833160109229 | Coste nuevo: 242.75149062275312 (i=0, j=4)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=5
+    -> Coste anterior: 232.51833160109229 | Coste nuevo: 251.8553937113851 (i=0, j=5)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=6
+    -> Coste anterior: 203.83204010007705 | Coste nuevo: 228.0925497572748 (i=0, j=6)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=7
+    -> Coste anterior: 187.83204010007705 | Coste nuevo: 236.9734287716696 (i=0, j=7)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=8
+    -> Coste anterior: 194.4068754210906 | Coste nuevo: 231.41769930674639 (i=0, j=8)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=9
+    -> Coste anterior: 194.4068754210906 | Coste nuevo: 243.31934279709915 (i=0, j=9)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=10
+    -> Coste anterior: 200.51833160109229 | Coste nuevo: 251.62790874062242 (i=0, j=10)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=11
+    -> Coste anterior: 240.51833160109229 | Coste nuevo: 250.92952633530558 (i=0, j=11)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=12
+    -> Coste anterior: 224.51833160109229 | Coste nuevo: 289.1699637714149 (i=0, j=12)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=13
+    -> Coste anterior: 192.51833160109229 | Coste nuevo: 284.9624974994598 (i=0, j=13)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=14
+    -> Coste anterior: 208.51833160109229 | Coste nuevo: 277.4075451022731 (i=0, j=14)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=15
+    -> Coste anterior: 264.5183316010923 | Coste nuevo: 313.0445433898369 (i=0, j=15)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=16
+    -> Coste anterior: 256.5183316010923 | Coste nuevo: 272.6417515258306 (i=0, j=16)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=17
+    -> Coste anterior: 202.4068754210906 | Coste nuevo: 269.60541204962044 (i=0, j=17)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=18
+    -> Coste anterior: 215.2512856248025 | Coste nuevo: 258.37250591158283 (i=0, j=18)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=19
+    -> Coste anterior: 205.3627418048042 | Coste nuevo: 270.7797869465491 (i=0, j=19)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=20
+    -> Coste anterior: 234.20715200851612 | Coste nuevo: 298.5868838930259 (i=0, j=20)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=21
+    -> Coste anterior: 237.52086050750088 | Coste nuevo: 302.4794162874162 (i=0, j=21)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=22
+    -> Coste anterior: 213.77316559703132 | Coste nuevo: 346.1281754255315 (i=0, j=22)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=23
+    -> Coste anterior: 213.77316559703132 | Coste nuevo: 387.5281940626247 (i=0, j=23)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=24
+    -> Coste anterior: 248.65064223641807 | Coste nuevo: 371.3701169463395 (i=0, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=25
+    -> Coste anterior: 293.9054762323571 | Coste nuevo: 341.2399449251207 (i=0, j=25)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=0, j=26
+    -> Coste anterior: 300.55872315246893 | Coste nuevo: 299.3064512981953 (i=0, j=26)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=1, j=3
+    -> Coste anterior: 105.9479980897899 | Coste nuevo: 123.3003829310275 (i=1, j=3)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=1, j=4
+    -> Coste anterior: 109.06982026061837 | Coste nuevo: 117.51351565873807 (i=1, j=4)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=1, j=5
+    -> Coste anterior: 125.06982026061837 | Coste nuevo: 108.16926580946195 (i=1, j=5)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=2, j=4
+    -> Coste anterior: 85.82244973917071 | Coste nuevo: 99.3003829310275 (i=2, j=4)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=2, j=5
+    -> Coste anterior: 93.82244973917071 | Coste nuevo: 105.84179910711786 (i=2, j=5)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=2, j=6
+    -> Coste anterior: 73.13615823815547 | Coste nuevo: 72.03470205158735 (i=2, j=6)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=3, j=5
+    -> Coste anterior: 62.42220510185596 | Coste nuevo: 92.87817782917155 (i=3, j=5)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=6
+    -> Coste anterior: 56.03470205158735 | Coste nuevo: 115.73034292711618 (i=3, j=6)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=7
+    -> Coste anterior: 49.612496949731394 | Coste nuevo: 89.49010760950335 (i=3, j=7)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=8
+    -> Coste anterior: 41.88854381999832 | Coste nuevo: 82.87338882493961 (i=3, j=8)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=9
+    -> Coste anterior: 41.88854381999832 | Coste nuevo: 107.38859867143636 (i=3, j=9)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=10
+    -> Coste anterior: 48.0 | Coste nuevo: 91.85823382988089 (i=3, j=10)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=11
+    -> Coste anterior: 88.0 | Coste nuevo: 96.5877385217023 (i=3, j=11)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=12
+    -> Coste anterior: 72.0 | Coste nuevo: 161.9292410985899 (i=3, j=12)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=13
+    -> Coste anterior: 40.0 | Coste nuevo: 202.61441857990218 (i=3, j=13)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=14
+    -> Coste anterior: 56.0 | Coste nuevo: 202.71354972863924 (i=3, j=14)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=15
+    -> Coste anterior: 112.0 | Coste nuevo: 181.1174882077502 (i=3, j=15)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=3, j=16
+    -> Coste anterior: 104.0 | Coste nuevo: 101.70031430537148 (i=3, j=16)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=4, j=6
+    -> Coste anterior: 80.03470205158735 | Coste nuevo: 118.5392260260815 (i=4, j=6)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=7
+    -> Coste anterior: 73.6124969497314 | Coste nuevo: 104.03506804898055 (i=4, j=7)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=8
+    -> Coste anterior: 65.88854381999832 | Coste nuevo: 99.38859867143636 (i=4, j=8)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=9
+    -> Coste anterior: 65.88854381999832 | Coste nuevo: 108.29855350392606 (i=4, j=9)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=10
+    -> Coste anterior: 72.0 | Coste nuevo: 92.10586460772704 (i=4, j=10)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=11
+    -> Coste anterior: 112.0 | Coste nuevo: 122.85160878121212 (i=4, j=11)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=12
+    -> Coste anterior: 96.0 | Coste nuevo: 157.1099917667202 (i=4, j=12)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=13
+    -> Coste anterior: 64.0 | Coste nuevo: 202.21548774225084 (i=4, j=13)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=14
+    -> Coste anterior: 80.0 | Coste nuevo: 202.82968691148605 (i=4, j=14)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=15
+    -> Coste anterior: 128.4980619863884 | Coste nuevo: 169.45425635112804 (i=4, j=15)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=16
+    -> Coste anterior: 115.81177048537316 | Coste nuevo: 125.64533342408242 (i=4, j=16)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=17
+    -> Coste anterior: 69.20225231898308 | Coste nuevo: 77.66563145999496 (i=4, j=17)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=18
+    -> Coste anterior: 86.73295402371023 | Coste nuevo: 122.87338882493961 (i=4, j=18)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=19
+    -> Coste anterior: 76.84441020371192 | Coste nuevo: 180.34563013492044 (i=4, j=19)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=20
+    -> Coste anterior: 105.68882040742383 | Coste nuevo: 188.27514962638503 (i=4, j=20)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=21
+    -> Coste anterior: 109.0025289064086 | Coste nuevo: 162.5626233406628 (i=4, j=21)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=22
+    -> Coste anterior: 85.25483399593904 | Coste nuevo: 137.9197191250556 (i=4, j=22)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=23
+    -> Coste anterior: 85.25483399593904 | Coste nuevo: 188.1984883993019 (i=4, j=23)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=24
+    -> Coste anterior: 120.13231063532578 | Coste nuevo: 205.58828508929702 (i=4, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=25
+    -> Coste anterior: 134.11682341768804 | Coste nuevo: 167.87825789607194 (i=4, j=25)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=26
+    -> Coste anterior: 105.29822128134704 | Coste nuevo: 196.5232151808098 (i=4, j=26)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=27
+    -> Coste anterior: 148.818602136341 | Coste nuevo: 223.58875825025012 (i=4, j=27)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=28
+    -> Coste anterior: 116.81860213634101 | Coste nuevo: 254.50742254376485 (i=4, j=28)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=29
+    -> Coste anterior: 56.0 | Coste nuevo: 257.30495754690855 (i=4, j=29)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=30
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 279.9828987463709 (i=4, j=30)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=31
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 300.50030460667 (i=4, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=32
+    -> Coste anterior: 80.0 | Coste nuevo: 280.64989185404283 (i=4, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=33
+    -> Coste anterior: 96.0 | Coste nuevo: 245.43013344781207 (i=4, j=33)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=34
+    -> Coste anterior: 104.79215610874228 | Coste nuevo: 248.89609588975247 (i=4, j=34)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=35
+    -> Coste anterior: 106.09037739008932 | Coste nuevo: 247.55754323697354 (i=4, j=35)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=36
+    -> Coste anterior: 98.28306628628832 | Coste nuevo: 264.30917073339106 (i=4, j=36)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=37
+    -> Coste anterior: 88.98484500494129 | Coste nuevo: 269.52110006246306 (i=4, j=37)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=38
+    -> Coste anterior: 64.0 | Coste nuevo: 276.85009194892865 (i=4, j=38)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=39
+    -> Coste anterior: 88.0 | Coste nuevo: 303.7117346263036 (i=4, j=39)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=40
+    -> Coste anterior: 97.88854381999832 | Coste nuevo: 361.05652256059807 (i=4, j=40)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=41
+    -> Coste anterior: 69.20225231898308 | Coste nuevo: 361.28279590177124 (i=4, j=41)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=42
+    -> Coste anterior: 83.31370849898477 | Coste nuevo: 360.27895641921066 (i=4, j=42)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=43
+    -> Coste anterior: 80.0 | Coste nuevo: 419.02287359372895 (i=4, j=43)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=44
+    -> Coste anterior: 56.0 | Coste nuevo: 454.28288255464247 (i=4, j=44)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=45
+    -> Coste anterior: 73.29822128134704 | Coste nuevo: 462.30891540669677 (i=4, j=45)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=46
+    -> Coste anterior: 73.29822128134704 | Coste nuevo: 461.2365393451464 (i=4, j=46)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=47
+    -> Coste anterior: 65.88854381999832 | Coste nuevo: 473.134100425145 (i=4, j=47)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=48
+    -> Coste anterior: 81.88854381999832 | Coste nuevo: 485.39061056097296 (i=4, j=48)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=49
+    -> Coste anterior: 80.0 | Coste nuevo: 489.8223132855811 (i=4, j=49)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=50
+    -> Coste anterior: 73.88854381999832 | Coste nuevo: 474.9913966083117 (i=4, j=50)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=51
+    -> Coste anterior: 79.42920304853634 | Coste nuevo: 441.5509583964939 (i=4, j=51)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=52
+    -> Coste anterior: 106.26201877853381 | Coste nuevo: 429.4641431535821 (i=4, j=52)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=53
+    -> Coste anterior: 127.80267800707182 | Coste nuevo: 425.06470550322996 (i=4, j=53)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=54
+    -> Coste anterior: 99.08131845707604 | Coste nuevo: 409.4655073907708 (i=4, j=54)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=55
+    -> Coste anterior: 73.88854381999832 | Coste nuevo: 395.49485219990174 (i=4, j=55)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=56
+    -> Coste anterior: 86.73295402371023 | Coste nuevo: 411.8371780473615 (i=4, j=56)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=57
+    -> Coste anterior: 92.84441020371192 | Coste nuevo: 433.63275926007697 (i=4, j=57)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=58
+    -> Coste anterior: 80.0 | Coste nuevo: 427.78764890220407 (i=4, j=58)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=59
+    -> Coste anterior: 64.0 | Coste nuevo: 417.4123627184722 (i=4, j=59)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=60
+    -> Coste anterior: 80.0 | Coste nuevo: 440.0195150818954 (i=4, j=60)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=61
+    -> Coste anterior: 80.0 | Coste nuevo: 467.03831644310594 (i=4, j=61)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=62
+    -> Coste anterior: 88.0 | Coste nuevo: 453.7060659197214 (i=4, j=62)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=63
+    -> Coste anterior: 133.66563145999496 | Coste nuevo: 422.5663837211964 (i=4, j=63)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=64
+    -> Coste anterior: 122.51004166370687 | Coste nuevo: 420.8174825751579 (i=4, j=64)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=65
+    -> Coste anterior: 94.14263148505896 | Coste nuevo: 437.5662025637122 (i=4, j=65)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=66
+    -> Coste anterior: 73.29822128134704 | Coste nuevo: 410.72694276259324 (i=4, j=66)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=67
+    -> Coste anterior: 104.5685424949238 | Coste nuevo: 397.8913152132261 (i=4, j=67)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=68
+    -> Coste anterior: 164.92057245746406 | Coste nuevo: 441.9669820170218 (i=4, j=68)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=69
+    -> Coste anterior: 144.1291176025369 | Coste nuevo: 441.8799616311362 (i=4, j=69)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=70
+    -> Coste anterior: 83.77708763999664 | Coste nuevo: 388.4053067911157 (i=4, j=70)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=71
+    -> Coste anterior: 73.29822128134704 | Coste nuevo: 357.2353368954512 (i=4, j=71)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=72
+    -> Coste anterior: 89.29822128134704 | Coste nuevo: 354.9865066757819 (i=4, j=72)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=73
+    -> Coste anterior: 80.0 | Coste nuevo: 346.4577453955004 (i=4, j=73)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=74
+    -> Coste anterior: 64.0 | Coste nuevo: 343.3067864856761 (i=4, j=74)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=75
+    -> Coste anterior: 80.2490309931942 | Coste nuevo: 332.7037130540315 (i=4, j=75)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=76
+    -> Coste anterior: 114.7696142441328 | Coste nuevo: 337.11842619015533 (i=4, j=76)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=77
+    -> Coste anterior: 90.5205832509386 | Coste nuevo: 396.5955898104254 (i=4, j=77)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=78
+    -> Coste anterior: 98.59644256269408 | Coste nuevo: 390.89001887270143 (i=4, j=78)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=79
+    -> Coste anterior: 151.52262740960535 | Coste nuevo: 361.91635233777413 (i=4, j=79)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=80
+    -> Coste anterior: 169.27821480945153 | Coste nuevo: 374.8503460811727 (i=4, j=80)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=81
+    -> Coste anterior: 124.35202996254024 | Coste nuevo: 346.5137051487571 (i=4, j=81)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=82
+    -> Coste anterior: 67.31370849898477 | Coste nuevo: 344.63999511358077 (i=4, j=82)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=83
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 368.7758377354377 (i=4, j=83)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=84
+    -> Coste anterior: 56.0 | Coste nuevo: 353.16818860712885 (i=4, j=84)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=85
+    -> Coste anterior: 81.28663395418647 | Coste nuevo: 357.33153574788525 (i=4, j=85)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=86
+    -> Coste anterior: 114.51769021036307 | Coste nuevo: 375.8545101000858 (i=4, j=86)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=87
+    -> Coste anterior: 132.4560501556394 | Coste nuevo: 373.67295425616754 (i=4, j=87)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=88
+    -> Coste anterior: 111.22499389946279 | Coste nuevo: 417.2689229831912 (i=4, j=88)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=89
+    -> Coste anterior: 92.2490309931942 | Coste nuevo: 441.6767997546673 (i=4, j=89)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=90
+    -> Coste anterior: 97.86152794292559 | Coste nuevo: 418.21898880342985 (i=4, j=90)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=91
+    -> Coste anterior: 88.93630452911259 | Coste nuevo: 424.0569507539007 (i=4, j=91)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=92
+    -> Coste anterior: 71.3238075793812 | Coste nuevo: 427.13993202732104 (i=4, j=92)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=93
+    -> Coste anterior: 72.0 | Coste nuevo: 405.2783083305177 (i=4, j=93)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=94
+    -> Coste anterior: 112.66210024238575 | Coste nuevo: 368.07726442598903 (i=4, j=94)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=95
+    -> Coste anterior: 142.3277317023807 | Coste nuevo: 317.6581184550229 (i=4, j=95)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=96
+    -> Coste anterior: 156.1476288672482 | Coste nuevo: 334.72998690930103 (i=4, j=96)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=97
+    -> Coste anterior: 170.36424840116177 | Coste nuevo: 330.06359414158544 (i=4, j=97)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=98
+    -> Coste anterior: 123.88225099390856 | Coste nuevo: 323.394821564024 (i=4, j=98)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=99
+    -> Coste anterior: 100.18144406874904 | Coste nuevo: 354.57437573009304 (i=4, j=99)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=100
+    -> Coste anterior: 160.28663443051084 | Coste nuevo: 378.40656203873283 (i=4, j=100)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=101
+    -> Coste anterior: 124.10519036176179 | Coste nuevo: 312.48494202920097 (i=4, j=101)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=102
+    -> Coste anterior: 88.0 | Coste nuevo: 287.07450831742375 (i=4, j=102)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=103
+    -> Coste anterior: 152.0 | Coste nuevo: 296.5422876981881 (i=4, j=103)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=104
+    -> Coste anterior: 141.12043955712207 | Coste nuevo: 250.83826040171377 (i=4, j=104)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=105
+    -> Coste anterior: 90.66109878566009 | Coste nuevo: 208.20008530176577 (i=4, j=105)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=106
+    -> Coste anterior: 90.66109878566009 | Coste nuevo: 196.71675954055678 (i=4, j=106)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=107
+    -> Coste anterior: 90.66109878566009 | Coste nuevo: 214.26697810981267 (i=4, j=107)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=108
+    -> Coste anterior: 87.15315617826941 | Coste nuevo: 196.14610448564605 (i=4, j=108)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=109
+    -> Coste anterior: 120.01837898467318 | Coste nuevo: 211.46753004731463 (i=4, j=109)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=110
+    -> Coste anterior: 160.0107599023687 | Coste nuevo: 171.7746457431528 (i=4, j=110)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=111
+    -> Coste anterior: 165.06915285670092 | Coste nuevo: 189.5787345690138 (i=4, j=111)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=112
+    -> Coste anterior: 147.63065330444323 | Coste nuevo: 151.12894431783502 (i=4, j=112)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=113
+    -> Coste anterior: 96.16637831516918 | Coste nuevo: 141.7394519347269 (i=4, j=113)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=114
+    -> Coste anterior: 64.0 | Coste nuevo: 111.55417527999327 (i=4, j=114)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=115
+    -> Coste anterior: 64.0 | Coste nuevo: 129.95907513131937 (i=4, j=115)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=116
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 156.01603949259942 (i=4, j=116)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=117
+    -> Coste anterior: 88.1918863281563 | Coste nuevo: 198.28828736088798 (i=4, j=117)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=118
+    -> Coste anterior: 88.87817782917155 | Coste nuevo: 257.8315590242289 (i=4, j=118)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=119
+    -> Coste anterior: 92.0 | Coste nuevo: 239.96478869154083 (i=4, j=119)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=120
+    -> Coste anterior: 132.61178575186364 | Coste nuevo: 218.65026097124337 (i=4, j=120)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=121
+    -> Coste anterior: 108.61178575186362 | Coste nuevo: 278.2864231903012 (i=4, j=121)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=122
+    -> Coste anterior: 87.24099870362662 | Coste nuevo: 315.33748911565726 (i=4, j=122)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=123
+    -> Coste anterior: 95.24099870362662 | Coste nuevo: 276.3406083507557 (i=4, j=123)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=124
+    -> Coste anterior: 85.54065922853802 | Coste nuevo: 290.04833172272174 (i=4, j=124)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=125
+    -> Coste anterior: 73.54065922853802 | Coste nuevo: 311.9502567006568 (i=4, j=125)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=126
+    -> Coste anterior: 77.29822128134704 | Coste nuevo: 292.8685194665514 (i=4, j=126)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=127
+    -> Coste anterior: 89.29822128134704 | Coste nuevo: 253.22101495999595 (i=4, j=127)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=128
+    -> Coste anterior: 72.0 | Coste nuevo: 221.64457437599148 (i=4, j=128)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=129
+    -> Coste anterior: 88.0 | Coste nuevo: 224.90699408926562 (i=4, j=129)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=130
+    -> Coste anterior: 126.6476151587624 | Coste nuevo: 214.9989245987344 (i=4, j=130)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=131
+    -> Coste anterior: 120.58874065571669 | Coste nuevo: 183.1247905623787 (i=4, j=131)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=132
+    -> Coste anterior: 137.94112549695427 | Coste nuevo: 213.5695924049009 (i=4, j=132)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=133
+    -> Coste anterior: 128.0 | Coste nuevo: 237.2281802367225 (i=4, j=133)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=134
+    -> Coste anterior: 104.0 | Coste nuevo: 253.06956115411964 (i=4, j=134)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=135
+    -> Coste anterior: 152.0 | Coste nuevo: 253.1562714398034 (i=4, j=135)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=136
+    -> Coste anterior: 192.0 | Coste nuevo: 276.6697343152069 (i=4, j=136)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=137
+    -> Coste anterior: 131.31370849898477 | Coste nuevo: 283.96798159730463 (i=4, j=137)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=138
+    -> Coste anterior: 76.61192978033179 | Coste nuevo: 280.16269557291315 (i=4, j=138)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=139
+    -> Coste anterior: 94.14263148505896 | Coste nuevo: 251.15523676529284 (i=4, j=139)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=140
+    -> Coste anterior: 76.84441020371192 | Coste nuevo: 214.61582518674987 (i=4, j=140)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=141
+    -> Coste anterior: 56.0 | Coste nuevo: 193.07672692387973 (i=4, j=141)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=142
+    -> Coste anterior: 72.0 | Coste nuevo: 196.4839833327914 (i=4, j=142)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=143
+    -> Coste anterior: 96.0 | Coste nuevo: 197.39681593002422 (i=4, j=143)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=144
+    -> Coste anterior: 105.94112549695427 | Coste nuevo: 207.46333857650967 (i=4, j=144)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=145
+    -> Coste anterior: 113.94112549695427 | Coste nuevo: 206.20659085960895 (i=4, j=145)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=146
+    -> Coste anterior: 128.0 | Coste nuevo: 208.11404210483946 (i=4, j=146)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=147
+    -> Coste anterior: 116.84441020371192 | Coste nuevo: 255.62974663353958 (i=4, j=147)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=148
+    -> Coste anterior: 81.49352084438543 | Coste nuevo: 327.74130393272947 (i=4, j=148)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=149
+    -> Coste anterior: 62.64911064067352 | Coste nuevo: 338.21387944054476 (i=4, j=149)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=150
+    -> Coste anterior: 75.29822128134704 | Coste nuevo: 339.952237402181 (i=4, j=150)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=151
+    -> Coste anterior: 75.29822128134704 | Coste nuevo: 380.20966885224396 (i=4, j=151)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=152
+    -> Coste anterior: 141.3892772703669 | Coste nuevo: 363.9347747938009 (i=4, j=152)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=153
+    -> Coste anterior: 231.70876690224253 | Coste nuevo: 350.88307101738593 (i=4, j=153)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=154
+    -> Coste anterior: 190.79720748837147 | Coste nuevo: 360.27429412191435 (i=4, j=154)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=155
+    -> Coste anterior: 100.47771785649584 | Coste nuevo: 377.14284699800123 (i=4, j=155)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=156
+    -> Coste anterior: 82.2490309931942 | Coste nuevo: 348.68772025489136 (i=4, j=156)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=157
+    -> Coste anterior: 115.51564629876208 | Coste nuevo: 366.50820029081575 (i=4, j=157)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=158
+    -> Coste anterior: 176.0459233435135 | Coste nuevo: 362.71108629791945 (i=4, j=158)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=159
+    -> Coste anterior: 230.1035085227171 | Coste nuevo: 302.07422538543074 (i=4, j=159)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=160
+    -> Coste anterior: 148.63790898375626 | Coste nuevo: 235.24601468072643 (i=4, j=160)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=161
+    -> Coste anterior: 143.40062396475545 | Coste nuevo: 301.56718184537823 (i=4, j=161)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=162
+    -> Coste anterior: 287.67611817598447 | Coste nuevo: 361.0756896897033 (i=4, j=162)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=163
+    -> Coste anterior: 215.58920271021378 | Coste nuevo: 299.8680214003863 (i=4, j=163)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=164
+    -> Coste anterior: 89.12043955712207 | Coste nuevo: 259.2898937231792 (i=4, j=164)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=165
+    -> Coste anterior: 112.38705486268995 | Coste nuevo: 279.6770046194942 (i=4, j=165)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=166
+    -> Coste anterior: 163.665620274535 | Coste nuevo: 262.3403690587203 (i=4, j=166)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=167
+    -> Coste anterior: 240.7318766208977 | Coste nuevo: 256.4850584541043 (i=4, j=167)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=168
+    -> Coste anterior: 168.3328716519306 | Coste nuevo: 287.45616688242706 (i=4, j=168)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=169
+    -> Coste anterior: 80.0 | Coste nuevo: 299.69572434530653 (i=4, j=169)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=170
+    -> Coste anterior: 88.0 | Coste nuevo: 299.4585108568581 (i=4, j=170)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=171
+    -> Coste anterior: 80.0 | Coste nuevo: 298.22274477794394 (i=4, j=171)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=172
+    -> Coste anterior: 248.39088914585776 | Coste nuevo: 340.2816501949992 (i=4, j=172)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=4, j=173
+    -> Coste anterior: 455.2848041804467 | Coste nuevo: 409.5639877128944 (i=4, j=173)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=5, j=7
+    -> Coste anterior: 165.13295139802293 | Coste nuevo: 156.33059301703443 (i=5, j=7)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=6, j=8
+    -> Coste anterior: 65.92324587158566 | Coste nuevo: 46.9146276043266 (i=6, j=8)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=7, j=9
+    -> Coste anterior: 46.9146276043266 | Coste nuevo: 56.80317142432492 (i=7, j=9)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=7, j=10
+    -> Coste anterior: 54.42220510185596 | Coste nuevo: 67.92563827931656 (i=7, j=10)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=7, j=11
+    -> Coste anterior: 94.42220510185595 | Coste nuevo: 90.58219630852977 (i=7, j=11)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=8, j=10
+    -> Coste anterior: 71.88785370965506 | Coste nuevo: 62.914627604326604 (i=8, j=10)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=9, j=11
+    -> Coste anterior: 64.21284888567364 | Coste nuevo: 54.9146276043266 (i=9, j=11)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=10, j=12
+    -> Coste anterior: 54.9146276043266 | Coste nuevo: 83.40314073354908 (i=10, j=12)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=10, j=13
+    -> Coste anterior: 54.9146276043266 | Coste nuevo: 93.47726750741194 (i=10, j=13)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=10, j=14
+    -> Coste anterior: 70.9146276043266 | Coste nuevo: 83.75007176292391 (i=10, j=14)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=10, j=15
+    -> Coste anterior: 119.41268959071499 | Coste nuevo: 126.16275644038447 (i=10, j=15)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=10, j=16
+    -> Coste anterior: 106.72639808969976 | Coste nuevo: 121.48290699132968 (i=10, j=16)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=10, j=17
+    -> Coste anterior: 60.116879923309675 | Coste nuevo: 105.59953737916734 (i=10, j=17)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=10, j=18
+    -> Coste anterior: 77.64758162803683 | Coste nuevo: 73.98494459403491 (i=10, j=18)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=11, j=13
+    -> Coste anterior: 51.31370849898476 | Coste nuevo: 64.98484500494129 (i=11, j=13)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=11, j=14
+    -> Coste anterior: 67.31370849898477 | Coste nuevo: 81.88854381999832 (i=11, j=14)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=11, j=15
+    -> Coste anterior: 115.81177048537316 | Coste nuevo: 97.77700111368355 (i=11, j=15)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=12, j=14
+    -> Coste anterior: 48.0 | Coste nuevo: 64.0 (i=12, j=14)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=12, j=15
+    -> Coste anterior: 64.98484500494129 | Coste nuevo: 112.66210024238575 (i=12, j=15)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=12, j=16
+    -> Coste anterior: 68.29855350392604 | Coste nuevo: 177.0666044813122 (i=12, j=16)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=12, j=17
+    -> Coste anterior: 67.56273949217896 | Coste nuevo: 172.66210024238575 (i=12, j=17)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=12, j=18
+    -> Coste anterior: 70.67123609505015 | Coste nuevo: 105.86152794292559 (i=12, j=18)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=12, j=19
+    -> Coste anterior: 46.42220510185596 | Coste nuevo: 60.51596081796784 (i=12, j=19)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=12, j=20
+    -> Coste anterior: 89.68882040742383 | Coste nuevo: 73.96132365774716 (i=12, j=20)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=13, j=15
+    -> Coste anterior: 64.98484500494129 | Coste nuevo: 105.86676377627084 (i=13, j=15)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=16
+    -> Coste anterior: 68.29855350392604 | Coste nuevo: 168.7921561087423 (i=13, j=16)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=17
+    -> Coste anterior: 67.56273949217896 | Coste nuevo: 162.84313968704095 (i=13, j=17)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=18
+    -> Coste anterior: 70.67123609505015 | Coste nuevo: 97.34679022999342 (i=13, j=18)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=19
+    -> Coste anterior: 46.42220510185596 | Coste nuevo: 52.92620544871615 (i=13, j=19)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=20
+    -> Coste anterior: 78.6476151587624 | Coste nuevo: 84.29304845796447 (i=13, j=20)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=21
+    -> Coste anterior: 81.96132365774717 | Coste nuevo: 148.77013886449987 (i=13, j=21)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=22
+    -> Coste anterior: 69.25483399593904 | Coste nuevo: 204.6295058789221 (i=13, j=22)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=23
+    -> Coste anterior: 69.25483399593904 | Coste nuevo: 259.31967152267237 (i=13, j=23)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=24
+    -> Coste anterior: 104.13231063532578 | Coste nuevo: 235.0383497765977 (i=13, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=25
+    -> Coste anterior: 118.11682341768805 | Coste nuevo: 137.7563556583431 (i=13, j=25)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=26
+    -> Coste anterior: 89.29822128134704 | Coste nuevo: 96.12822282087865 (i=13, j=26)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=13, j=27
+    -> Coste anterior: 132.818602136341 | Coste nuevo: 130.98704168877086 (i=13, j=27)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=14, j=16
+    -> Coste anterior: 77.59677478527308 | Coste nuevo: 136.9848450049413 (i=14, j=16)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=14, j=17
+    -> Coste anterior: 76.86096077352599 | Coste nuevo: 137.8531211061367 (i=14, j=17)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=14, j=18
+    -> Coste anterior: 79.96945737639719 | Coste nuevo: 88.92657055857748 (i=14, j=18)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=14, j=19
+    -> Coste anterior: 55.720426383203 | Coste nuevo: 58.380966322468964 (i=14, j=19)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=14, j=20
+    -> Coste anterior: 87.94583644010945 | Coste nuevo: 85.20225231898308 (i=14, j=20)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=15, j=17
+    -> Coste anterior: 92.54758449712024 | Coste nuevo: 100.79097600639669 (i=15, j=17)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=15, j=18
+    -> Coste anterior: 95.65608109999144 | Coste nuevo: 98.76672164916987 (i=15, j=18)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=15, j=19
+    -> Coste anterior: 74.72075860578201 | Coste nuevo: 80.49242250247065 (i=15, j=19)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=15, j=20
+    -> Coste anterior: 100.29855350392604 | Coste nuevo: 100.62182542569488 (i=15, j=20)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=15, j=21
+    -> Coste anterior: 100.29855350392606 | Coste nuevo: 110.2598771616732 (i=15, j=21)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=15, j=22
+    -> Coste anterior: 94.23967900088033 | Coste nuevo: 155.13116583558664 (i=15, j=22)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=15, j=23
+    -> Coste anterior: 94.23967900088033 | Coste nuevo: 197.79693978412013 (i=15, j=23)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=15, j=24
+    -> Coste anterior: 129.11715564026707 | Coste nuevo: 191.7645019878171 (i=15, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=15, j=25
+    -> Coste anterior: 143.10166842262933 | Coste nuevo: 141.0025289064086 (i=15, j=25)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=16, j=18
+    -> Coste anterior: 97.98494459403491 | Coste nuevo: 100.50701140217811 (i=16, j=18)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=16, j=19
+    -> Coste anterior: 77.04962209982548 | Coste nuevo: 126.4624900466561 (i=16, j=19)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=16, j=20
+    -> Coste anterior: 102.62741699796952 | Coste nuevo: 120.98484500494129 (i=16, j=20)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=16, j=21
+    -> Coste anterior: 102.62741699796953 | Coste nuevo: 138.89140030839323 (i=16, j=21)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=16, j=22
+    -> Coste anterior: 96.5685424949238 | Coste nuevo: 133.47661456427963 (i=16, j=22)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=16, j=23
+    -> Coste anterior: 96.5685424949238 | Coste nuevo: 195.80797965469648 (i=16, j=23)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=16, j=24
+    -> Coste anterior: 120.31623740539334 | Coste nuevo: 199.1276476260538 (i=16, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=16, j=25
+    -> Coste anterior: 141.0025289064086 | Coste nuevo: 131.31370849898477 (i=16, j=25)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=17, j=19
+    -> Coste anterior: 81.98494459403491 | Coste nuevo: 96.55977991504847 (i=17, j=19)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=17, j=20
+    -> Coste anterior: 107.56273949217896 | Coste nuevo: 89.28457861121292 (i=17, j=20)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=18, j=20
+    -> Coste anterior: 95.70678371306887 | Coste nuevo: 136.04058367353304 (i=18, j=20)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=18, j=21
+    -> Coste anterior: 66.22833610331136 | Coste nuevo: 161.2099494208834 (i=18, j=21)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=18, j=22
+    -> Coste anterior: 76.16946160026563 | Coste nuevo: 188.88860792570614 (i=18, j=22)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=18, j=23
+    -> Coste anterior: 76.16946160026563 | Coste nuevo: 247.404516596566 (i=18, j=23)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=18, j=24
+    -> Coste anterior: 98.22833610331136 | Coste nuevo: 244.3345061538273 (i=18, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=18, j=25
+    -> Coste anterior: 126.9146276043266 | Coste nuevo: 178.7148176139562 (i=18, j=25)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=18, j=26
+    -> Coste anterior: 110.9146276043266 | Coste nuevo: 124.31992998755614 (i=18, j=26)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=18, j=27
+    -> Coste anterior: 128.60344801175043 | Coste nuevo: 108.92141338585422 (i=18, j=27)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=19, j=21
+    -> Coste anterior: 87.4195731067118 | Coste nuevo: 158.45778756873722 (i=19, j=21)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=22
+    -> Coste anterior: 97.36069860366607 | Coste nuevo: 185.95121183488024 (i=19, j=22)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=23
+    -> Coste anterior: 97.36069860366608 | Coste nuevo: 232.30952317187194 (i=19, j=23)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=24
+    -> Coste anterior: 119.4195731067118 | Coste nuevo: 244.17481155907194 (i=19, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=25
+    -> Coste anterior: 148.10586460772703 | Coste nuevo: 170.48301685596357 (i=19, j=25)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=26
+    -> Coste anterior: 108.59828711019767 | Coste nuevo: 142.42220510185595 (i=19, j=26)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=27
+    -> Coste anterior: 133.7135694945965 | Coste nuevo: 147.63212299354876 (i=19, j=27)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=28
+    -> Coste anterior: 125.22114699212585 | Coste nuevo: 180.948347186218 (i=19, j=28)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=29
+    -> Coste anterior: 68.10586460772703 | Coste nuevo: 224.82599026182498 (i=19, j=29)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=30
+    -> Coste anterior: 71.4195731067118 | Coste nuevo: 230.52614208436205 (i=19, j=30)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=31
+    -> Coste anterior: 71.4195731067118 | Coste nuevo: 237.95568712618862 (i=19, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=32
+    -> Coste anterior: 92.10586460772703 | Coste nuevo: 239.64215963602737 (i=19, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=33
+    -> Coste anterior: 108.10586460772703 | Coste nuevo: 246.34005714253232 (i=19, j=33)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=34
+    -> Coste anterior: 116.8980207164693 | Coste nuevo: 261.064194558965 (i=19, j=34)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=35
+    -> Coste anterior: 118.19624199781636 | Coste nuevo: 269.86693132305686 (i=19, j=35)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=36
+    -> Coste anterior: 110.38893089401535 | Coste nuevo: 246.35000299017952 (i=19, j=36)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=37
+    -> Coste anterior: 101.09070961266832 | Coste nuevo: 259.9095731995138 (i=19, j=37)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=38
+    -> Coste anterior: 76.10586460772703 | Coste nuevo: 258.7911783670142 (i=19, j=38)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=39
+    -> Coste anterior: 100.10586460772703 | Coste nuevo: 302.5509386636886 (i=19, j=39)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=40
+    -> Coste anterior: 109.99440842772535 | Coste nuevo: 368.55129969908825 (i=19, j=40)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=41
+    -> Coste anterior: 81.30811692671011 | Coste nuevo: 368.2696313015604 (i=19, j=41)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=42
+    -> Coste anterior: 95.4195731067118 | Coste nuevo: 367.9542482502402 (i=19, j=42)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=43
+    -> Coste anterior: 92.10586460772703 | Coste nuevo: 416.43955012107824 (i=19, j=43)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=44
+    -> Coste anterior: 68.10586460772703 | Coste nuevo: 443.65417879194666 (i=19, j=44)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=45
+    -> Coste anterior: 85.40408588907407 | Coste nuevo: 432.31643201547456 (i=19, j=45)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=46
+    -> Coste anterior: 85.40408588907407 | Coste nuevo: 420.4683479098375 (i=19, j=46)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=47
+    -> Coste anterior: 77.99440842772535 | Coste nuevo: 417.7770801034284 (i=19, j=47)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=48
+    -> Coste anterior: 93.99440842772535 | Coste nuevo: 438.7111737460552 (i=19, j=48)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=49
+    -> Coste anterior: 92.10586460772703 | Coste nuevo: 439.45777134440397 (i=19, j=49)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=50
+    -> Coste anterior: 85.99440842772535 | Coste nuevo: 435.1351577703988 (i=19, j=50)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=51
+    -> Coste anterior: 91.53506765626337 | Coste nuevo: 410.80243639110523 (i=19, j=51)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=52
+    -> Coste anterior: 118.36788338626084 | Coste nuevo: 393.42413782370545 (i=19, j=52)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=53
+    -> Coste anterior: 139.90854261479888 | Coste nuevo: 398.68634255386786 (i=19, j=53)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=54
+    -> Coste anterior: 111.18718306480307 | Coste nuevo: 379.70383314837454 (i=19, j=54)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=55
+    -> Coste anterior: 85.99440842772535 | Coste nuevo: 379.17383871808227 (i=19, j=55)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=56
+    -> Coste anterior: 98.83881863143726 | Coste nuevo: 385.7782166555795 (i=19, j=56)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=57
+    -> Coste anterior: 104.95027481143894 | Coste nuevo: 393.17706380070695 (i=19, j=57)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=58
+    -> Coste anterior: 92.10586460772703 | Coste nuevo: 371.28444316895025 (i=19, j=58)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=59
+    -> Coste anterior: 76.10586460772703 | Coste nuevo: 354.41433803233485 (i=19, j=59)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=60
+    -> Coste anterior: 92.10586460772703 | Coste nuevo: 359.402317206273 (i=19, j=60)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=61
+    -> Coste anterior: 92.10586460772703 | Coste nuevo: 381.3002093272548 (i=19, j=61)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=62
+    -> Coste anterior: 100.10586460772703 | Coste nuevo: 376.17870037412877 (i=19, j=62)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=63
+    -> Coste anterior: 145.77149606772198 | Coste nuevo: 336.8563974738464 (i=19, j=63)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=64
+    -> Coste anterior: 134.6159062714339 | Coste nuevo: 341.7274290576871 (i=19, j=64)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=65
+    -> Coste anterior: 106.24849609278598 | Coste nuevo: 331.06032435285624 (i=19, j=65)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=66
+    -> Coste anterior: 85.40408588907407 | Coste nuevo: 311.7062828253136 (i=19, j=66)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=67
+    -> Coste anterior: 116.67440710265083 | Coste nuevo: 320.05979239984185 (i=19, j=67)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=68
+    -> Coste anterior: 177.0264370651911 | Coste nuevo: 359.55633030971273 (i=19, j=68)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=69
+    -> Coste anterior: 156.23498221026392 | Coste nuevo: 367.25966586992104 (i=19, j=69)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=70
+    -> Coste anterior: 95.88295224772367 | Coste nuevo: 293.5577942917304 (i=19, j=70)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=71
+    -> Coste anterior: 85.40408588907407 | Coste nuevo: 260.22410765461404 (i=19, j=71)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=72
+    -> Coste anterior: 101.40408588907407 | Coste nuevo: 261.2654665524429 (i=19, j=72)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=73
+    -> Coste anterior: 92.10586460772703 | Coste nuevo: 241.3064978272082 (i=19, j=73)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=74
+    -> Coste anterior: 76.10586460772703 | Coste nuevo: 245.40586417186202 (i=19, j=74)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=75
+    -> Coste anterior: 92.35489560092122 | Coste nuevo: 214.58563945126673 (i=19, j=75)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=76
+    -> Coste anterior: 126.87547885185982 | Coste nuevo: 214.09393355762734 (i=19, j=76)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=77
+    -> Coste anterior: 102.62644785866564 | Coste nuevo: 262.7813109363542 (i=19, j=77)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=78
+    -> Coste anterior: 110.70230717042111 | Coste nuevo: 250.03862766463877 (i=19, j=78)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=79
+    -> Coste anterior: 163.62849201733238 | Coste nuevo: 228.818602136341 (i=19, j=79)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=80
+    -> Coste anterior: 181.38407941717855 | Coste nuevo: 222.42406190093044 (i=19, j=80)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=81
+    -> Coste anterior: 136.45789457026729 | Coste nuevo: 202.3866058063867 (i=19, j=81)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=82
+    -> Coste anterior: 79.4195731067118 | Coste nuevo: 186.04595021629416 (i=19, j=82)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=83
+    -> Coste anterior: 71.4195731067118 | Coste nuevo: 208.7921561087423 (i=19, j=83)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=84
+    -> Coste anterior: 68.10586460772703 | Coste nuevo: 193.64694524732704 (i=19, j=84)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=85
+    -> Coste anterior: 93.39249856191351 | Coste nuevo: 197.6197814117245 (i=19, j=85)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=86
+    -> Coste anterior: 126.62355481809013 | Coste nuevo: 221.8682283339702 (i=19, j=86)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=87
+    -> Coste anterior: 144.56191476336642 | Coste nuevo: 215.45923329162903 (i=19, j=87)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=88
+    -> Coste anterior: 123.33085850718982 | Coste nuevo: 272.7059200212958 (i=19, j=88)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=89
+    -> Coste anterior: 104.35489560092122 | Coste nuevo: 297.6919050007365 (i=19, j=89)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=90
+    -> Coste anterior: 109.96739255065262 | Coste nuevo: 275.0036576660308 (i=19, j=90)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=91
+    -> Coste anterior: 101.04216913683962 | Coste nuevo: 286.6703447838187 (i=19, j=91)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=92
+    -> Coste anterior: 83.42967218710824 | Coste nuevo: 300.00418064431017 (i=19, j=92)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=93
+    -> Coste anterior: 84.10586460772703 | Coste nuevo: 289.2734694868316 (i=19, j=93)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=94
+    -> Coste anterior: 124.76796485011278 | Coste nuevo: 243.1642966100299 (i=19, j=94)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=95
+    -> Coste anterior: 154.43359631010776 | Coste nuevo: 200.0690340888271 (i=19, j=95)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=96
+    -> Coste anterior: 168.25349347497522 | Coste nuevo: 209.7563556583431 (i=19, j=96)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=97
+    -> Coste anterior: 182.4701130088888 | Coste nuevo: 225.81714448862613 (i=19, j=97)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=98
+    -> Coste anterior: 135.9881156016356 | Coste nuevo: 223.9835871939589 (i=19, j=98)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=99
+    -> Coste anterior: 112.28730867647607 | Coste nuevo: 263.162234952934 (i=19, j=99)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=100
+    -> Coste anterior: 172.39249903823787 | Coste nuevo: 297.209655987411 (i=19, j=100)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=101
+    -> Coste anterior: 136.21105496948883 | Coste nuevo: 249.91220290132512 (i=19, j=101)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=102
+    -> Coste anterior: 100.10586460772703 | Coste nuevo: 231.02420407075044 (i=19, j=102)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=103
+    -> Coste anterior: 164.10586460772703 | Coste nuevo: 263.2843165044813 (i=19, j=103)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=104
+    -> Coste anterior: 153.2263041648491 | Coste nuevo: 266.33750775903104 (i=19, j=104)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=105
+    -> Coste anterior: 102.76696339338713 | Coste nuevo: 275.82284457593795 (i=19, j=105)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=106
+    -> Coste anterior: 102.76696339338712 | Coste nuevo: 300.54047589541676 (i=19, j=106)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=107
+    -> Coste anterior: 102.76696339338713 | Coste nuevo: 298.3856996318342 (i=19, j=107)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=108
+    -> Coste anterior: 99.25902078599644 | Coste nuevo: 311.6278003428101 (i=19, j=108)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=109
+    -> Coste anterior: 132.1242435924002 | Coste nuevo: 274.27411010353694 (i=19, j=109)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=110
+    -> Coste anterior: 172.11662451009573 | Coste nuevo: 281.6209463111569 (i=19, j=110)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=111
+    -> Coste anterior: 177.17501746442798 | Coste nuevo: 236.260116380331 (i=19, j=111)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=112
+    -> Coste anterior: 159.73651791217026 | Coste nuevo: 271.66403411572793 (i=19, j=112)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=113
+    -> Coste anterior: 108.27224292289623 | Coste nuevo: 242.73540469177524 (i=19, j=113)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=114
+    -> Coste anterior: 76.10586460772703 | Coste nuevo: 251.8830046445563 (i=19, j=114)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=115
+    -> Coste anterior: 76.10586460772703 | Coste nuevo: 273.1511022184717 (i=19, j=115)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=116
+    -> Coste anterior: 71.4195731067118 | Coste nuevo: 285.3194009536496 (i=19, j=116)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=117
+    -> Coste anterior: 100.29775093588334 | Coste nuevo: 316.3896903298112 (i=19, j=117)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=118
+    -> Coste anterior: 100.98404243689859 | Coste nuevo: 366.93016891643623 (i=19, j=118)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=119
+    -> Coste anterior: 104.10586460772703 | Coste nuevo: 358.67961088994207 (i=19, j=119)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=120
+    -> Coste anterior: 144.71765035959066 | Coste nuevo: 333.10537243543206 (i=19, j=120)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=121
+    -> Coste anterior: 120.71765035959066 | Coste nuevo: 405.7451477402492 (i=19, j=121)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=122
+    -> Coste anterior: 99.34686331135364 | Coste nuevo: 426.85320855486236 (i=19, j=122)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=123
+    -> Coste anterior: 107.34686331135364 | Coste nuevo: 399.38183227490885 (i=19, j=123)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=124
+    -> Coste anterior: 97.64652383626505 | Coste nuevo: 408.0200061062748 (i=19, j=124)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=125
+    -> Coste anterior: 85.64652383626505 | Coste nuevo: 436.3161563442178 (i=19, j=125)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=126
+    -> Coste anterior: 89.40408588907407 | Coste nuevo: 420.5867243054541 (i=19, j=126)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=127
+    -> Coste anterior: 101.40408588907407 | Coste nuevo: 395.30325167494925 (i=19, j=127)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=128
+    -> Coste anterior: 84.10586460772703 | Coste nuevo: 376.27068928394306 (i=19, j=128)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=129
+    -> Coste anterior: 100.10586460772703 | Coste nuevo: 376.849660541699 (i=19, j=129)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=130
+    -> Coste anterior: 138.75347976648942 | Coste nuevo: 371.02378447074744 (i=19, j=130)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=131
+    -> Coste anterior: 132.69460526344372 | Coste nuevo: 331.8012474682371 (i=19, j=131)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=132
+    -> Coste anterior: 150.0469901046813 | Coste nuevo: 364.34431886531985 (i=19, j=132)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=133
+    -> Coste anterior: 140.10586460772703 | Coste nuevo: 384.7526149894666 (i=19, j=133)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=134
+    -> Coste anterior: 116.10586460772703 | Coste nuevo: 391.1425611649786 (i=19, j=134)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=135
+    -> Coste anterior: 164.10586460772703 | Coste nuevo: 397.5676068895021 (i=19, j=135)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=136
+    -> Coste anterior: 204.10586460772703 | Coste nuevo: 408.59547806553053 (i=19, j=136)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=137
+    -> Coste anterior: 143.4195731067118 | Coste nuevo: 412.7035960727646 (i=19, j=137)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=138
+    -> Coste anterior: 88.71779438805883 | Coste nuevo: 405.41243566721306 (i=19, j=138)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=139
+    -> Coste anterior: 106.24849609278598 | Coste nuevo: 372.84862753279566 (i=19, j=139)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=140
+    -> Coste anterior: 88.95027481143894 | Coste nuevo: 337.731003186788 (i=19, j=140)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=141
+    -> Coste anterior: 68.10586460772703 | Coste nuevo: 310.4061312614762 (i=19, j=141)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=142
+    -> Coste anterior: 84.10586460772703 | Coste nuevo: 310.9149659609172 (i=19, j=142)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=143
+    -> Coste anterior: 108.10586460772703 | Coste nuevo: 318.9086408726209 (i=19, j=143)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=144
+    -> Coste anterior: 118.0469901046813 | Coste nuevo: 330.23245127345615 (i=19, j=144)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=145
+    -> Coste anterior: 126.04699010468131 | Coste nuevo: 344.64585263685905 (i=19, j=145)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=146
+    -> Coste anterior: 140.10586460772703 | Coste nuevo: 331.5396060459776 (i=19, j=146)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=147
+    -> Coste anterior: 128.95027481143893 | Coste nuevo: 351.70287062270984 (i=19, j=147)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=148
+    -> Coste anterior: 93.59938545211246 | Coste nuevo: 397.44982277411515 (i=19, j=148)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=149
+    -> Coste anterior: 74.75497524840056 | Coste nuevo: 402.56251794410025 (i=19, j=149)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=150
+    -> Coste anterior: 87.40408588907407 | Coste nuevo: 404.7411531779933 (i=19, j=150)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=151
+    -> Coste anterior: 87.40408588907407 | Coste nuevo: 437.18739905627564 (i=19, j=151)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=152
+    -> Coste anterior: 153.49514187809393 | Coste nuevo: 445.9497356281102 (i=19, j=152)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=153
+    -> Coste anterior: 243.81463150996956 | Coste nuevo: 427.4129116470074 (i=19, j=153)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=154
+    -> Coste anterior: 202.9030720960985 | Coste nuevo: 455.27863068221643 (i=19, j=154)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=155
+    -> Coste anterior: 112.58358246422289 | Coste nuevo: 450.3616224305787 (i=19, j=155)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=156
+    -> Coste anterior: 94.35489560092122 | Coste nuevo: 424.96134687739675 (i=19, j=156)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=157
+    -> Coste anterior: 127.6215109064891 | Coste nuevo: 432.6556825251141 (i=19, j=157)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=158
+    -> Coste anterior: 188.15178795124052 | Coste nuevo: 447.213398047155 (i=19, j=158)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=159
+    -> Coste anterior: 242.20937313044413 | Coste nuevo: 336.7886153592709 (i=19, j=159)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=160
+    -> Coste anterior: 160.74377359148332 | Coste nuevo: 215.9098426014438 (i=19, j=160)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=161
+    -> Coste anterior: 155.5064885724825 | Coste nuevo: 236.9712772498856 (i=19, j=161)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=19, j=162
+    -> Coste anterior: 299.78198278371156 | Coste nuevo: 285.89156808090877 (i=19, j=162)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=20, j=22
+    -> Coste anterior: 169.25483399593904 | Coste nuevo: 162.77511939497674 (i=20, j=22)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=21, j=23
+    -> Coste anterior: 89.70873545504556 | Coste nuevo: 126.32066523537735 (i=21, j=23)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=21, j=24
+    -> Coste anterior: 102.62741699796952 | Coste nuevo: 140.05144988529318 (i=21, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=21, j=25
+    -> Coste anterior: 131.31370849898477 | Coste nuevo: 126.38252483095498 (i=21, j=25)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=22, j=24
+    -> Coste anterior: 91.0069567363926 | Coste nuevo: 134.3950269560608 (i=22, j=24)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=25
+    -> Coste anterior: 140.6194330843191 | Coste nuevo: 144.27436224529657 (i=22, j=25)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=26
+    -> Coste anterior: 131.8136343054427 | Coste nuevo: 178.6140721210902 (i=22, j=26)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=27
+    -> Coste anterior: 136.00273184293025 | Coste nuevo: 198.69259565092506 (i=22, j=27)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=28
+    -> Coste anterior: 127.51030934045961 | Coste nuevo: 179.8256923050417 (i=22, j=28)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=29
+    -> Coste anterior: 70.39502695606079 | Coste nuevo: 213.57548106524857 (i=22, j=29)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=30
+    -> Coste anterior: 73.70873545504556 | Coste nuevo: 239.96493597506273 (i=22, j=30)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=31
+    -> Coste anterior: 73.70873545504556 | Coste nuevo: 258.4116969289212 (i=22, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=32
+    -> Coste anterior: 94.39502695606079 | Coste nuevo: 247.80560053199366 (i=22, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=33
+    -> Coste anterior: 110.39502695606079 | Coste nuevo: 196.61754036553847 (i=22, j=33)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=34
+    -> Coste anterior: 119.18718306480307 | Coste nuevo: 174.15682758422082 (i=22, j=34)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=35
+    -> Coste anterior: 120.4854043461501 | Coste nuevo: 213.2319362997634 (i=22, j=35)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=36
+    -> Coste anterior: 112.67809324234912 | Coste nuevo: 199.88133314822178 (i=22, j=36)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=37
+    -> Coste anterior: 103.37987196100207 | Coste nuevo: 232.30917073339103 (i=22, j=37)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=38
+    -> Coste anterior: 78.39502695606079 | Coste nuevo: 225.1957220838491 (i=22, j=38)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=39
+    -> Coste anterior: 102.39502695606079 | Coste nuevo: 249.387735958177 (i=22, j=39)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=40
+    -> Coste anterior: 112.28357077605911 | Coste nuevo: 302.71829884556234 (i=22, j=40)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=41
+    -> Coste anterior: 83.59727927504387 | Coste nuevo: 300.22004433001183 (i=22, j=41)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=42
+    -> Coste anterior: 97.70873545504556 | Coste nuevo: 305.89155070072695 (i=22, j=42)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=43
+    -> Coste anterior: 94.39502695606079 | Coste nuevo: 359.1557675612145 (i=22, j=43)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=44
+    -> Coste anterior: 70.39502695606079 | Coste nuevo: 397.13729478245716 (i=22, j=44)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=45
+    -> Coste anterior: 87.69324823740783 | Coste nuevo: 404.50844170865827 (i=22, j=45)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=46
+    -> Coste anterior: 87.69324823740783 | Coste nuevo: 413.8930634967551 (i=22, j=46)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=47
+    -> Coste anterior: 80.28357077605911 | Coste nuevo: 419.18837540096126 (i=22, j=47)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=48
+    -> Coste anterior: 96.28357077605911 | Coste nuevo: 438.14064467299875 (i=22, j=48)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=49
+    -> Coste anterior: 94.39502695606079 | Coste nuevo: 431.5897029666261 (i=22, j=49)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=50
+    -> Coste anterior: 88.28357077605911 | Coste nuevo: 425.73412392713806 (i=22, j=50)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=51
+    -> Coste anterior: 93.82423000459713 | Coste nuevo: 388.54044362672494 (i=22, j=51)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=52
+    -> Coste anterior: 120.6570457345946 | Coste nuevo: 365.9634183758359 (i=22, j=52)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=53
+    -> Coste anterior: 142.19770496313262 | Coste nuevo: 383.7274596499036 (i=22, j=53)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=54
+    -> Coste anterior: 113.47634541313681 | Coste nuevo: 350.90278030776375 (i=22, j=54)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=55
+    -> Coste anterior: 88.28357077605911 | Coste nuevo: 336.338138788168 (i=22, j=55)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=56
+    -> Coste anterior: 101.12798097977102 | Coste nuevo: 358.95744848292526 (i=22, j=56)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=57
+    -> Coste anterior: 107.2394371597727 | Coste nuevo: 379.85870736697575 (i=22, j=57)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=58
+    -> Coste anterior: 94.39502695606079 | Coste nuevo: 378.137865968817 (i=22, j=58)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=59
+    -> Coste anterior: 78.39502695606079 | Coste nuevo: 373.9147546152959 (i=22, j=59)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=60
+    -> Coste anterior: 94.39502695606079 | Coste nuevo: 390.56861745541244 (i=22, j=60)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=61
+    -> Coste anterior: 94.39502695606079 | Coste nuevo: 429.3750161829468 (i=22, j=61)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=62
+    -> Coste anterior: 102.39502695606079 | Coste nuevo: 414.8926396713043 (i=22, j=62)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=63
+    -> Coste anterior: 148.06065841605573 | Coste nuevo: 364.4278024984691 (i=22, j=63)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=64
+    -> Coste anterior: 136.90506861976766 | Coste nuevo: 394.7485892677327 (i=22, j=64)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=65
+    -> Coste anterior: 108.53765844111975 | Coste nuevo: 392.01056126220743 (i=22, j=65)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=66
+    -> Coste anterior: 87.69324823740783 | Coste nuevo: 379.38386119971995 (i=22, j=66)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=67
+    -> Coste anterior: 118.9635694509846 | Coste nuevo: 368.0856378705778 (i=22, j=67)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=68
+    -> Coste anterior: 179.31559941352484 | Coste nuevo: 376.3728959365169 (i=22, j=68)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=69
+    -> Coste anterior: 158.52414455859767 | Coste nuevo: 411.9262533921072 (i=22, j=69)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=70
+    -> Coste anterior: 98.17211459605743 | Coste nuevo: 351.72374253697944 (i=22, j=70)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=71
+    -> Coste anterior: 87.69324823740783 | Coste nuevo: 316.74004661578886 (i=22, j=71)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=72
+    -> Coste anterior: 103.69324823740783 | Coste nuevo: 327.65393971561934 (i=22, j=72)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=73
+    -> Coste anterior: 94.39502695606079 | Coste nuevo: 310.2272520904175 (i=22, j=73)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=74
+    -> Coste anterior: 78.39502695606079 | Coste nuevo: 313.25164562914983 (i=22, j=74)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=75
+    -> Coste anterior: 94.64405794925499 | Coste nuevo: 299.58094639201664 (i=22, j=75)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=76
+    -> Coste anterior: 129.16464120019359 | Coste nuevo: 325.8065292374413 (i=22, j=76)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=77
+    -> Coste anterior: 104.91561020699939 | Coste nuevo: 370.83871950140576 (i=22, j=77)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=78
+    -> Coste anterior: 112.99146951875485 | Coste nuevo: 364.8797078027141 (i=22, j=78)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=79
+    -> Coste anterior: 165.91765436566612 | Coste nuevo: 359.4882690058581 (i=22, j=79)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=80
+    -> Coste anterior: 183.6732417655123 | Coste nuevo: 349.0992743049633 (i=22, j=80)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=81
+    -> Coste anterior: 138.74705691860103 | Coste nuevo: 350.00147376973433 (i=22, j=81)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=82
+    -> Coste anterior: 81.70873545504556 | Coste nuevo: 347.8293249063783 (i=22, j=82)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=83
+    -> Coste anterior: 73.70873545504556 | Coste nuevo: 368.1588678167784 (i=22, j=83)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=84
+    -> Coste anterior: 70.39502695606079 | Coste nuevo: 352.3628881374981 (i=22, j=84)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=85
+    -> Coste anterior: 95.68166091024727 | Coste nuevo: 358.670459124768 (i=22, j=85)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=86
+    -> Coste anterior: 128.91271716642387 | Coste nuevo: 378.6228886731326 (i=22, j=86)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=87
+    -> Coste anterior: 146.8510771117002 | Coste nuevo: 374.15709592706514 (i=22, j=87)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=88
+    -> Coste anterior: 125.62002085552358 | Coste nuevo: 428.3439123178605 (i=22, j=88)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=89
+    -> Coste anterior: 106.64405794925499 | Coste nuevo: 457.02963874209973 (i=22, j=89)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=90
+    -> Coste anterior: 112.25655489898638 | Coste nuevo: 434.0715415755009 (i=22, j=90)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=91
+    -> Coste anterior: 103.3313314851734 | Coste nuevo: 442.0758696830428 (i=22, j=91)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=92
+    -> Coste anterior: 85.718834535442 | Coste nuevo: 449.56345543017414 (i=22, j=92)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=93
+    -> Coste anterior: 86.39502695606079 | Coste nuevo: 431.5593224513698 (i=22, j=93)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=94
+    -> Coste anterior: 127.05712719844655 | Coste nuevo: 388.24754501398394 (i=22, j=94)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=95
+    -> Coste anterior: 156.7227586584415 | Coste nuevo: 339.0372348493536 (i=22, j=95)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=96
+    -> Coste anterior: 170.54265582330896 | Coste nuevo: 349.93996571578816 (i=22, j=96)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=97
+    -> Coste anterior: 184.75927535722258 | Coste nuevo: 353.11752630089495 (i=22, j=97)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=98
+    -> Coste anterior: 138.27727794996935 | Coste nuevo: 346.5806505398984 (i=22, j=98)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=99
+    -> Coste anterior: 114.57647102480983 | Coste nuevo: 385.437640033247 (i=22, j=99)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=100
+    -> Coste anterior: 174.68166138657162 | Coste nuevo: 413.1422546025913 (i=22, j=100)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=101
+    -> Coste anterior: 138.50021731782257 | Coste nuevo: 342.80592029071823 (i=22, j=101)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=102
+    -> Coste anterior: 102.39502695606079 | Coste nuevo: 321.95347918208546 (i=22, j=102)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=103
+    -> Coste anterior: 166.3950269560608 | Coste nuevo: 344.0238570727108 (i=22, j=103)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=104
+    -> Coste anterior: 155.51546651318287 | Coste nuevo: 292.7701106928875 (i=22, j=104)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=105
+    -> Coste anterior: 105.05612574172088 | Coste nuevo: 246.10431528961766 (i=22, j=105)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=106
+    -> Coste anterior: 105.05612574172088 | Coste nuevo: 259.90253258813755 (i=22, j=106)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=107
+    -> Coste anterior: 105.05612574172088 | Coste nuevo: 253.87975745353057 (i=22, j=107)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=108
+    -> Coste anterior: 101.5481831343302 | Coste nuevo: 258.4765964306806 (i=22, j=108)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=109
+    -> Coste anterior: 134.41340594073395 | Coste nuevo: 241.4644539917801 (i=22, j=109)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=110
+    -> Coste anterior: 174.40578685842945 | Coste nuevo: 248.06844398086236 (i=22, j=110)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=111
+    -> Coste anterior: 179.46417981276173 | Coste nuevo: 203.39413615556404 (i=22, j=111)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=112
+    -> Coste anterior: 162.02568026050398 | Coste nuevo: 225.82458661387386 (i=22, j=112)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=113
+    -> Coste anterior: 110.56140527122997 | Coste nuevo: 179.54535282224822 (i=22, j=113)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=114
+    -> Coste anterior: 78.39502695606079 | Coste nuevo: 158.21070456175357 (i=22, j=114)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=115
+    -> Coste anterior: 78.39502695606079 | Coste nuevo: 184.64955837556863 (i=22, j=115)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=116
+    -> Coste anterior: 73.70873545504556 | Coste nuevo: 202.9511503121226 (i=22, j=116)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=117
+    -> Coste anterior: 102.5869132842171 | Coste nuevo: 250.8924806745369 (i=22, j=117)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=118
+    -> Coste anterior: 103.27320478523234 | Coste nuevo: 313.50707846557634 (i=22, j=118)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=119
+    -> Coste anterior: 106.39502695606079 | Coste nuevo: 295.87732120106637 (i=22, j=119)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=120
+    -> Coste anterior: 147.0068127079244 | Coste nuevo: 260.5494820532989 (i=22, j=120)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=121
+    -> Coste anterior: 123.00681270792441 | Coste nuevo: 336.3693701689453 (i=22, j=121)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=122
+    -> Coste anterior: 101.6360256596874 | Coste nuevo: 364.0594990990709 (i=22, j=122)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=123
+    -> Coste anterior: 109.6360256596874 | Coste nuevo: 332.53386694486375 (i=22, j=123)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=124
+    -> Coste anterior: 99.93568618459881 | Coste nuevo: 335.0304376855128 (i=22, j=124)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=125
+    -> Coste anterior: 87.93568618459881 | Coste nuevo: 366.98688915786414 (i=22, j=125)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=126
+    -> Coste anterior: 91.69324823740783 | Coste nuevo: 345.47044817169075 (i=22, j=126)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=127
+    -> Coste anterior: 103.69324823740783 | Coste nuevo: 296.9178590713949 (i=22, j=127)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=128
+    -> Coste anterior: 86.39502695606079 | Coste nuevo: 256.47177032188904 (i=22, j=128)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=129
+    -> Coste anterior: 102.39502695606079 | Coste nuevo: 256.0494720186331 (i=22, j=129)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=130
+    -> Coste anterior: 141.0426421148232 | Coste nuevo: 261.4010305082754 (i=22, j=130)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=131
+    -> Coste anterior: 134.98376761177747 | Coste nuevo: 224.83749084919418 (i=22, j=131)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=132
+    -> Coste anterior: 152.33615245301507 | Coste nuevo: 246.5295545211929 (i=22, j=132)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=133
+    -> Coste anterior: 142.3950269560608 | Coste nuevo: 238.85722121910894 (i=22, j=133)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=134
+    -> Coste anterior: 118.39502695606079 | Coste nuevo: 253.64925491907775 (i=22, j=134)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=135
+    -> Coste anterior: 166.3950269560608 | Coste nuevo: 246.29421373546725 (i=22, j=135)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=136
+    -> Coste anterior: 206.3950269560608 | Coste nuevo: 290.9824623546591 (i=22, j=136)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=137
+    -> Coste anterior: 145.70873545504557 | Coste nuevo: 264.67011389266224 (i=22, j=137)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=138
+    -> Coste anterior: 91.0069567363926 | Coste nuevo: 254.79126888857778 (i=22, j=138)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=139
+    -> Coste anterior: 108.53765844111975 | Coste nuevo: 232.45786997288485 (i=22, j=139)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=140
+    -> Coste anterior: 91.2394371597727 | Coste nuevo: 188.35813195858242 (i=22, j=140)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=141
+    -> Coste anterior: 70.39502695606079 | Coste nuevo: 167.44799318533555 (i=22, j=141)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=142
+    -> Coste anterior: 86.39502695606079 | Coste nuevo: 176.29945851583918 (i=22, j=142)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=143
+    -> Coste anterior: 110.39502695606079 | Coste nuevo: 166.81260911128442 (i=22, j=143)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=144
+    -> Coste anterior: 120.33615245301507 | Coste nuevo: 200.23020204207796 (i=22, j=144)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=145
+    -> Coste anterior: 128.33615245301507 | Coste nuevo: 191.04083308817246 (i=22, j=145)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=146
+    -> Coste anterior: 142.3950269560608 | Coste nuevo: 208.66924893907333 (i=22, j=146)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=147
+    -> Coste anterior: 131.2394371597727 | Coste nuevo: 214.80978407754804 (i=22, j=147)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=148
+    -> Coste anterior: 95.88854780044622 | Coste nuevo: 278.0492961499078 (i=22, j=148)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=149
+    -> Coste anterior: 77.0441375967343 | Coste nuevo: 282.56734567447285 (i=22, j=149)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=150
+    -> Coste anterior: 89.69324823740783 | Coste nuevo: 283.93043708996777 (i=22, j=150)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=151
+    -> Coste anterior: 89.69324823740783 | Coste nuevo: 326.1216526441685 (i=22, j=151)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=152
+    -> Coste anterior: 155.7843042264277 | Coste nuevo: 324.95148327593586 (i=22, j=152)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=153
+    -> Coste anterior: 246.10379385830333 | Coste nuevo: 320.06706339709945 (i=22, j=153)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=154
+    -> Coste anterior: 205.19223444443227 | Coste nuevo: 328.4421051980644 (i=22, j=154)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=155
+    -> Coste anterior: 114.87274481255665 | Coste nuevo: 325.0750815943737 (i=22, j=155)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=156
+    -> Coste anterior: 96.64405794925499 | Coste nuevo: 296.569183822829 (i=22, j=156)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=157
+    -> Coste anterior: 129.91067325482285 | Coste nuevo: 317.4572655770478 (i=22, j=157)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=158
+    -> Coste anterior: 190.44095029957427 | Coste nuevo: 320.6061348544953 (i=22, j=158)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=159
+    -> Coste anterior: 244.4985354787779 | Coste nuevo: 262.96179407618007 (i=22, j=159)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=160
+    -> Coste anterior: 163.03293593981707 | Coste nuevo: 237.81302795716033 (i=22, j=160)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=161
+    -> Coste anterior: 99.88475043631567 | Coste nuevo: 233.055034929976 (i=22, j=161)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=162
+    -> Coste anterior: 129.3631980460732 | Coste nuevo: 246.9098909053571 (i=22, j=162)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=163
+    -> Coste anterior: 115.18718306480307 | Coste nuevo: 273.99229827276605 (i=22, j=163)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=164
+    -> Coste anterior: 103.51546651318286 | Coste nuevo: 298.67126900974813 (i=22, j=164)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=165
+    -> Coste anterior: 126.78208181875073 | Coste nuevo: 310.030967795986 (i=22, j=165)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=166
+    -> Coste anterior: 178.06064723059578 | Coste nuevo: 293.4593770957438 (i=22, j=166)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=22, j=167
+    -> Coste anterior: 255.1269035769585 | Coste nuevo: 252.68474773543466 (i=22, j=167)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=23, j=25
+    -> Coste anterior: 149.53811462724306 | Coste nuevo: 158.37240211541223 (i=23, j=25)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=23, j=26
+    -> Coste anterior: 140.73231584836668 | Coste nuevo: 253.00117953475967 (i=23, j=26)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=23, j=27
+    -> Coste anterior: 144.92141338585424 | Coste nuevo: 245.3486676305044 (i=23, j=27)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=23, j=28
+    -> Coste anterior: 136.4289908833836 | Coste nuevo: 157.5507905963397 (i=23, j=28)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=23, j=29
+    -> Coste anterior: 79.31370849898477 | Coste nuevo: 128.069150349183 (i=23, j=29)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=23, j=30
+    -> Coste anterior: 82.62741699796953 | Coste nuevo: 147.97730713298557 (i=23, j=30)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=23, j=31
+    -> Coste anterior: 82.62741699796952 | Coste nuevo: 170.38516548216595 (i=23, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=23, j=32
+    -> Coste anterior: 103.31370849898477 | Coste nuevo: 140.48337230559034 (i=23, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=23, j=33
+    -> Coste anterior: 119.31370849898477 | Coste nuevo: 109.68898205204587 (i=23, j=33)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=24, j=26
+    -> Coste anterior: 118.71682863072895 | Coste nuevo: 241.2389573484861 (i=24, j=26)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=24, j=27
+    -> Coste anterior: 122.90592616821651 | Coste nuevo: 226.0410778340477 (i=24, j=27)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=24, j=28
+    -> Coste anterior: 114.41350366574586 | Coste nuevo: 142.2746492064552 (i=24, j=28)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=24, j=29
+    -> Coste anterior: 57.29822128134704 | Coste nuevo: 113.94112549695427 (i=24, j=29)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=24, j=30
+    -> Coste anterior: 60.6119297803318 | Coste nuevo: 144.66210024238575 (i=24, j=30)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=24, j=31
+    -> Coste anterior: 60.6119297803318 | Coste nuevo: 172.20983890440408 (i=24, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=24, j=32
+    -> Coste anterior: 105.86676377627084 | Coste nuevo: 138.62342390013293 (i=24, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=24, j=33
+    -> Coste anterior: 105.86676377627084 | Coste nuevo: 103.92563827931656 (i=24, j=33)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=25, j=27
+    -> Coste anterior: 165.16130673175024 | Coste nuevo: 177.48099281215326 (i=25, j=27)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=28
+    -> Coste anterior: 156.66888422927963 | Coste nuevo: 196.1511979337975 (i=25, j=28)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=29
+    -> Coste anterior: 99.55360184488079 | Coste nuevo: 189.6365663124542 (i=25, j=29)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=30
+    -> Coste anterior: 102.86731034386555 | Coste nuevo: 214.22722460776993 (i=25, j=30)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=31
+    -> Coste anterior: 102.86731034386555 | Coste nuevo: 234.33121337299815 (i=25, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=32
+    -> Coste anterior: 139.5536018448808 | Coste nuevo: 214.67606989321817 (i=25, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=33
+    -> Coste anterior: 139.5536018448808 | Coste nuevo: 172.96837077561113 (i=25, j=33)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=34
+    -> Coste anterior: 132.34575795362306 | Coste nuevo: 162.74094038133865 (i=25, j=34)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=35
+    -> Coste anterior: 149.6439792349701 | Coste nuevo: 183.92572866078794 (i=25, j=35)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=36
+    -> Coste anterior: 141.83666813116912 | Coste nuevo: 186.66582988722175 (i=25, j=36)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=37
+    -> Coste anterior: 132.53844684982207 | Coste nuevo: 198.7364183401888 (i=25, j=37)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=38
+    -> Coste anterior: 107.55360184488079 | Coste nuevo: 202.37965477837506 (i=25, j=38)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=39
+    -> Coste anterior: 131.5536018448808 | Coste nuevo: 226.5072980487995 (i=25, j=39)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=40
+    -> Coste anterior: 141.4421456648791 | Coste nuevo: 278.90715382462935 (i=25, j=40)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=41
+    -> Coste anterior: 112.75585416386387 | Coste nuevo: 278.72906831077194 (i=25, j=41)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=42
+    -> Coste anterior: 126.86731034386555 | Coste nuevo: 281.6225764726944 (i=25, j=42)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=43
+    -> Coste anterior: 123.55360184488079 | Coste nuevo: 335.53638457140005 (i=25, j=43)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=44
+    -> Coste anterior: 99.55360184488079 | Coste nuevo: 371.710723247656 (i=25, j=44)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=45
+    -> Coste anterior: 116.85182312622783 | Coste nuevo: 379.58939188507316 (i=25, j=45)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=46
+    -> Coste anterior: 116.85182312622783 | Coste nuevo: 381.15922446985525 (i=25, j=46)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=47
+    -> Coste anterior: 109.4421456648791 | Coste nuevo: 392.3777590026755 (i=25, j=47)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=48
+    -> Coste anterior: 125.4421456648791 | Coste nuevo: 404.5744282449703 (i=25, j=48)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=49
+    -> Coste anterior: 123.55360184488079 | Coste nuevo: 407.1827661708056 (i=25, j=49)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=50
+    -> Coste anterior: 117.4421456648791 | Coste nuevo: 393.5645793334555 (i=25, j=50)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=51
+    -> Coste anterior: 122.98280489341712 | Coste nuevo: 360.4166246953179 (i=25, j=51)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=52
+    -> Coste anterior: 149.8156206234146 | Coste nuevo: 346.17317983354974 (i=25, j=52)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=53
+    -> Coste anterior: 171.35627985195262 | Coste nuevo: 346.5095755263391 (i=25, j=53)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=54
+    -> Coste anterior: 142.6349203019568 | Coste nuevo: 328.48073434668254 (i=25, j=54)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=55
+    -> Coste anterior: 117.4421456648791 | Coste nuevo: 311.914882282595 (i=25, j=55)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=56
+    -> Coste anterior: 130.28655586859102 | Coste nuevo: 331.7676172532585 (i=25, j=56)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=57
+    -> Coste anterior: 136.3980120485927 | Coste nuevo: 351.723895634119 (i=25, j=57)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=58
+    -> Coste anterior: 123.55360184488079 | Coste nuevo: 350.59436571907355 (i=25, j=58)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=59
+    -> Coste anterior: 107.55360184488079 | Coste nuevo: 341.4217571510684 (i=25, j=59)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=60
+    -> Coste anterior: 123.55360184488079 | Coste nuevo: 366.8628219814266 (i=25, j=60)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=61
+    -> Coste anterior: 123.55360184488079 | Coste nuevo: 394.1901964062624 (i=25, j=61)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=62
+    -> Coste anterior: 131.5536018448808 | Coste nuevo: 380.6672443948371 (i=25, j=62)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=63
+    -> Coste anterior: 177.21923330487573 | Coste nuevo: 352.14401911028193 (i=25, j=63)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=64
+    -> Coste anterior: 166.06364350858763 | Coste nuevo: 351.1706674562795 (i=25, j=64)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=65
+    -> Coste anterior: 137.69623332993973 | Coste nuevo: 373.32476840706056 (i=25, j=65)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=66
+    -> Coste anterior: 116.85182312622783 | Coste nuevo: 346.2777735709954 (i=25, j=66)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=67
+    -> Coste anterior: 148.1221443398046 | Coste nuevo: 332.93420626465104 (i=25, j=67)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=68
+    -> Coste anterior: 208.47417430234486 | Coste nuevo: 368.61249010546766 (i=25, j=68)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=69
+    -> Coste anterior: 187.68271944741767 | Coste nuevo: 371.319190080103 (i=25, j=69)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=70
+    -> Coste anterior: 127.33068948487742 | Coste nuevo: 325.3224880406573 (i=25, j=70)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=71
+    -> Coste anterior: 116.85182312622783 | Coste nuevo: 297.5764498482431 (i=25, j=71)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=72
+    -> Coste anterior: 132.85182312622783 | Coste nuevo: 293.01257032244166 (i=25, j=72)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=73
+    -> Coste anterior: 123.55360184488079 | Coste nuevo: 292.26720786425415 (i=25, j=73)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=74
+    -> Coste anterior: 107.55360184488079 | Coste nuevo: 284.43354037586494 (i=25, j=74)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=75
+    -> Coste anterior: 123.80263283807498 | Coste nuevo: 287.4887317834779 (i=25, j=75)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=76
+    -> Coste anterior: 158.32321608901358 | Coste nuevo: 291.8396542355274 (i=25, j=76)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=77
+    -> Coste anterior: 134.0741850958194 | Coste nuevo: 350.8106621551386 (i=25, j=77)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=78
+    -> Coste anterior: 142.15004440757485 | Coste nuevo: 353.5512655266793 (i=25, j=78)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=79
+    -> Coste anterior: 195.07622925448612 | Coste nuevo: 317.8277643564958 (i=25, j=79)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=80
+    -> Coste anterior: 212.83181665433233 | Coste nuevo: 353.9415408161443 (i=25, j=80)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=81
+    -> Coste anterior: 167.90563180742103 | Coste nuevo: 319.7430816761963 (i=25, j=81)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=82
+    -> Coste anterior: 110.86731034386555 | Coste nuevo: 331.0256570548255 (i=25, j=82)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=83
+    -> Coste anterior: 102.86731034386555 | Coste nuevo: 352.6663704829027 (i=25, j=83)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=84
+    -> Coste anterior: 99.55360184488079 | Coste nuevo: 335.6067598383605 (i=25, j=84)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=85
+    -> Coste anterior: 124.84023579906727 | Coste nuevo: 346.3376151711148 (i=25, j=85)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=86
+    -> Coste anterior: 158.07129205524387 | Coste nuevo: 352.72231967076743 (i=25, j=86)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=87
+    -> Coste anterior: 176.0096520005202 | Coste nuevo: 372.42746036505616 (i=25, j=87)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=88
+    -> Coste anterior: 154.7785957443436 | Coste nuevo: 407.98792985816067 (i=25, j=88)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=89
+    -> Coste anterior: 135.802632838075 | Coste nuevo: 438.00105823886577 (i=25, j=89)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=90
+    -> Coste anterior: 141.4151297878064 | Coste nuevo: 425.7898398464413 (i=25, j=90)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=91
+    -> Coste anterior: 132.4899063739934 | Coste nuevo: 430.04582453586085 (i=25, j=91)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=92
+    -> Coste anterior: 114.877409424262 | Coste nuevo: 436.54896847592426 (i=25, j=92)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=93
+    -> Coste anterior: 115.55360184488079 | Coste nuevo: 425.4735508549465 (i=25, j=93)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=94
+    -> Coste anterior: 156.21570208726655 | Coste nuevo: 369.3310223661857 (i=25, j=94)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=95
+    -> Coste anterior: 185.8813335472615 | Coste nuevo: 349.6505622655786 (i=25, j=95)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=96
+    -> Coste anterior: 199.70123071212896 | Coste nuevo: 321.74722801192775 (i=25, j=96)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=97
+    -> Coste anterior: 213.91785024604258 | Coste nuevo: 365.6325478862675 (i=25, j=97)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=98
+    -> Coste anterior: 167.43585283878934 | Coste nuevo: 331.27400633093697 (i=25, j=98)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=99
+    -> Coste anterior: 143.73504591362985 | Coste nuevo: 380.04134083850767 (i=25, j=99)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=100
+    -> Coste anterior: 203.84023627539162 | Coste nuevo: 415.3222416750335 (i=25, j=100)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=101
+    -> Coste anterior: 167.65879220664257 | Coste nuevo: 344.7612586526681 (i=25, j=101)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=102
+    -> Coste anterior: 131.5536018448808 | Coste nuevo: 323.78092864921103 (i=25, j=102)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=103
+    -> Coste anterior: 195.5536018448808 | Coste nuevo: 350.05883314294465 (i=25, j=103)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=104
+    -> Coste anterior: 184.67404140200287 | Coste nuevo: 316.14715002162734 (i=25, j=104)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=105
+    -> Coste anterior: 134.21470063054088 | Coste nuevo: 303.619300248607 (i=25, j=105)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=106
+    -> Coste anterior: 134.21470063054088 | Coste nuevo: 294.08403548364265 (i=25, j=106)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=107
+    -> Coste anterior: 134.21470063054088 | Coste nuevo: 314.3241293529196 (i=25, j=107)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=108
+    -> Coste anterior: 130.7067580231502 | Coste nuevo: 296.5763013514981 (i=25, j=108)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=109
+    -> Coste anterior: 163.57198082955395 | Coste nuevo: 306.1617207490085 (i=25, j=109)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=110
+    -> Coste anterior: 203.56436174724945 | Coste nuevo: 253.73584159777332 (i=25, j=110)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=111
+    -> Coste anterior: 208.62275470158173 | Coste nuevo: 283.5442909607658 (i=25, j=111)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=112
+    -> Coste anterior: 191.18425514932397 | Coste nuevo: 237.1832173646298 (i=25, j=112)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=113
+    -> Coste anterior: 139.71998016004997 | Coste nuevo: 246.9522955681644 (i=25, j=113)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=114
+    -> Coste anterior: 107.55360184488079 | Coste nuevo: 229.85684561584054 (i=25, j=114)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=115
+    -> Coste anterior: 107.55360184488079 | Coste nuevo: 240.3926407348864 (i=25, j=115)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=116
+    -> Coste anterior: 102.86731034386555 | Coste nuevo: 267.19306692536367 (i=25, j=116)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=117
+    -> Coste anterior: 131.7454881730371 | Coste nuevo: 306.3626893695547 (i=25, j=117)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=118
+    -> Coste anterior: 132.43177967405234 | Coste nuevo: 357.05172408578005 (i=25, j=118)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=119
+    -> Coste anterior: 135.5536018448808 | Coste nuevo: 340.18826040368117 (i=25, j=119)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=120
+    -> Coste anterior: 176.1653875967444 | Coste nuevo: 331.9141191206661 (i=25, j=120)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=121
+    -> Coste anterior: 152.1653875967444 | Coste nuevo: 376.9443359435827 (i=25, j=121)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=122
+    -> Coste anterior: 130.7946005485074 | Coste nuevo: 415.8695071510307 (i=25, j=122)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=123
+    -> Coste anterior: 138.7946005485074 | Coste nuevo: 379.30222095957015 (i=25, j=123)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=124
+    -> Coste anterior: 129.0942610734188 | Coste nuevo: 393.40322015760705 (i=25, j=124)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=125
+    -> Coste anterior: 117.0942610734188 | Coste nuevo: 411.49126391935755 (i=25, j=125)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=126
+    -> Coste anterior: 120.85182312622783 | Coste nuevo: 392.9555156766223 (i=25, j=126)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=127
+    -> Coste anterior: 132.85182312622783 | Coste nuevo: 350.00827434574745 (i=25, j=127)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=128
+    -> Coste anterior: 115.55360184488079 | Coste nuevo: 312.4550573626325 (i=25, j=128)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=129
+    -> Coste anterior: 131.5536018448808 | Coste nuevo: 318.3106226759247 (i=25, j=129)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=130
+    -> Coste anterior: 170.2012170036432 | Coste nuevo: 300.0636026308877 (i=25, j=130)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=131
+    -> Coste anterior: 164.14234250059747 | Coste nuevo: 292.4181119112267 (i=25, j=131)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=132
+    -> Coste anterior: 181.49472734183507 | Coste nuevo: 277.07745455577134 (i=25, j=132)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=133
+    -> Coste anterior: 171.5536018448808 | Coste nuevo: 294.4942267093213 (i=25, j=133)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=134
+    -> Coste anterior: 147.5536018448808 | Coste nuevo: 272.5964703191461 (i=25, j=134)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=135
+    -> Coste anterior: 195.5536018448808 | Coste nuevo: 299.65554918423004 (i=25, j=135)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=136
+    -> Coste anterior: 235.5536018448808 | Coste nuevo: 294.66802148032036 (i=25, j=136)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=137
+    -> Coste anterior: 174.86731034386557 | Coste nuevo: 302.5828253511425 (i=25, j=137)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=138
+    -> Coste anterior: 120.1655316252126 | Coste nuevo: 275.2230916222413 (i=25, j=138)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=139
+    -> Coste anterior: 137.69623332993973 | Coste nuevo: 244.44095081616 (i=25, j=139)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=140
+    -> Coste anterior: 120.3980120485927 | Coste nuevo: 210.6011739400514 (i=25, j=140)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=141
+    -> Coste anterior: 99.55360184488079 | Coste nuevo: 184.66293923356767 (i=25, j=141)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=142
+    -> Coste anterior: 115.55360184488079 | Coste nuevo: 187.8304281992036 (i=25, j=142)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=143
+    -> Coste anterior: 139.5536018448808 | Coste nuevo: 194.41883705770954 (i=25, j=143)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=144
+    -> Coste anterior: 149.49472734183507 | Coste nuevo: 213.44180364342878 (i=25, j=144)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=145
+    -> Coste anterior: 157.49472734183507 | Coste nuevo: 230.9081425238706 (i=25, j=145)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=146
+    -> Coste anterior: 171.5536018448808 | Coste nuevo: 220.11002713771546 (i=25, j=146)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=147
+    -> Coste anterior: 160.3980120485927 | Coste nuevo: 230.98041879174463 (i=25, j=147)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=148
+    -> Coste anterior: 125.04712268926622 | Coste nuevo: 269.75610254147836 (i=25, j=148)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=149
+    -> Coste anterior: 106.2027124855543 | Coste nuevo: 273.3164719321992 (i=25, j=149)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=150
+    -> Coste anterior: 118.85182312622783 | Coste nuevo: 274.68583307533993 (i=25, j=150)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=151
+    -> Coste anterior: 118.85182312622783 | Coste nuevo: 314.2399190477292 (i=25, j=151)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=152
+    -> Coste anterior: 184.9428791152477 | Coste nuevo: 331.7465659963257 (i=25, j=152)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=153
+    -> Coste anterior: 275.26236874712333 | Coste nuevo: 312.91451728452597 (i=25, j=153)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=154
+    -> Coste anterior: 234.35080933325227 | Coste nuevo: 339.1808947645528 (i=25, j=154)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=155
+    -> Coste anterior: 144.03131970137665 | Coste nuevo: 319.95233379616684 (i=25, j=155)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=156
+    -> Coste anterior: 125.80263283807498 | Coste nuevo: 292.34354167097473 (i=25, j=156)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=157
+    -> Coste anterior: 159.06924814364285 | Coste nuevo: 307.23195706619356 (i=25, j=157)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=158
+    -> Coste anterior: 219.59952518839427 | Coste nuevo: 329.25430506298835 (i=25, j=158)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=25, j=159
+    -> Coste anterior: 273.6571103675979 | Coste nuevo: 270.91442186944465 (i=25, j=159)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=26, j=28
+    -> Coste anterior: 179.4965251038464 | Coste nuevo: 236.7608817990932 (i=26, j=28)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=29
+    -> Coste anterior: 122.38124271944757 | Coste nuevo: 307.38500061781303 (i=26, j=29)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=30
+    -> Coste anterior: 125.69495121843234 | Coste nuevo: 323.45641748449407 (i=26, j=30)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=31
+    -> Coste anterior: 125.69495121843234 | Coste nuevo: 335.2959571819059 (i=26, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=32
+    -> Coste anterior: 162.38124271944758 | Coste nuevo: 338.12700369362983 (i=26, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=33
+    -> Coste anterior: 162.38124271944758 | Coste nuevo: 298.8631523551612 (i=26, j=33)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=34
+    -> Coste anterior: 155.17339882818985 | Coste nuevo: 299.9949665851116 (i=26, j=34)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=35
+    -> Coste anterior: 172.47162010953687 | Coste nuevo: 330.95983889489133 (i=26, j=35)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=36
+    -> Coste anterior: 164.6643090057359 | Coste nuevo: 307.27723501368496 (i=26, j=36)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=37
+    -> Coste anterior: 155.36608772438885 | Coste nuevo: 337.03399251496637 (i=26, j=37)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=38
+    -> Coste anterior: 130.38124271944758 | Coste nuevo: 329.6910892943324 (i=26, j=38)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=39
+    -> Coste anterior: 154.38124271944758 | Coste nuevo: 364.1962043886323 (i=26, j=39)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=40
+    -> Coste anterior: 164.2697865394459 | Coste nuevo: 417.7569888328255 (i=26, j=40)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=41
+    -> Coste anterior: 135.58349503843064 | Coste nuevo: 416.68180798885726 (i=26, j=41)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=42
+    -> Coste anterior: 149.69495121843232 | Coste nuevo: 423.7977621513609 (i=26, j=42)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=43
+    -> Coste anterior: 146.38124271944758 | Coste nuevo: 469.6221286826576 (i=26, j=43)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=44
+    -> Coste anterior: 122.38124271944757 | Coste nuevo: 504.74795979810295 (i=26, j=44)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=45
+    -> Coste anterior: 139.6794640007946 | Coste nuevo: 502.807838684627 (i=26, j=45)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=46
+    -> Coste anterior: 139.6794640007946 | Coste nuevo: 506.8303099480569 (i=26, j=46)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=47
+    -> Coste anterior: 132.26978653944587 | Coste nuevo: 504.50358629703663 (i=26, j=47)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=48
+    -> Coste anterior: 148.26978653944587 | Coste nuevo: 527.7671874443269 (i=26, j=48)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=49
+    -> Coste anterior: 146.38124271944758 | Coste nuevo: 519.5373043500339 (i=26, j=49)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=50
+    -> Coste anterior: 140.26978653944587 | Coste nuevo: 519.3467043112005 (i=26, j=50)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=51
+    -> Coste anterior: 145.8104457679839 | Coste nuevo: 486.77132527548247 (i=26, j=51)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=52
+    -> Coste anterior: 172.64326149798137 | Coste nuevo: 461.7454644888819 (i=26, j=52)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=53
+    -> Coste anterior: 194.1839207265194 | Coste nuevo: 482.7331966829823 (i=26, j=53)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=54
+    -> Coste anterior: 165.4625611765236 | Coste nuevo: 450.3171695738289 (i=26, j=54)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=55
+    -> Coste anterior: 140.26978653944587 | Coste nuevo: 441.92161149082887 (i=26, j=55)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=56
+    -> Coste anterior: 153.1141967431578 | Coste nuevo: 460.628934466749 (i=26, j=56)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=57
+    -> Coste anterior: 159.2256529231595 | Coste nuevo: 473.0462361460147 (i=26, j=57)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=58
+    -> Coste anterior: 146.38124271944758 | Coste nuevo: 462.2381991660356 (i=26, j=58)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=59
+    -> Coste anterior: 130.38124271944758 | Coste nuevo: 453.2184921078602 (i=26, j=59)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=60
+    -> Coste anterior: 146.38124271944758 | Coste nuevo: 458.4893469827732 (i=26, j=60)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=61
+    -> Coste anterior: 146.38124271944758 | Coste nuevo: 492.2706572788208 (i=26, j=61)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=62
+    -> Coste anterior: 154.38124271944758 | Coste nuevo: 482.6502961205857 (i=26, j=62)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=63
+    -> Coste anterior: 200.04687417944254 | Coste nuevo: 427.8459356323321 (i=26, j=63)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=64
+    -> Coste anterior: 188.8912843831544 | Coste nuevo: 457.9558312007251 (i=26, j=64)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=65
+    -> Coste anterior: 160.5238742045065 | Coste nuevo: 439.55895740961967 (i=26, j=65)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=66
+    -> Coste anterior: 139.6794640007946 | Coste nuevo: 430.26499000543924 (i=26, j=66)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=67
+    -> Coste anterior: 170.9497852143714 | Coste nuevo: 431.4410530805495 (i=26, j=67)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=68
+    -> Coste anterior: 231.30181517691165 | Coste nuevo: 441.19538757059155 (i=26, j=68)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=69
+    -> Coste anterior: 210.51036032198445 | Coste nuevo: 478.9304295310779 (i=26, j=69)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=70
+    -> Coste anterior: 150.15833035944422 | Coste nuevo: 405.7510062421366 (i=26, j=70)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=71
+    -> Coste anterior: 139.6794640007946 | Coste nuevo: 369.3622925150495 (i=26, j=71)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=72
+    -> Coste anterior: 155.6794640007946 | Coste nuevo: 380.46492218366285 (i=26, j=72)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=73
+    -> Coste anterior: 146.38124271944758 | Coste nuevo: 354.78540586173074 (i=26, j=73)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=74
+    -> Coste anterior: 130.38124271944758 | Coste nuevo: 363.4481996401104 (i=26, j=74)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=75
+    -> Coste anterior: 146.63027371264178 | Coste nuevo: 331.9407386089133 (i=26, j=75)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=76
+    -> Coste anterior: 181.1508569635804 | Coste nuevo: 345.86745870901666 (i=26, j=76)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=77
+    -> Coste anterior: 156.90182597038617 | Coste nuevo: 388.9898782918448 (i=26, j=77)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=78
+    -> Coste anterior: 164.97768528214164 | Coste nuevo: 371.96050898153874 (i=26, j=78)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=79
+    -> Coste anterior: 217.9038701290529 | Coste nuevo: 362.95788954937314 (i=26, j=79)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=80
+    -> Coste anterior: 235.6594575288991 | Coste nuevo: 337.19780295471537 (i=26, j=80)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=81
+    -> Coste anterior: 190.7332726819878 | Coste nuevo: 325.07286990565314 (i=26, j=81)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=82
+    -> Coste anterior: 133.69495121843232 | Coste nuevo: 304.97765484060665 (i=26, j=82)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=83
+    -> Coste anterior: 125.69495121843234 | Coste nuevo: 328.43226524880805 (i=26, j=83)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=84
+    -> Coste anterior: 122.38124271944757 | Coste nuevo: 316.6150388311162 (i=26, j=84)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=85
+    -> Coste anterior: 147.66787667363405 | Coste nuevo: 313.6235748394158 (i=26, j=85)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=86
+    -> Coste anterior: 180.89893292981066 | Coste nuevo: 344.9370875976746 (i=26, j=86)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=87
+    -> Coste anterior: 198.83729287508697 | Coste nuevo: 320.1927025311923 (i=26, j=87)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=88
+    -> Coste anterior: 177.60623661891037 | Coste nuevo: 371.20703222654134 (i=26, j=88)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=89
+    -> Coste anterior: 158.63027371264178 | Coste nuevo: 383.5466973636678 (i=26, j=89)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=90
+    -> Coste anterior: 164.24277066237318 | Coste nuevo: 353.85797073251797 (i=26, j=90)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=91
+    -> Coste anterior: 155.31754724856017 | Coste nuevo: 362.1235860384333 (i=26, j=91)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=92
+    -> Coste anterior: 137.70505029882878 | Coste nuevo: 361.2580131103525 (i=26, j=92)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=93
+    -> Coste anterior: 138.38124271944758 | Coste nuevo: 337.1141747481889 (i=26, j=93)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=94
+    -> Coste anterior: 179.04334296183333 | Coste nuevo: 312.3605429378381 (i=26, j=94)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=95
+    -> Coste anterior: 208.7089744218283 | Coste nuevo: 251.611327436488 (i=26, j=95)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=96
+    -> Coste anterior: 222.52887158669574 | Coste nuevo: 289.9623953785259 (i=26, j=96)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=97
+    -> Coste anterior: 236.74549112060936 | Coste nuevo: 265.35876673887003 (i=26, j=97)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=98
+    -> Coste anterior: 190.26349371335613 | Coste nuevo: 266.9379109302643 (i=26, j=98)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=99
+    -> Coste anterior: 166.56268678819663 | Coste nuevo: 288.4643055086167 (i=26, j=99)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=100
+    -> Coste anterior: 226.66787714995843 | Coste nuevo: 318.3212587289 (i=26, j=100)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=101
+    -> Coste anterior: 190.48643308120936 | Coste nuevo: 251.18156931751614 (i=26, j=101)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=102
+    -> Coste anterior: 154.38124271944758 | Coste nuevo: 228.49966743199317 (i=26, j=102)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=103
+    -> Coste anterior: 218.38124271944758 | Coste nuevo: 262.0912083990547 (i=26, j=103)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=104
+    -> Coste anterior: 207.50168227656965 | Coste nuevo: 245.71214920256963 (i=26, j=104)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=105
+    -> Coste anterior: 157.04234150510766 | Coste nuevo: 206.79121744588292 (i=26, j=105)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=106
+    -> Coste anterior: 157.04234150510766 | Coste nuevo: 254.6971694471927 (i=26, j=106)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=107
+    -> Coste anterior: 157.04234150510766 | Coste nuevo: 224.17148044863825 (i=26, j=107)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=108
+    -> Coste anterior: 153.53439889771698 | Coste nuevo: 262.5904047659928 (i=26, j=108)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=109
+    -> Coste anterior: 186.39962170412076 | Coste nuevo: 198.5387455168938 (i=26, j=109)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=110
+    -> Coste anterior: 226.39200262181623 | Coste nuevo: 263.4242558474881 (i=26, j=110)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=26, j=111
+    -> Coste anterior: 231.4503955761485 | Coste nuevo: 153.9197191250556 (i=26, j=111)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=27, j=29
+    -> Coste anterior: 145.11528238439882 | Coste nuevo: 224.96700934976965 (i=27, j=29)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=30
+    -> Coste anterior: 148.4289908833836 | Coste nuevo: 246.49896877053425 (i=27, j=30)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=31
+    -> Coste anterior: 148.4289908833836 | Coste nuevo: 259.22840045969065 (i=27, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=32
+    -> Coste anterior: 185.11528238439882 | Coste nuevo: 269.7813281533157 (i=27, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=33
+    -> Coste anterior: 185.11528238439882 | Coste nuevo: 236.63823052648115 (i=27, j=33)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=34
+    -> Coste anterior: 177.90743849314111 | Coste nuevo: 244.5934829689839 (i=27, j=34)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=35
+    -> Coste anterior: 195.20565977448814 | Coste nuevo: 252.55965275194694 (i=27, j=35)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=36
+    -> Coste anterior: 187.39834867068714 | Coste nuevo: 233.65229002130286 (i=27, j=36)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=37
+    -> Coste anterior: 178.10012738934012 | Coste nuevo: 259.77403819498846 (i=27, j=37)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=38
+    -> Coste anterior: 153.11528238439882 | Coste nuevo: 243.65160552305548 (i=27, j=38)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=39
+    -> Coste anterior: 177.11528238439882 | Coste nuevo: 282.4586525281025 (i=27, j=39)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=40
+    -> Coste anterior: 187.00382620439714 | Coste nuevo: 343.72113866339396 (i=27, j=40)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=41
+    -> Coste anterior: 158.3175347033819 | Coste nuevo: 342.32094719185795 (i=27, j=41)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=42
+    -> Coste anterior: 172.4289908833836 | Coste nuevo: 345.3404628973022 (i=27, j=42)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=43
+    -> Coste anterior: 169.11528238439882 | Coste nuevo: 395.223525799166 (i=27, j=43)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=44
+    -> Coste anterior: 145.11528238439882 | Coste nuevo: 428.504160558568 (i=27, j=44)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=45
+    -> Coste anterior: 162.41350366574585 | Coste nuevo: 425.10282982498495 (i=27, j=45)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=46
+    -> Coste anterior: 162.41350366574585 | Coste nuevo: 430.39649128848265 (i=27, j=46)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=47
+    -> Coste anterior: 155.00382620439714 | Coste nuevo: 426.012101618122 (i=27, j=47)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=48
+    -> Coste anterior: 171.00382620439714 | Coste nuevo: 452.7347383888863 (i=27, j=48)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=49
+    -> Coste anterior: 169.11528238439882 | Coste nuevo: 441.0470213227368 (i=27, j=49)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=50
+    -> Coste anterior: 163.00382620439714 | Coste nuevo: 443.1147833425971 (i=27, j=50)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=51
+    -> Coste anterior: 168.54448543293515 | Coste nuevo: 408.5019795056593 (i=27, j=51)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=52
+    -> Coste anterior: 195.3773011629326 | Coste nuevo: 382.2604343169641 (i=27, j=52)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=53
+    -> Coste anterior: 216.91796039147064 | Coste nuevo: 409.3940293465106 (i=27, j=53)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=54
+    -> Coste anterior: 188.19660084147486 | Coste nuevo: 369.2667327515737 (i=27, j=54)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=55
+    -> Coste anterior: 163.00382620439714 | Coste nuevo: 364.31318249876216 (i=27, j=55)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=56
+    -> Coste anterior: 175.84823640810905 | Coste nuevo: 379.432148765701 (i=27, j=56)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=57
+    -> Coste anterior: 181.95969258811073 | Coste nuevo: 395.798822258726 (i=27, j=57)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=58
+    -> Coste anterior: 169.11528238439882 | Coste nuevo: 383.0403303735624 (i=27, j=58)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=59
+    -> Coste anterior: 153.11528238439882 | Coste nuevo: 378.9994533648528 (i=27, j=59)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=60
+    -> Coste anterior: 169.11528238439882 | Coste nuevo: 381.9953362604043 (i=27, j=60)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=61
+    -> Coste anterior: 169.11528238439882 | Coste nuevo: 425.79065271434575 (i=27, j=61)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=62
+    -> Coste anterior: 177.11528238439882 | Coste nuevo: 414.2592466392599 (i=27, j=62)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=63
+    -> Coste anterior: 222.78091384439378 | Coste nuevo: 347.8380605030693 (i=27, j=63)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=64
+    -> Coste anterior: 211.62532404810568 | Coste nuevo: 399.63778945292137 (i=27, j=64)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=65
+    -> Coste anterior: 183.25791386945775 | Coste nuevo: 369.5051137003455 (i=27, j=65)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=66
+    -> Coste anterior: 162.41350366574585 | Coste nuevo: 369.3948805454302 (i=27, j=66)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=67
+    -> Coste anterior: 193.68382487932263 | Coste nuevo: 368.33697289627185 (i=27, j=67)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=68
+    -> Coste anterior: 254.03585484186289 | Coste nuevo: 362.7278044720817 (i=27, j=68)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=69
+    -> Coste anterior: 233.24439998693572 | Coste nuevo: 417.2715237863139 (i=27, j=69)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=70
+    -> Coste anterior: 172.89237002439546 | Coste nuevo: 338.85119345545655 (i=27, j=70)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=71
+    -> Coste anterior: 162.41350366574585 | Coste nuevo: 298.5381615115582 (i=27, j=71)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=72
+    -> Coste anterior: 178.41350366574585 | Coste nuevo: 323.3172238378402 (i=27, j=72)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=73
+    -> Coste anterior: 169.11528238439882 | Coste nuevo: 288.6992206180864 (i=27, j=73)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=74
+    -> Coste anterior: 153.11528238439882 | Coste nuevo: 303.63579188049937 (i=27, j=74)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=75
+    -> Coste anterior: 169.36431337759302 | Coste nuevo: 270.7564788076576 (i=27, j=75)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=76
+    -> Coste anterior: 203.88489662853164 | Coste nuevo: 313.18261274446706 (i=27, j=76)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=77
+    -> Coste anterior: 179.63586563533744 | Coste nuevo: 339.25905484839154 (i=27, j=77)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=78
+    -> Coste anterior: 187.7117249470929 | Coste nuevo: 323.6062412984632 (i=27, j=78)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=79
+    -> Coste anterior: 240.63790979400417 | Coste nuevo: 345.33927082651894 (i=27, j=79)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=80
+    -> Coste anterior: 258.39349719385035 | Coste nuevo: 292.10427677293467 (i=27, j=80)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=81
+    -> Coste anterior: 213.46731234693908 | Coste nuevo: 320.4106271529622 (i=27, j=81)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=82
+    -> Coste anterior: 156.4289908833836 | Coste nuevo: 300.2915779460779 (i=27, j=82)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=83
+    -> Coste anterior: 148.4289908833836 | Coste nuevo: 318.5788952626434 (i=27, j=83)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=84
+    -> Coste anterior: 145.11528238439882 | Coste nuevo: 306.01374777435416 (i=27, j=84)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=85
+    -> Coste anterior: 170.4019163385853 | Coste nuevo: 309.3687626264107 (i=27, j=85)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=86
+    -> Coste anterior: 203.6329725947619 | Coste nuevo: 336.30808277758445 (i=27, j=86)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=87
+    -> Coste anterior: 221.5713325400382 | Coste nuevo: 318.12231846025713 (i=27, j=87)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=88
+    -> Coste anterior: 200.3402762838616 | Coste nuevo: 380.08400449774433 (i=27, j=88)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=89
+    -> Coste anterior: 181.36431337759302 | Coste nuevo: 401.60756305233474 (i=27, j=89)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=90
+    -> Coste anterior: 186.97681032732442 | Coste nuevo: 377.05299710540714 (i=27, j=90)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=91
+    -> Coste anterior: 178.05158691351141 | Coste nuevo: 385.6051520432085 (i=27, j=91)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=92
+    -> Coste anterior: 160.43908996378002 | Coste nuevo: 394.18145055380535 (i=27, j=92)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=93
+    -> Coste anterior: 161.11528238439882 | Coste nuevo: 376.2024602616756 (i=27, j=93)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=94
+    -> Coste anterior: 201.77738262678457 | Coste nuevo: 339.0782497081765 (i=27, j=94)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=95
+    -> Coste anterior: 231.44301408677953 | Coste nuevo: 286.027706196631 (i=27, j=95)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=96
+    -> Coste anterior: 245.262911251647 | Coste nuevo: 307.10173421846963 (i=27, j=96)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=97
+    -> Coste anterior: 259.4795307855606 | Coste nuevo: 301.9544161296416 (i=27, j=97)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=98
+    -> Coste anterior: 212.99753337830737 | Coste nuevo: 301.97416099196727 (i=27, j=98)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=99
+    -> Coste anterior: 189.29672645314787 | Coste nuevo: 337.8879143239067 (i=27, j=99)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=100
+    -> Coste anterior: 249.40191681490967 | Coste nuevo: 368.7873230409601 (i=27, j=100)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=101
+    -> Coste anterior: 213.22047274616062 | Coste nuevo: 300.99785891592165 (i=27, j=101)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=102
+    -> Coste anterior: 177.11528238439882 | Coste nuevo: 283.7796806707489 (i=27, j=102)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=103
+    -> Coste anterior: 241.11528238439882 | Coste nuevo: 322.3137498203893 (i=27, j=103)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=104
+    -> Coste anterior: 230.2357219415209 | Coste nuevo: 283.0004046676845 (i=27, j=104)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=105
+    -> Coste anterior: 179.7763811700589 | Coste nuevo: 241.22859391572362 (i=27, j=105)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=106
+    -> Coste anterior: 179.7763811700589 | Coste nuevo: 291.61177224232716 (i=27, j=106)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=107
+    -> Coste anterior: 179.7763811700589 | Coste nuevo: 254.45752368921833 (i=27, j=107)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=108
+    -> Coste anterior: 176.26843856266822 | Coste nuevo: 293.4393288624129 (i=27, j=108)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=109
+    -> Coste anterior: 209.133661369072 | Coste nuevo: 227.44095973836133 (i=27, j=109)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=110
+    -> Coste anterior: 208.81938570068763 | Coste nuevo: 254.44933033243782 (i=27, j=110)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=111
+    -> Coste anterior: 183.25791386945775 | Coste nuevo: 228.97828933964524 (i=27, j=111)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=112
+    -> Coste anterior: 206.12607090327992 | Coste nuevo: 236.83247846991085 (i=27, j=112)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=113
+    -> Coste anterior: 185.28166069956802 | Coste nuevo: 196.41516048789651 (i=27, j=113)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=114
+    -> Coste anterior: 153.11528238439882 | Coste nuevo: 200.47537296495835 (i=27, j=114)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=115
+    -> Coste anterior: 153.11528238439882 | Coste nuevo: 231.1599315139875 (i=27, j=115)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=116
+    -> Coste anterior: 148.4289908833836 | Coste nuevo: 230.5819474961679 (i=27, j=116)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=117
+    -> Coste anterior: 177.30716871255515 | Coste nuevo: 277.3817510990656 (i=27, j=117)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=118
+    -> Coste anterior: 177.99346021357036 | Coste nuevo: 335.38807535868415 (i=27, j=118)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=119
+    -> Coste anterior: 181.11528238439882 | Coste nuevo: 323.70770310769865 (i=27, j=119)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=120
+    -> Coste anterior: 221.72706813626246 | Coste nuevo: 270.5374093555779 (i=27, j=120)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=121
+    -> Coste anterior: 197.72706813626246 | Coste nuevo: 369.29066429540995 (i=27, j=121)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=122
+    -> Coste anterior: 176.35628108802544 | Coste nuevo: 379.25409455452944 (i=27, j=122)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=123
+    -> Coste anterior: 184.35628108802544 | Coste nuevo: 359.44811826430043 (i=27, j=123)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=124
+    -> Coste anterior: 174.65594161293683 | Coste nuevo: 350.92940172005217 (i=27, j=124)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=125
+    -> Coste anterior: 162.65594161293683 | Coste nuevo: 393.477653128631 (i=27, j=125)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=126
+    -> Coste anterior: 166.41350366574585 | Coste nuevo: 372.8371914038987 (i=27, j=126)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=127
+    -> Coste anterior: 178.41350366574585 | Coste nuevo: 331.51189064446817 (i=27, j=127)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=128
+    -> Coste anterior: 161.11528238439882 | Coste nuevo: 302.9348609324229 (i=27, j=128)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=129
+    -> Coste anterior: 177.11528238439882 | Coste nuevo: 301.33921033675165 (i=27, j=129)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=130
+    -> Coste anterior: 215.76289754316122 | Coste nuevo: 315.30277304399823 (i=27, j=130)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=131
+    -> Coste anterior: 209.7040230401155 | Coste nuevo: 267.5002110839198 (i=27, j=131)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=132
+    -> Coste anterior: 227.0564078813531 | Coste nuevo: 303.92709867230343 (i=27, j=132)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=133
+    -> Coste anterior: 217.11528238439882 | Coste nuevo: 311.98833592370795 (i=27, j=133)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=134
+    -> Coste anterior: 193.11528238439882 | Coste nuevo: 328.87624447030674 (i=27, j=134)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=135
+    -> Coste anterior: 241.11528238439882 | Coste nuevo: 323.9289521079694 (i=27, j=135)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=136
+    -> Coste anterior: 281.1152823843988 | Coste nuevo: 352.50136720606497 (i=27, j=136)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=137
+    -> Coste anterior: 220.4289908833836 | Coste nuevo: 343.12743247863597 (i=27, j=137)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=138
+    -> Coste anterior: 165.72721216473062 | Coste nuevo: 344.33542102705434 (i=27, j=138)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=139
+    -> Coste anterior: 183.25791386945775 | Coste nuevo: 313.8382048402503 (i=27, j=139)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=140
+    -> Coste anterior: 165.95969258811073 | Coste nuevo: 285.2761535406202 (i=27, j=140)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=141
+    -> Coste anterior: 145.11528238439882 | Coste nuevo: 262.9188975932718 (i=27, j=141)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=142
+    -> Coste anterior: 161.11528238439882 | Coste nuevo: 267.7809522449835 (i=27, j=142)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=143
+    -> Coste anterior: 185.11528238439882 | Coste nuevo: 263.0260243364461 (i=27, j=143)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=144
+    -> Coste anterior: 195.0564078813531 | Coste nuevo: 287.87425656501546 (i=27, j=144)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=145
+    -> Coste anterior: 203.0564078813531 | Coste nuevo: 277.25228278761597 (i=27, j=145)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=146
+    -> Coste anterior: 217.11528238439882 | Coste nuevo: 290.2448729810077 (i=27, j=146)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=147
+    -> Coste anterior: 205.95969258811073 | Coste nuevo: 300.2950786343938 (i=27, j=147)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=148
+    -> Coste anterior: 170.60880322878424 | Coste nuevo: 351.65957717224694 (i=27, j=148)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=149
+    -> Coste anterior: 151.76439302507234 | Coste nuevo: 356.59504071060417 (i=27, j=149)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=150
+    -> Coste anterior: 164.41350366574585 | Coste nuevo: 361.26554436613173 (i=27, j=150)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=151
+    -> Coste anterior: 164.41350366574585 | Coste nuevo: 393.4061578483666 (i=27, j=151)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=152
+    -> Coste anterior: 230.50455965476573 | Coste nuevo: 393.9292921952534 (i=27, j=152)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=153
+    -> Coste anterior: 320.82404928664135 | Coste nuevo: 382.5502622776761 (i=27, j=153)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=154
+    -> Coste anterior: 279.9124898727703 | Coste nuevo: 400.44041776359234 (i=27, j=154)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=155
+    -> Coste anterior: 189.59300024089467 | Coste nuevo: 401.65411020494895 (i=27, j=155)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=156
+    -> Coste anterior: 171.36431337759302 | Coste nuevo: 372.8266947092178 (i=27, j=156)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=157
+    -> Coste anterior: 204.6309286831609 | Coste nuevo: 390.99694074014775 (i=27, j=157)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=158
+    -> Coste anterior: 265.4195244868708 | Coste nuevo: 353.35085094182494 (i=27, j=158)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=159
+    -> Coste anterior: 266.8742687312987 | Coste nuevo: 274.67670519201033 (i=27, j=159)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=160
+    -> Coste anterior: 185.15035043337937 | Coste nuevo: 221.0180989324162 (i=27, j=160)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=161
+    -> Coste anterior: 174.60500586465372 | Coste nuevo: 204.9496307588745 (i=27, j=161)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=162
+    -> Coste anterior: 204.08345347441121 | Coste nuevo: 221.7296172320713 (i=27, j=162)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=163
+    -> Coste anterior: 189.90743849314111 | Coste nuevo: 237.50391044422102 (i=27, j=163)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=164
+    -> Coste anterior: 178.2357219415209 | Coste nuevo: 266.5681765894885 (i=27, j=164)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=165
+    -> Coste anterior: 201.50233724708878 | Coste nuevo: 266.98204767261126 (i=27, j=165)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=166
+    -> Coste anterior: 231.84617267924074 | Coste nuevo: 268.6496379110864 (i=27, j=166)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=27, j=167
+    -> Coste anterior: 264.68474773543466 | Coste nuevo: 183.45826165920442 (i=27, j=167)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=28, j=30
+    -> Coste anterior: 77.91015106167885 | Coste nuevo: 98.98704168877087 (i=28, j=30)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=28, j=31
+    -> Coste anterior: 77.91015106167883 | Coste nuevo: 126.70714595633933 (i=28, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=28, j=32
+    -> Coste anterior: 114.59644256269408 | Coste nuevo: 127.78021868860027 (i=28, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=28, j=33
+    -> Coste anterior: 114.59644256269408 | Coste nuevo: 136.66210024238575 (i=28, j=33)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=28, j=34
+    -> Coste anterior: 107.38859867143636 | Coste nuevo: 125.91015106167885 (i=28, j=34)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=28, j=35
+    -> Coste anterior: 124.68681995278338 | Coste nuevo: 116.92618484691127 (i=28, j=35)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=29, j=31
+    -> Coste anterior: 35.31370849898476 | Coste nuevo: 51.31370849898476 (i=29, j=31)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=29, j=32
+    -> Coste anterior: 72.0 | Coste nuevo: 75.77708763999664 (i=29, j=32)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=29, j=33
+    -> Coste anterior: 72.0 | Coste nuevo: 128.9848450049413 (i=29, j=33)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=29, j=34
+    -> Coste anterior: 56.0 | Coste nuevo: 128.7921561087423 (i=29, j=34)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=29, j=35
+    -> Coste anterior: 64.0 | Coste nuevo: 91.31370849898477 (i=29, j=35)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=29, j=36
+    -> Coste anterior: 64.98484500494129 | Coste nuevo: 76.6119297803318 (i=29, j=36)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=29, j=37
+    -> Coste anterior: 64.98484500494129 | Coste nuevo: 51.31370849898476 (i=29, j=37)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=30, j=32
+    -> Coste anterior: 75.31370849898477 | Coste nuevo: 70.62741699796952 (i=30, j=32)
+    -> Resultado: TRUE (Mejora detectada)
+    [Evaluando Factorización] i=31, j=33
+    -> Coste anterior: 67.31370849898477 | Coste nuevo: 155.88225099390857 (i=31, j=33)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=34
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 177.96032152373277 (i=31, j=34)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=35
+    -> Coste anterior: 67.31370849898477 | Coste nuevo: 137.3606986036661 (i=31, j=35)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=36
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 115.18676510134536 (i=31, j=36)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=37
+    -> Coste anterior: 54.62741699796952 | Coste nuevo: 88.79215610874228 (i=31, j=37)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=38
+    -> Coste anterior: 38.62741699796952 | Coste nuevo: 93.07530892134368 (i=31, j=38)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=39
+    -> Coste anterior: 67.31370849898477 | Coste nuevo: 133.5080601857511 (i=31, j=39)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=40
+    -> Coste anterior: 77.20225231898308 | Coste nuevo: 190.00206702618118 (i=31, j=40)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=41
+    -> Coste anterior: 48.51596081796784 | Coste nuevo: 183.48190943486125 (i=31, j=41)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=42
+    -> Coste anterior: 62.62741699796952 | Coste nuevo: 178.2775610631405 (i=31, j=42)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=43
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 214.86696593329125 (i=31, j=43)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=44
+    -> Coste anterior: 35.31370849898476 | Coste nuevo: 227.45232693127332 (i=31, j=44)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=45
+    -> Coste anterior: 52.61192978033179 | Coste nuevo: 209.26720917790516 (i=31, j=45)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=46
+    -> Coste anterior: 52.61192978033179 | Coste nuevo: 189.8549853677739 (i=31, j=46)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=47
+    -> Coste anterior: 45.20225231898308 | Coste nuevo: 188.05069891382212 (i=31, j=47)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=48
+    -> Coste anterior: 61.20225231898308 | Coste nuevo: 207.82916420354115 (i=31, j=48)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=49
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 211.82708530000363 (i=31, j=49)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=50
+    -> Coste anterior: 53.20225231898308 | Coste nuevo: 204.26367796029598 (i=31, j=50)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=51
+    -> Coste anterior: 58.74291154752109 | Coste nuevo: 187.8447837357101 (i=31, j=51)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=52
+    -> Coste anterior: 85.57572727751857 | Coste nuevo: 177.42105657874893 (i=31, j=52)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=53
+    -> Coste anterior: 107.11638650605659 | Coste nuevo: 180.72378277058192 (i=31, j=53)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=54
+    -> Coste anterior: 78.39502695606079 | Coste nuevo: 165.5060212558351 (i=31, j=54)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=55
+    -> Coste anterior: 53.20225231898308 | Coste nuevo: 167.0476097233552 (i=31, j=55)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=56
+    -> Coste anterior: 66.04666252269499 | Coste nuevo: 163.40954780370032 (i=31, j=56)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=57
+    -> Coste anterior: 72.15811870269667 | Coste nuevo: 165.4129526986357 (i=31, j=57)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=58
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 141.8292552086532 (i=31, j=58)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=59
+    -> Coste anterior: 43.31370849898476 | Coste nuevo: 125.07530892134368 (i=31, j=59)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=60
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 144.25395800741225 (i=31, j=60)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=61
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 174.21203558823365 (i=31, j=61)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=62
+    -> Coste anterior: 67.31370849898477 | Coste nuevo: 168.42566433551127 (i=31, j=62)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=63
+    -> Coste anterior: 112.97933995897972 | Coste nuevo: 144.9848450049413 (i=31, j=63)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=64
+    -> Coste anterior: 101.82375016269164 | Coste nuevo: 148.69360312942936 (i=31, j=64)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=65
+    -> Coste anterior: 73.45633998404371 | Coste nuevo: 157.25483399593904 (i=31, j=65)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=66
+    -> Coste anterior: 52.61192978033179 | Coste nuevo: 131.71812661063782 (i=31, j=66)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=67
+    -> Coste anterior: 83.88225099390857 | Coste nuevo: 133.36438474336435 (i=31, j=67)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=68
+    -> Coste anterior: 144.2342809564488 | Coste nuevo: 173.8549853677739 (i=31, j=68)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=69
+    -> Coste anterior: 123.44282610152163 | Coste nuevo: 173.67313476398226 (i=31, j=69)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=70
+    -> Coste anterior: 63.090796138981396 | Coste nuevo: 101.78320766403942 (i=31, j=70)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=71
+    -> Coste anterior: 52.61192978033179 | Coste nuevo: 78.18709732392436 (i=31, j=71)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=72
+    -> Coste anterior: 68.61192978033179 | Coste nuevo: 91.31370849898477 (i=31, j=72)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=73
+    -> Coste anterior: 59.31370849898476 | Coste nuevo: 82.28306628628832 (i=31, j=73)
+    -> Resultado: FALSE (El coste no disminuye)
+    [Evaluando Factorización] i=31, j=74
