@@ -302,80 +302,65 @@ public class Algoritmos {
                 vsolGA.set(j, a);
 
         }
-        public void setMatriz(double matriz[][]){
+        public void setMatriz(double [][]matriz){
             this.matriz = matriz;
         }
 
+        public ArrayList<Integer> blpm(ArrayList<Integer> solucion, int limitIteracc, double costeActual){
 
-    public ArrayList<Integer> pdlb( ArrayList<Integer> solucion, int limitIteracc, double costeActual) {
-        MedidorTiempos.empezarContador();
+            MedidorTiempos.empezarContador();
+            int i =0;
+            int j =0;
 
-        int tamS = solucion.size();
+            int numIteraciones=0;
+            int n = solucion.size();
+            boolean mejora= false;
+            boolean []vmascara = new boolean[n];
+            double []coste;
+            int sinMejora=0;
 
-        boolean[] dlb = new boolean[tamS]; // Para marcar las casillas de las posiciones
-        boolean mejorGlo = true;
-        int iteraccActuales = 0;
-        double mejoraActual = 0;
-        double mejora = 0;
-        int i=0;
-        int j =0;
-        boolean mejorLocalAc = false;
-        boolean haymejora = false;
 
-        while (mejorGlo && iteraccActuales < limitIteracc) {
-            mejorGlo = false;
-                if (dlb[i]) {
+
+            while(numIteraciones < limitIteracc && sinMejora < n ){ //condiciones basicas para que siga la busqueda
+                if(vmascara[i]){ //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
+                    sinMejora++;
+                    i = (i + 1) % n;
                     continue;
                 }
-                mejorGlo = true;
-                j=(i + 1) % tamS;
-                while( j != i && iteraccActuales < limitIteracc && !haymejora) {
-                    if (adyacentes(i, j, tamS)) {
-                        j++;
-                        if(j==tamS) j=0;
-                        continue;
+                mejora=false;
+                j = (i + 1) % n; //j = i+1
+                while(i!= j && !mejora){
+                    if(factorizacion(solucion, i,j,n)){ // si hay mejora
+                        cambio(solucion, i,j);
+                        mejora = true;
+                        numIteraciones++;
+                        vmascara[i] = false;
+                        vmascara[j]= false;
+                        sinMejora=0;
+                        coste = calculoCoste(i,j,solucion, n);
+                        costeActual += coste[0]-coste[1];
                     }
-                    if (factorizacion(solucion, i, j, tamS)) {
-                        cambio(solucion, i, j);
-
-                        mejorLocalAc = true;
-                        double []coste = calculoCoste(i, j, solucion, tamS);
-
-                        if(coste[1] < coste[0]){
-                            mejoraActual+= coste[1];
-                        }
-                        iteraccActuales++;
-                        haymejora = true;
-                    }
-                    j++;
-                    if(j== tamS)j=0;
-
+                    if (!mejora) j = (j + 1) % n;
                 }
-                if (!mejorLocalAc) {
-                    dlb[i] = true;
+                if(!mejora){
+                    sinMejora++;
+                    vmascara[i] = true;
                 }
-                i++;
-                haymejora=false;
-                if(i== tamS) i =0;
-                mejorLocalAc =false;
+                i = (i + 1) % n;
 
+            }
+            Log.print("=================================================");
+            Log.print("=== BÚSQUEDA FINALIZADA: ÓPTIMO LOCAL ALCANZADO ===");
+
+            Log.print("=================================================");
+
+            Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+            MedidorTiempos.finalizarYMostrar("BLPM");
+            System.out.println("Coste total " + costeActual);
+
+
+            return solucion;
         }
-        Log.print("\n=================================================");
-        Log.print("=== FIN DE BÚSQUEDA / ÓPTIMO LOCAL ALCANZADO ===");
-        Log.print("Solución final: " + solucion);
-        Log.print("=================================================");
-
-        Log.print("Fin de ejecución del bucle principal. Motivo de salida -> mejorGlo: " + mejorGlo + ", Iteraciones alcanzadas: " + iteraccActuales + "/" + limitIteracc);
-
-        Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
-        MedidorTiempos.finalizarYMostrar("PDLB");
-        System.out.printf("Coste total: " + mejoraActual);
-        Log.print("Coste final: " + mejoraActual);
-        System.out.printf("Iteraciones: " + iteraccActuales);
-        Log.print("\nIteraciones: " + iteraccActuales);
-        System.out.println();
-        return  solucion;
-    }
 
     private boolean adyacentes (int i, int j, int tam) {
         if (i == j) {
@@ -389,11 +374,11 @@ public class Algoritmos {
         return false;
     }
 
-    private boolean factorizacion( ArrayList<Integer> solucion, int i, int j, int n ){
+    private boolean factorizacion(ArrayList<Integer> solucion, int i, int j, int n ){
 
         Log.print("    [Evaluando Factorización] i=" + i + ", j=" + j);
 
-        if (i == j || (i + 1) % n == j || (j + 1) % n == i){
+        if (adyacentes(i,j,n)){
             Log.print("    -> Los nodos son contiguos o iguales (i=" + i + ", j=" + j + "), no se realiza el 2-opt.");
             return false;
         }

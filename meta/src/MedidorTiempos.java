@@ -1,7 +1,5 @@
 public  class MedidorTiempos {
 
-  
-
     private static long tiempoInicio;
 
     /**

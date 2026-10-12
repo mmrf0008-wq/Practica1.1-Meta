@@ -59,19 +59,19 @@ public class Main {
                 }
                 break;
             case 3:
-                //for (int i = 0; i < config.archivos.size(); i++) {
-                int i = 0;
+                for (int i = 0; i < config.archivos.size(); i++) {
+               //int i = 5;
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
-                    System.out.println("-------------------Dont look bit -------------------");
+                    System.out.println("-------------------Busqueda Local Primero Mejor -------------------");
                     System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
 
                     for (int j = 0; j < config.semillas.size(); j++) {
                         System.out.println("********************* SEMILLA " + j + " *********************");
                         algoritmos.setMatriz(archivosDatos.getMatriz1());
                         solucion = algoritmos.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
-                        algoritmos.pdlb(solucion, config.getLimitIteraciones(), costeTotal);
+                        algoritmos.blpm(solucion, config.getLimitIteraciones(), costeTotal);
                     }
-               // }
+                }
             break;
         }
     }
