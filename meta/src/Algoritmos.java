@@ -123,13 +123,9 @@ public class Algoritmos {
         ArrayList<Integer> vectorgreedy = greedy();
         ArrayList<Integer> vsolAlea = new ArrayList<>(); //vector solucion de greedyAleatorio (vsolAlea = vector solucion Aleatorio)
 
-<<<<<<< HEAD
         int pos, i =0;
         double []coste;
-=======
-        int pos =0;
-        int i =0;
->>>>>>> parent of d47c32d (bajado los tiempos, hay error en el calculo del coste de greedy aleatorio)
+
         boolean primera =true;
 
 
