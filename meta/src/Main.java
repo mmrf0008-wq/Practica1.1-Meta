@@ -1,10 +1,8 @@
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
 
-        /*String ruta = "C:\\Users\\Maitena\\Desktop\\Apuntes\\3º\\meta\\Practica1-Meta\\src\\config.txt";*/
         String rutaRelativa = "src/config.txt";
         System.out.println("Ruta actual de ejecución: " + new java.io.File(".").getAbsolutePath());
         Configuracion config = new Configuracion(rutaRelativa);
@@ -12,7 +10,7 @@ public class Main {
         int algoritmo=config.parametros;
         Algoritmos algoritmos= new Algoritmos();
         double costeTotal=0.0;
-        ArrayList<Integer> solucion = new ArrayList<>() ;
+        ArrayList<Integer> solucion;
         Log.inicializar();
 
         //comando terminal sacar logs  javac *.java && java Main >> log.txt
@@ -69,10 +67,13 @@ public class Main {
                         System.out.println("********************* SEMILLA " + j + " *********************");
                         algoritmos.setMatriz(archivosDatos.getMatriz1());
                         solucion = algoritmos.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
-                        algoritmos.blpm(solucion, config.getLimitIteraciones(), costeTotal);
+                        solucion = algoritmos.blpm(solucion, config.getLimitIteraciones(), costeTotal);
+
                     }
                 }
             break;
+            case 4: //tabu
+                break;
         }
     }
 }

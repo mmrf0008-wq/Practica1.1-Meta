@@ -4,10 +4,10 @@ import java.util.Collections;
 import static java.lang.Math.*;
 
 public class Algoritmos {
-    private double matriz[][];
+    private double [][]matriz;
 
 
-    private class Candidato implements Comparable<Candidato> {
+    private static class Candidato implements Comparable<Candidato> {
         double sumaDistancia;
         int ciudad;
         
@@ -25,9 +25,7 @@ public class Algoritmos {
         /**        
          * Compara dos candidatos según su sumatoria de distancias
          * @param o Candidato a comparar
-         * @return 1 si this es mayor que o
-         * @return -1 si this es menor que o
-         * @return 0 si son iguales
+         * @return 1 si this es mayor que o -1 si this es menor que o 0 si son iguales
          */
         @Override
         public int compareTo(Candidato o) {
@@ -52,7 +50,7 @@ public class Algoritmos {
 
         ArrayList<Candidato> vectorSolucion = new ArrayList<>();
 
-        double sumatorio = 0;
+        double sumatorio;
         //suma de las distancias de las ciudades con respecto a la primer columna
         for(int i = 0; i < n; i++){
             sumatorio = 0;
@@ -74,9 +72,8 @@ public class Algoritmos {
         int actual = vectorSolucion.getFirst().ciudad;
         ciudadesOrdenadas.add(actual);
         visitado[actual] = true;
-        double costeTotal = 0.0;
-        double minDistancia = 0;
-        int siguienteCiudad=0;
+        double costeTotal = 0.0, minDistancia;
+        int siguienteCiudad;
 
         for (int i = 1; i < n; ++i) {
             minDistancia = Double.MAX_VALUE;
@@ -124,7 +121,6 @@ public class Algoritmos {
         ArrayList<Integer> vsolAlea = new ArrayList<>(); //vector solucion de greedyAleatorio (vsolAlea = vector solucion Aleatorio)
 
         int pos, i =0;
-        double []coste;
 
         boolean primera =true;
 
@@ -187,7 +183,7 @@ public class Algoritmos {
         int i = 0;
         int j;
         boolean mejora = true;              // mejora true: hay ciudades que pueden ser movidas. mejora=false: vmascara =1 entera
-        boolean haymejora = false;
+        boolean haymejora;
         double []costes;
 
         while(mejora){          // la condicion de parada es que no pueda mover mas (matriz entera en 1)
@@ -211,7 +207,7 @@ public class Algoritmos {
             while(j != i && !haymejora){
                 Log.print("  -> Comprobando par (i=" + i + ", j=" + j + ")");
                 costes = calculoCoste(i,j,solucion,n);
-                if(factorizacion(solucion, i, j, n,costes)){ // si hay mejora hacemos cambio
+                if(factorizacion( i, j, n,costes)){ // si hay mejora hacemos cambio
                     Log.print("  [¡MEJORA ENCONTRADA!] Aplicando movimiento 2-opt entre i=" + i + " y j=" + j);
                     Log.print("  Reactivando bits en máscara (DLB=0) para i: " + i + " y j: " + j);
 
@@ -244,17 +240,14 @@ public class Algoritmos {
         MedidorTiempos.finalizarYMostrar("Don't look bit");
 
         Log.print("\t Coste total: " + costeAnterior);
-
-
-
     }
 
     /**
      *
-     * @param i
-     * @param j
-     * @param solucion
-     * @param n
+     * @param i posicion
+     * @param j posicion
+     * @param solucion vector donde se encuntran las paradas ordenadas
+     * @param n tamaño del vector
      * @return coste[1]  coste Actual , coste[0] costeAnterior
      */
         public double[] calculoCoste(int i , int j, ArrayList<Integer> solucion, int n ){
@@ -275,8 +268,6 @@ public class Algoritmos {
 
             if(j<n-1) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(j+1));
             if(j== n-1) nuevoCoste += distancia_euclidea(solucion.get(i),solucion.getFirst());
-
-            /*********************************************************************************/
 
 
             if(i>=1) costeAnterior += distancia_euclidea(solucion.get(i),solucion.get(i-1));
@@ -311,12 +302,11 @@ public class Algoritmos {
         public ArrayList<Integer> blpm(ArrayList<Integer> solucion, int limitIteracc, double costeActual){
 
             MedidorTiempos.empezarContador();
-            int i =0;
-            int j =0;
+            int i =0, j ;
 
             int numIteraciones=0;
             int n = solucion.size();
-            boolean mejora= false;
+            boolean mejora;
             boolean []vmascara = new boolean[n];
             double []coste;
             int sinMejora=0;
@@ -332,7 +322,7 @@ public class Algoritmos {
                 j = (i + 1) % n; //j = i+1
                 while(i!= j && !mejora){
                     coste = calculoCoste(i,j,solucion, n);
-                    if(factorizacion(solucion, i,j,n,coste)){ // si hay mejora
+                    if(factorizacion( i,j,n,coste)){ // si hay mejora
                         cambio(solucion, i,j);
                         mejora = true;
                         numIteraciones++;
@@ -376,7 +366,7 @@ public class Algoritmos {
         return false;
     }
 
-    private boolean factorizacion(ArrayList<Integer> solucion, int i, int j, int n, double[] costes ){
+    private boolean factorizacion(int i, int j, int n, double[] costes ){
 
         Log.print("    [Evaluando Factorización] i=" + i + ", j=" + j);
 
@@ -396,6 +386,9 @@ public class Algoritmos {
             Log.print("    -> Resultado: TRUE (Mejora detectada)");
             return true;
         }
+    }
+    public void tabu(){
+
     }
 
 }
