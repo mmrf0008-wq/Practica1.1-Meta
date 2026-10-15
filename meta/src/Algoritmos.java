@@ -387,9 +387,28 @@ public class Algoritmos {
             return true;
         }
     }
-    public void tabu(){
+    public void tabu(ArrayList<Integer> solucion, int limiteIteraciones){
+            //memoria corto plazo
+            //memoria largo plazo
+        //lista tabu
+        int solucionActual;
+        int mejor_momento_actual;
+        int cant_movimientos_sin_mejora=0; //esto * 0.05 = 500 (5% de 10 mil) -> el algoritmo se ha estancado
+
+
+        //generacion de soluciones vecinas
+        //seleccion de la mejor
+        //aplicacion de operadores
+        //modificacion de la solucion actual
+        //actualización de memorias
+
+        //si hay estancamiento -> aplicaoms criterio de osiclacion estragegica
+
 
     }
+
+    private void actualizaMemorias(){}
+
 
 }
 
