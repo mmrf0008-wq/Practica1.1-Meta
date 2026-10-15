@@ -4,3 +4,6 @@ Algoritmos=greedy greedyAleatorio
 Parametros=3
 K=5
 limitIterac=10000
+porEstancamiento=0.05
+tenenciaTabu=10
+osEstrategica=0.5
