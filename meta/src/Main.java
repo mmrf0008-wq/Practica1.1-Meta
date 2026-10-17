@@ -73,7 +73,21 @@ public class Main {
                 }
             break;
             case 4: //tabu
+                Algoritmos.Tabu a = new Algoritmos().Tabu();
+                for (int i = 0; i < config.archivos.size(); i++) {
+                    //int i = 5;
+                    ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
+                    System.out.println("-------------------Busqueda Tabú -------------------");
+                    System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
 
+                    for (int j = 0; j < config.semillas.size(); j++) {
+                        System.out.println("********************* SEMILLA " + j + " *********************");
+                        algoritmos.setMatriz(archivosDatos.getMatriz1());
+                        solucion = algoritmos.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
+                        a.tabu(solucion,config.limitIteraciones);
+
+                    }
+                }
                 break;
         }
     }
