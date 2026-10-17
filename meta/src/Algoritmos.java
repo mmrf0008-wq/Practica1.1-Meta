@@ -4,26 +4,28 @@ import java.util.Collections;
 import static java.lang.Math.*;
 
 public class Algoritmos {
-    private double [][]matriz;
+    private double[][] matriz;
 
 
     private static class Candidato implements Comparable<Candidato> {
         double sumaDistancia;
         int ciudad;
-        
+
         /**
          * Constructor de la clase Candidato
+         *
          * @param sumaDistancia Sumatoria de distancias
-         * @param ciudad Ciudad
+         * @param ciudad        Ciudad
          */
 
         public Candidato(double sumaDistancia, int ciudad) {
             this.sumaDistancia = sumaDistancia;
             this.ciudad = ciudad;
         }
-        
-        /**        
+
+        /**
          * Compara dos candidatos según su sumatoria de distancias
+         *
          * @param o Candidato a comparar
          * @return 1 si this es mayor que o -1 si this es menor que o 0 si son iguales
          */
@@ -34,15 +36,14 @@ public class Algoritmos {
     }
 
 
-
-    private double distancia_euclidea(int i, int j ){
+    private double distancia_euclidea(int i, int j) {
         double dx = matriz[i][1] - matriz[j][1];
         double dy = matriz[i][2] - matriz[j][2];
-        return sqrt(dx*dx + dy*dy);
+        return sqrt(dx * dx + dy * dy);
     }
 
 
-    public ArrayList<Integer> greedy(){
+    public ArrayList<Integer> greedy() {
 
         MedidorTiempos.empezarContador();
 
@@ -52,10 +53,10 @@ public class Algoritmos {
 
         double sumatorio;
         //suma de las distancias de las ciudades con respecto a la primer columna
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             sumatorio = 0;
-            for(int j = 0; j < n; j++){
-                sumatorio += distancia_euclidea( i, j );
+            for (int j = 0; j < n; j++) {
+                sumatorio += distancia_euclidea(i, j);
             }
             // Guardamos el candidato con su sumatoria de distancias y su ciudad correspondiente en el vector de soluciones
             vectorSolucion.add(new Candidato(sumatorio, i));
@@ -81,8 +82,8 @@ public class Algoritmos {
 
             // Ciudad más cercana a la ciudad actual que no haya sido visitada
             for (int j = 0; j < n; ++j) {
-                if (!visitado[j] && (distancia_euclidea( actual, j)  < minDistancia)) {
-                    minDistancia = distancia_euclidea( actual, j);
+                if (!visitado[j] && (distancia_euclidea(actual, j) < minDistancia)) {
+                    minDistancia = distancia_euclidea(actual, j);
                     siguienteCiudad = j;
 
                 }
@@ -97,10 +98,10 @@ public class Algoritmos {
                 actual = siguienteCiudad;
             }
         }
-        
+
         int primeraCiudad = ciudadesOrdenadas.getFirst();
 
-        costeTotal += distancia_euclidea( actual, primeraCiudad);
+        costeTotal += distancia_euclidea(actual, primeraCiudad);
 
         MedidorTiempos.finalizarYMostrar("Greedy");
 
@@ -112,7 +113,7 @@ public class Algoritmos {
     }
 
 
-    public ArrayList<Integer> greedyAleatorio( long semilla, int k, double costeTotal){
+    public ArrayList<Integer> greedyAleatorio(long semilla, int k, double costeTotal) {
         MedidorTiempos.empezarContador();
 
         java.util.Random rand = new java.util.Random(semilla);
@@ -120,14 +121,14 @@ public class Algoritmos {
         ArrayList<Integer> vectorgreedy = greedy();
         ArrayList<Integer> vsolAlea = new ArrayList<>(); //vector solucion de greedyAleatorio (vsolAlea = vector solucion Aleatorio)
 
-        int pos, i =0;
+        int pos, i = 0;
 
-        boolean primera =true;
+        boolean primera = true;
 
 
-        while(!vectorgreedy.isEmpty()) {     //empezamos a rellenar el vector solucion aleatoriamente
+        while (!vectorgreedy.isEmpty()) {     //empezamos a rellenar el vector solucion aleatoriamente
             // Para cuando quedan menos soluciones que k
-            if(vectorgreedy.size() < k){
+            if (vectorgreedy.size() < k) {
                 k = vectorgreedy.size();
             }
 
@@ -135,13 +136,12 @@ public class Algoritmos {
 
             //calculamos el coste
 
-            if(primera){
-                primera =false;
+            if (primera) {
+                primera = false;
                 i = vectorgreedy.get(pos);
-                costeTotal += distancia_euclidea(i,pos);
-            }
-            else {
-                costeTotal += distancia_euclidea(i,pos);
+                costeTotal += distancia_euclidea(i, pos);
+            } else {
+                costeTotal += distancia_euclidea(i, pos);
                 i = vectorgreedy.get(pos);
             }
 
@@ -153,20 +153,21 @@ public class Algoritmos {
         }
         int primeraCiudad = vsolAlea.getFirst();
 
-        costeTotal +=  distancia_euclidea( matriz.length-1, primeraCiudad);
+        costeTotal += distancia_euclidea(matriz.length - 1, primeraCiudad);
         Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
-       Log.print("\t Coste total: " + costeTotal);
+        Log.print("\t Coste total: " + costeTotal);
 
 
         //se devuelve la solucion
         return vsolAlea;
     }
-    public void DontLookbits( ArrayList<Integer> solucion, double costeAnterior ){
+
+    public void DontLookbits(ArrayList<Integer> solucion, double costeAnterior) {
         MedidorTiempos.empezarContador();
 
-                    // recibir solucion greedy aleatorio
+        // recibir solucion greedy aleatorio
         int n = solucion.size();
 
         int[] vmascara = new int[n];        // crear vector igual tamaño que solucion, vector mascara
@@ -179,22 +180,22 @@ public class Algoritmos {
 
         Log.print("");
 
-            // la i y la j son ciclicas
+        // la i y la j son ciclicas
         int i = 0;
         int j;
         boolean mejora = true;              // mejora true: hay ciudades que pueden ser movidas. mejora=false: vmascara =1 entera
         boolean haymejora;
-        double []costes;
+        double[] costes;
 
-        while(mejora){          // la condicion de parada es que no pueda mover mas (matriz entera en 1)
+        while (mejora) {          // la condicion de parada es que no pueda mover mas (matriz entera en 1)
             mejora = false;
             haymejora = false;
-            if(i == n) i = 0;
+            if (i == n) i = 0;
 
             Log.print("---------------------------------------");
             Log.print("[EVALUANDO NODO BASE i = " + i + "]");
 
-            if(vmascara[i] == 1){
+            if (vmascara[i] == 1) {
                 Log.print("Máscara activada (DLB=1) en i = " + i + ". Nodo omitido.");
                 i++;
                 continue; // descartamos aquellas que no tengan mejoras
@@ -204,10 +205,10 @@ public class Algoritmos {
             j = (i + 1) % n;
             Log.print("Nodo activo (DLB=0). Iniciando exploración del vecindario con j = " + j + " para i = " + i);
 
-            while(j != i && !haymejora){
+            while (j != i && !haymejora) {
                 Log.print("  -> Comprobando par (i=" + i + ", j=" + j + ")");
-                costes = calculoCoste(i,j,solucion,n);
-                if(factorizacion( i, j, n,costes)){ // si hay mejora hacemos cambio
+                costes = calculoCoste(i, j, solucion, n);
+                if (factorizacion(i, j, n, costes)) { // si hay mejora hacemos cambio
                     Log.print("  [¡MEJORA ENCONTRADA!] Aplicando movimiento 2-opt entre i=" + i + " y j=" + j);
                     Log.print("  Reactivando bits en máscara (DLB=0) para i: " + i + " y j: " + j);
 
@@ -219,11 +220,11 @@ public class Algoritmos {
                     Log.print("  Nueva solución tras el cambio: " + solucion);
                 }
                 j++;
-                if(j == n) j = 0;
+                if (j == n) j = 0;
                 Log.print("---------------------------------------");
             }
 
-            if(!haymejora){
+            if (!haymejora) {
                 Log.print("[FIN VECINDARIO] No se encontraron mejoras para i = " + i);
                 vmascara[i] = 1;
                 Log.print("Desactivando nodo: vmascara[" + i + "] = 1");
@@ -243,115 +244,116 @@ public class Algoritmos {
     }
 
     /**
-     *
-     * @param i posicion
-     * @param j posicion
+     * @param i        posicion
+     * @param j        posicion
      * @param solucion vector donde se encuntran las paradas ordenadas
-     * @param n tamaño del vector
+     * @param n        tamaño del vector
      * @return coste[1]  coste Actual , coste[0] costeAnterior
      */
-        public double[] calculoCoste(int i , int j, ArrayList<Integer> solucion, int n ){
+    public double[] calculoCoste(int i, int j, ArrayList<Integer> solucion, int n) {
 
-            double []costes = new double[2];
-            double nuevoCoste =0;
-            double costeAnterior=0;
+        double[] costes = new double[2];
+        double nuevoCoste = 0;
+        double costeAnterior = 0;
 
-            //calculamos el nuevo coste
-            if(i>=1) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(i-1));
-            if(i==0) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(n-1));
+        //calculamos el nuevo coste
+        if (i >= 1) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(i - 1));
+        if (i == 0) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(n - 1));
 
-            if(i < (n-1)) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(i+1));
-            if(i == n-1) nuevoCoste += distancia_euclidea(solucion.get(j),solucion.getFirst());
+        if (i < (n - 1)) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.get(i + 1));
+        if (i == n - 1) nuevoCoste += distancia_euclidea(solucion.get(j), solucion.getFirst());
 
-            if(j>= 1) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(j-1));
-            if(j==0) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(n-1));
+        if (j >= 1) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(j - 1));
+        if (j == 0) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(n - 1));
 
-            if(j<n-1) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(j+1));
-            if(j== n-1) nuevoCoste += distancia_euclidea(solucion.get(i),solucion.getFirst());
+        if (j < n - 1) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.get(j + 1));
+        if (j == n - 1) nuevoCoste += distancia_euclidea(solucion.get(i), solucion.getFirst());
 
 
-            if(i>=1) costeAnterior += distancia_euclidea(solucion.get(i),solucion.get(i-1));
-            if(i==0) costeAnterior += distancia_euclidea(solucion.get(i),solucion.get(n-1));
+        if (i >= 1) costeAnterior += distancia_euclidea(solucion.get(i), solucion.get(i - 1));
+        if (i == 0) costeAnterior += distancia_euclidea(solucion.get(i), solucion.get(n - 1));
 
-            if(i<n-1) costeAnterior += distancia_euclidea(solucion.get(i),solucion.get(i+1));
-            if(i==n-1) costeAnterior+= distancia_euclidea(solucion.get(i),solucion.getFirst());
+        if (i < n - 1) costeAnterior += distancia_euclidea(solucion.get(i), solucion.get(i + 1));
+        if (i == n - 1) costeAnterior += distancia_euclidea(solucion.get(i), solucion.getFirst());
 
-            if(j>=1) costeAnterior += distancia_euclidea(solucion.get(j),solucion.get(j-1));
-            if(j==0) costeAnterior += distancia_euclidea(solucion.get(j),solucion.get(n-1));
+        if (j >= 1) costeAnterior += distancia_euclidea(solucion.get(j), solucion.get(j - 1));
+        if (j == 0) costeAnterior += distancia_euclidea(solucion.get(j), solucion.get(n - 1));
 
-            if(j < n-1) costeAnterior += distancia_euclidea(solucion.get(j),solucion.get(j+1));
-            if( j == n-1) costeAnterior += distancia_euclidea(solucion.get(j),solucion.getFirst());
+        if (j < n - 1) costeAnterior += distancia_euclidea(solucion.get(j), solucion.get(j + 1));
+        if (j == n - 1) costeAnterior += distancia_euclidea(solucion.get(j), solucion.getFirst());
 
-            costes[0] = nuevoCoste;
-            costes[1] = costeAnterior;
+        costes[0] = nuevoCoste;
+        costes[1] = costeAnterior;
 
-            return  costes;
-        }
-        private void cambio(ArrayList<Integer> vsolGA, int i, int j){
-                int a = vsolGA.get(i);
-                int b=  vsolGA.get(j);
+        return costes;
+    }
 
-                vsolGA.set(i, b);
-                vsolGA.set(j, a);
+    private void cambio(ArrayList<Integer> vsolGA, int i, int j) {
+        int a = vsolGA.get(i);
+        int b = vsolGA.get(j);
 
-        }
-        public void setMatriz(double [][]matriz){
-            this.matriz = matriz;
-        }
+        vsolGA.set(i, b);
+        vsolGA.set(j, a);
 
-        public ArrayList<Integer> blpm(ArrayList<Integer> solucion, int limitIteracc, double costeActual){
+    }
 
-            MedidorTiempos.empezarContador();
-            int i =0, j ;
+    public void setMatriz(double[][] matriz) {
+        this.matriz = matriz;
+    }
 
-            int numIteraciones=0;
-            int n = solucion.size();
-            boolean mejora;
-            boolean []vmascara = new boolean[n];
-            double []coste;
-            boolean mejoraGlobal = false;
+    public ArrayList<Integer> blpm(ArrayList<Integer> solucion, int limitIteracc, double costeActual) {
 
-            while(numIteraciones < limitIteracc && !mejoraGlobal ){ //condiciones basicas para que siga la busqueda
-                if(vmascara[i]){ //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
+        MedidorTiempos.empezarContador();
+        int i = 0, j;
 
-                    i = (i + 1) % n;
-                    continue;
-                }
-                mejora=false;
-                j = (i + 1) % n; //j = i+1
-                while(i!= j && !mejora){
-                    coste = calculoCoste(i,j,solucion, n);
-                    if(factorizacion( i,j,n,coste)){ // si hay mejora
-                        cambio(solucion, i,j);
-                        mejora = true;
-                        numIteraciones++;
-                        vmascara[i] = false;
-                        vmascara[j]= false;
-                        mejoraGlobal = true;
-                        costeActual += coste[1]-coste[0];
-                    }
-                    if (!mejora) j = (j + 1) % n;
-                }
-                if(!mejora){
-                    vmascara[i] = true;
-                }
+        int numIteraciones = 0;
+        int n = solucion.size();
+        boolean mejora;
+        boolean[] vmascara = new boolean[n];
+        double[] coste;
+        boolean mejoraGlobal = false;
+
+        while (numIteraciones < limitIteracc && !mejoraGlobal) { //condiciones basicas para que siga la busqueda
+            if (vmascara[i]) { //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
+
                 i = (i + 1) % n;
-
+                continue;
             }
-            Log.print("=================================================");
-            Log.print("=== BÚSQUEDA FINALIZADA: ÓPTIMO LOCAL ALCANZADO ===");
+            mejora = false;
+            j = (i + 1) % n; //j = i+1
+            while (i != j && !mejora) {
+                coste = calculoCoste(i, j, solucion, n);
+                if (factorizacion(i, j, n, coste)) { // si hay mejora
+                    cambio(solucion, i, j);
+                    mejora = true;
+                    numIteraciones++;
+                    vmascara[i] = false;
+                    vmascara[j] = false;
+                    mejoraGlobal = true;
+                    costeActual += coste[1] - coste[0];
+                }
+                if (!mejora) j = (j + 1) % n;
+            }
+            if (!mejora) {
+                vmascara[i] = true;
+            }
+            i = (i + 1) % n;
 
-            Log.print("=================================================");
-
-            Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
-            MedidorTiempos.finalizarYMostrar("BLPM");
-            System.out.println("Coste total " + costeActual);
-
-
-            return solucion;
         }
+        Log.print("=================================================");
+        Log.print("=== BÚSQUEDA FINALIZADA: ÓPTIMO LOCAL ALCANZADO ===");
 
-    private boolean adyacentes (int i, int j, int tam) {
+        Log.print("=================================================");
+
+        Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
+        MedidorTiempos.finalizarYMostrar("BLPM");
+        System.out.println("Coste total " + costeActual);
+
+
+        return solucion;
+    }
+
+    private boolean adyacentes(int i, int j, int tam) {
         if (i == j) {
             return true;
         }
@@ -363,11 +365,11 @@ public class Algoritmos {
         return false;
     }
 
-    private boolean factorizacion(int i, int j, int n, double[] costes ){
+    private boolean factorizacion(int i, int j, int n, double[] costes) {
 
         Log.print("    [Evaluando Factorización] i=" + i + ", j=" + j);
 
-        if (adyacentes(i,j,n)){
+        if (adyacentes(i, j, n)) {
             Log.print("    -> Los nodos son contiguos o iguales (i=" + i + ", j=" + j + "), no se realiza el 2-opt.");
             return false;
         }
@@ -378,113 +380,126 @@ public class Algoritmos {
         if (costes[1] <= costes[0]) {
             Log.print("    -> Resultado: FALSE (El coste no disminuye)");
             return false; // no hubo mejora
-        }
-        else{
+        } else {
             Log.print("    -> Resultado: TRUE (Mejora detectada)");
             return true;
         }
     }
-    public void tabu(ArrayList<Integer> solucion, int limiteIteraciones) {
 
-        int n = solucion.size();
-        int[][] memoria = new int[n][n]; // diagonal superior memoria corto plazo. Diagonal inferior memori
-
-        double costeTotal = 0;
-
-        int mv_actual_i = -1;  //mejor vecino actual (i)
-        int mv_actual_j = -1; //(j)
-
-        int pv_actual_i = -1; // peor vecina actual (i)
-        int pv_actual_j = -1;  //(j)
-        int nuevo_inicio = -1;
-        int numIteraciones = 0;
-        double mp_coste = Double.MAX_VALUE;
+    public class Tabu{
+        private int n;
+        private int [][]memoria;
+        private int mv_actual_i;
+        private int mv_actual_j;
+        private double costeTotal;
+        private int pv_actual_i;
+        private int pv_actual_j;
+        private int nuevo_inicio;
+        private int numIteraciones;
+        private double mp_coste;
+        private boolean mejoraGlobal;
 
 
-        while (numIteraciones < limiteIteraciones) {
-            exploracionEntorno(n,nuevo_inicio, memoria , solucion, numIteraciones, mv_actual_i, mv_actual_j, costeTotal, mp_coste, pv_actual_i,pv_actual_j);
+        public void tabu(ArrayList<Integer> solucion, int limiteIteraciones) {
 
-            decisionMovimientoAplicar();
-            actualizaMemorias();
+            n = solucion.size();
+            memoria = new int[n][n]; // diagonal superior memoria corto plazo. Diagonal inferior memori
 
-            estancamiento();
+            costeTotal = 0.0;
 
-        }
-    }
+            mv_actual_i = -1;  //mejor vecino actual (i)
+            mv_actual_j = -1; //(j)
+
+            pv_actual_i = -1; // peor vecina actual (i)
+            pv_actual_j = -1;  //(j)
+            nuevo_inicio = -1;
+            numIteraciones = 0;
+            mp_coste = Double.MAX_VALUE;
 
 
+            while (numIteraciones < limiteIteraciones) {
+                exploracionEntorno(solucion);
 
-    private void actualizaMemorias(int [][]memoria, int i , int j){
+                decisionMovimientoAplicar(solucion);
+                actualizaMemorias();
 
-    }
-    private void decisionMovimientoAplicar(boolean mejoraGlobal, ){
-            if(mejoraGlobal){ // aplicamos los movimientos encontrados antes
-
-            } else{ // si no hubo mejora se elije el mejor de los peores 
+                estancamiento();
 
             }
-    }
+        }
+        private void actualizaMemorias( int i , int j){
 
-    private void estancamiento(){}
-    private void exploracionEntorno(int n, int nuevo_inicio, int [][] memoria, ArrayList<Integer> solucion, int numIteraciones,
-                                    int mv_actual_i, int mv_actual_j, double costeTotal, double mp_coste, int pv_actual_i, int pv_actual_j){
-        boolean mejoraGlobal= false;
-        boolean[] vmascara = new boolean[n];
+        }
+        private void decisionMovimientoAplicar(ArrayList<Integer> solucion ){
+            if(mejoraGlobal){ // aplicamos los movimientos encontrados antes
+                cambio(solucion, mv_actual_i, mv_actual_j);
+            } else{ // si no hubo mejora se elije el mejor de los peores
+                cambio(solucion, pv_actual_i, pv_actual_j);
+            }
+            costeTotal += mp_coste;
+        }
 
-        int j;
-        double[] coste;
-        boolean mejora = false;
+        private void estancamiento(){}
+        private void exploracionEntorno(ArrayList<Integer> solucion){
+            mejoraGlobal= false;
+            boolean[] vmascara = new boolean[n];
+
+            int j;
+            double[] coste;
+            boolean mejora = false;
             for (int i = nuevo_inicio, contador = 0; contador < n  && !mejoraGlobal; i++, contador++) {
 
-            if (vmascara[i]) { //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
-                i = (i + 1) % n;
-                continue;
-            }
-            j = (i + 1) % n; //j = i+1
-
-            if (!esTabu(memoria, i, j)) { //si el movimiento no es tabu, lo evaluamos
-                coste = calculoCoste(i, j, solucion, n);
-                if (factorizacion(i, j, n, coste)) { // si hay mejora
-                    mejora = true;
-                    numIteraciones++;
-                    vmascara[i] = false;
-                    vmascara[j] = false;
-                    mv_actual_i = i;//almacenamos el mejor actual
-                    mv_actual_j = j;
-                    nuevo_inicio = i;
-                    costeTotal += coste[1] - coste[0];
-                } else { // si no hubo mejora. seleccionamos al mejor de los peores
-                    if (coste[1] < mp_coste) { //guardo el nuevo mejor peor coste
-                        mp_coste = coste[1];
-                        pv_actual_j = j;
-                        pv_actual_i = i;
-                    }
+                if (vmascara[i]) { //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
+                    i = (i + 1) % n;
+                    continue;
                 }
-                if (!mejora) j = (j + 1) % n;
+                j = (i + 1) % n; //j = i+1
+
+                if (!esTabu(memoria, i, j)) { //si el movimiento no es tabu, lo evaluamos
+                    coste = calculoCoste(i, j, solucion, n);
+                    if (factorizacion(i, j, n, coste)) { // si hay mejora
+                        mejora = true;
+                        numIteraciones++;
+                        vmascara[i] = false;
+                        vmascara[j] = false;
+                        mv_actual_i = i;//almacenamos el mejor actual
+                        mv_actual_j = j;
+                        nuevo_inicio = i;
+                    } else { // si no hubo mejora. seleccionamos al mejor de los peores
+                        if (coste[1] < mp_coste) { //guardo el nuevo mejor peor coste
+                            mp_coste = coste[1];
+                            pv_actual_j = j;
+                            pv_actual_i = i;
+                        }
+                    }
+                    if (!mejora) j = (j + 1) % n;
+                }
+
+                if (!mejora) {
+                    vmascara[i] = true;
+                }
+                if(i+1 ==n ) i=0;
             }
 
-            if (!mejora) {
-                vmascara[i] = true;
+        }
+
+        private boolean esTabu(int [][] memoria, int i , int j ) {
+
+            //verificamos en la diagonal superior si el vecino generado es tabu
+
+            int v1, v2 = -1;
+            if (i < j) { //ponemos los valores para que esten dentro de la diagonal princial
+                v1 = i;
+                v2 = j;
+            } else {
+                v1 = j;
+                v2 = i;
             }
-            if(i+1 ==n ) i=0;
-        }
 
+            return (memoria[v1][v2] > 0);
+        }
     }
 
-    private boolean esTabu(int [][] memoria, int i , int j ) {
 
-        //verificamos en la diagonal superior si el vecino generado es tabu
 
-        int v1, v2 = -1;
-        if (i < j) { //ponemos los valores para que esten dentro de la diagonal princial
-            v1 = i;
-            v2 = j;
-        } else {
-            v1 = j;
-            v2 = i;
-        }
-
-        return (memoria[v1][v2] > 0);
-    }
 }
-
