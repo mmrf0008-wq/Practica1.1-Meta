@@ -309,12 +309,11 @@ public class Algoritmos {
             boolean mejora;
             boolean []vmascara = new boolean[n];
             double []coste;
-            int sinMejora=0;
+            boolean mejoraGlobal = false;
 
-
-            while(numIteraciones < limitIteracc && sinMejora < n ){ //condiciones basicas para que siga la busqueda
+            while(numIteraciones < limitIteracc && !mejoraGlobal ){ //condiciones basicas para que siga la busqueda
                 if(vmascara[i]){ //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
-                    sinMejora++;
+
                     i = (i + 1) % n;
                     continue;
                 }
@@ -328,14 +327,12 @@ public class Algoritmos {
                         numIteraciones++;
                         vmascara[i] = false;
                         vmascara[j]= false;
-                        sinMejora=0;
-
+                        mejoraGlobal = true;
                         costeActual += coste[1]-coste[0];
                     }
                     if (!mejora) j = (j + 1) % n;
                 }
                 if(!mejora){
-                    sinMejora++;
                     vmascara[i] = true;
                 }
                 i = (i + 1) % n;
@@ -387,28 +384,107 @@ public class Algoritmos {
             return true;
         }
     }
-    public void tabu(ArrayList<Integer> solucion, int limiteIteraciones){
-            //memoria corto plazo
-            //memoria largo plazo
-        //lista tabu
-        int solucionActual;
-        int mejor_momento_actual;
-        int cant_movimientos_sin_mejora=0; //esto * 0.05 = 500 (5% de 10 mil) -> el algoritmo se ha estancado
+    public void tabu(ArrayList<Integer> solucion, int limiteIteraciones) {
+
+        int n = solucion.size();
+        int[][] memoria = new int[n][n]; // diagonal superior memoria corto plazo. Diagonal inferior memori
+
+        double costeTotal = 0;
+
+        int mv_actual_i = -1;  //mejor vecino actual (i)
+        int mv_actual_j = -1; //(j)
+
+        int pv_actual_i = -1; // peor vecina actual (i)
+        int pv_actual_j = -1;  //(j)
+        int nuevo_inicio = -1;
+        int numIteraciones = 0;
+        double mp_coste = Double.MAX_VALUE;
 
 
-        //generacion de soluciones vecinas
-        //seleccion de la mejor
-        //aplicacion de operadores
-        //modificacion de la solucion actual
-        //actualización de memorias
+        while (numIteraciones < limiteIteraciones) {
+            exploracionEntorno(n,nuevo_inicio, memoria , solucion, numIteraciones, mv_actual_i, mv_actual_j, costeTotal, mp_coste, pv_actual_i,pv_actual_j);
 
-        //si hay estancamiento -> aplicaoms criterio de osiclacion estragegica
+            decisionMovimientoAplicar();
+            actualizaMemorias();
 
+            estancamiento();
+
+        }
+    }
+
+
+
+    private void actualizaMemorias(int [][]memoria, int i , int j){
+
+    }
+    private void decisionMovimientoAplicar(boolean mejoraGlobal, ){
+            if(mejoraGlobal){ // aplicamos los movimientos encontrados antes
+
+            } else{ // si no hubo mejora se elije el mejor de los peores 
+
+            }
+    }
+
+    private void estancamiento(){}
+    private void exploracionEntorno(int n, int nuevo_inicio, int [][] memoria, ArrayList<Integer> solucion, int numIteraciones,
+                                    int mv_actual_i, int mv_actual_j, double costeTotal, double mp_coste, int pv_actual_i, int pv_actual_j){
+        boolean mejoraGlobal= false;
+        boolean[] vmascara = new boolean[n];
+
+        int j;
+        double[] coste;
+        boolean mejora = false;
+            for (int i = nuevo_inicio, contador = 0; contador < n  && !mejoraGlobal; i++, contador++) {
+
+            if (vmascara[i]) { //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
+                i = (i + 1) % n;
+                continue;
+            }
+            j = (i + 1) % n; //j = i+1
+
+            if (!esTabu(memoria, i, j)) { //si el movimiento no es tabu, lo evaluamos
+                coste = calculoCoste(i, j, solucion, n);
+                if (factorizacion(i, j, n, coste)) { // si hay mejora
+                    mejora = true;
+                    numIteraciones++;
+                    vmascara[i] = false;
+                    vmascara[j] = false;
+                    mv_actual_i = i;//almacenamos el mejor actual
+                    mv_actual_j = j;
+                    nuevo_inicio = i;
+                    costeTotal += coste[1] - coste[0];
+                } else { // si no hubo mejora. seleccionamos al mejor de los peores
+                    if (coste[1] < mp_coste) { //guardo el nuevo mejor peor coste
+                        mp_coste = coste[1];
+                        pv_actual_j = j;
+                        pv_actual_i = i;
+                    }
+                }
+                if (!mejora) j = (j + 1) % n;
+            }
+
+            if (!mejora) {
+                vmascara[i] = true;
+            }
+            if(i+1 ==n ) i=0;
+        }
 
     }
 
-    private void actualizaMemorias(){}
+    private boolean esTabu(int [][] memoria, int i , int j ) {
 
+        //verificamos en la diagonal superior si el vecino generado es tabu
 
+        int v1, v2 = -1;
+        if (i < j) { //ponemos los valores para que esten dentro de la diagonal princial
+            v1 = i;
+            v2 = j;
+        } else {
+            v1 = j;
+            v2 = i;
+        }
+
+        return (memoria[v1][v2] > 0);
+    }
 }
 
