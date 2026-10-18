@@ -363,6 +363,10 @@ public class Algoritmos {
         return false;
     }
 
+    public static void setMatriz(double[][] matriz) {
+        Algoritmos.matriz = matriz;
+    }
+
     public static boolean factorizacion(int i, int j, int n, double[] costes) {
 
         Log.print("    [Evaluando Factorización] i=" + i + ", j=" + j);

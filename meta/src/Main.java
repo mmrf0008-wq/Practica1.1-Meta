@@ -21,7 +21,7 @@ public class Main {
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
                     System.out.println("-------------------GREEDY -------------------");
                     System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
-                    algoritmos.setMatriz(archivosDatos.getMatriz1());
+                    Algoritmos.setMatriz(archivosDatos.getMatriz1());
                     algoritmos.greedy();
 
                 }
@@ -35,7 +35,7 @@ public class Main {
 
                     for (int j = 0; j < config.semillas.size(); j++) {
                         System.out.println("********************* SEMILLA " + j + " *********************");
-                        algoritmos.setMatriz(archivosDatos.getMatriz1());
+                        Algoritmos.setMatriz(archivosDatos.getMatriz1());
                          algoritmos.greedyAleatorio( config.getSemilla(j), config.getK(), costeTotal);
                     }
                 }
@@ -50,7 +50,7 @@ public class Main {
 
                     for (int j = 0; j < config.semillas.size(); j++) {
                         System.out.println("********************* SEMILLA " + j + " *********************");
-                        algoritmos.setMatriz(archivosDatos.getMatriz1());
+                        Algoritmos.setMatriz(archivosDatos.getMatriz1());
                         solucion=  algoritmos.greedyAleatorio( config.getSemilla(j), config.getK(), costeTotal);
                         algoritmos.DontLookbits(solucion, costeTotal );
                     }
@@ -65,7 +65,7 @@ public class Main {
 
                     for (int j = 0; j < config.semillas.size(); j++) {
                         System.out.println("********************* SEMILLA " + j + " *********************");
-                        algoritmos.setMatriz(archivosDatos.getMatriz1());
+                        Algoritmos.setMatriz(archivosDatos.getMatriz1());
                         solucion = algoritmos.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
                         solucion = algoritmos.blpm(solucion, config.getLimitIteraciones(), costeTotal);
 
@@ -73,7 +73,8 @@ public class Main {
                 }
             break;
             case 4: //tabu
-                Algoritmos.Tabu a = new Algoritmos().Tabu();
+                Tabu t = new Tabu();
+
                 for (int i = 0; i < config.archivos.size(); i++) {
                     //int i = 5;
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
@@ -82,9 +83,9 @@ public class Main {
 
                     for (int j = 0; j < config.semillas.size(); j++) {
                         System.out.println("********************* SEMILLA " + j + " *********************");
-                        algoritmos.setMatriz(archivosDatos.getMatriz1());
+                        Algoritmos.setMatriz(archivosDatos.getMatriz1());
                         solucion = algoritmos.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
-                        a.tabu(solucion,config.limitIteraciones);
+                        t.tabu(solucion,config.limitIteraciones);
 
                     }
                 }
