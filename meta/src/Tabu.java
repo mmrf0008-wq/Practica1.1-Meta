@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Tabu {
     private int n;
@@ -50,7 +51,7 @@ public class Tabu {
             decisionMovimientoAplicar(solucion);
 
 
-            estancamiento();
+            estancamiento(solucion);
 
         }
     }
@@ -108,13 +109,28 @@ public class Tabu {
         actualizaMemorias(solucion, mov1, mov2);
     }
 
-    private void estancamiento() {
+    private void estancamiento(ArrayList<Integer> solucion ) {
         if(cantEmpeoramiento >= porcentaje_estancamiento && numIteraciones < limite_it){
             cantEmpeoramiento =0;
-            
+
+            Random proba = new Random();
+
+            int p = proba.nextInt(1,100);
+
+            if(p <= prob_oscilamiento){
+                masvisitados(solucion, n);
+            }else{
+                menosvisitados(solucion, n);
+            }
+            mejorCosteGlobal = mp_coste;
+            nuevo_inicio = proba.nextInt(0, n-1);
+
+            numIteraciones++;
+
         }
     }
-
+    private void masvisitados(ArrayList<Integer> solucion, int n){}
+    private void menosvisitados(ArrayList<Integer> solucion, int n){}
     private void exploracionEntorno(ArrayList<Integer> solucion) {
         mejoraGlobal = false;
         boolean[] vmascara = new boolean[n];
