@@ -25,6 +25,7 @@ public class Tabu {
     public void tabu(ArrayList<Integer> solucion, int limiteIteraciones, double coste_Total,
                      int tenenciaTabu, double por_os, double por_est) {
 
+        MedidorTiempos.empezarContador();
         n = solucion.size();
         memoria = new int[n][n]; // diagonal superior memoria corto plazo. Diagonal inferior memori
 
@@ -43,6 +44,7 @@ public class Tabu {
         mejorCosteGlobal = costeTotal;
         costeTotal = coste_Total;
         costemejorAnterior = costeTotal;
+        nuevo_inicio =0;
 
 
         while (numIteraciones < limiteIteraciones) {
@@ -54,6 +56,9 @@ public class Tabu {
             estancamiento(solucion);
 
         }
+        MedidorTiempos.finalizarYMostrar("Busqueda tabu");
+        System.out.println("Coste total " + costeTotal);
+
     }
 
     private void actualizaMemorias(ArrayList<Integer>solucion, int i, int j) {
@@ -129,8 +134,41 @@ public class Tabu {
 
         }
     }
-    private void masvisitados(ArrayList<Integer> solucion, int n){}
-    private void menosvisitados(ArrayList<Integer> solucion, int n){}
+    private void masvisitados(ArrayList<Integer> solucion, int n){
+        ArrayList<Integer> nueva = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            nueva.add(0);
+        }
+
+        Random rand = new Random();
+        // Vector de visitados (marcaf)
+        boolean[] marcaf = new boolean[n];
+
+        // 2. Elegir una ciudad inicial aleatoria (equivalente a Randint(0, tam - 1))
+        int c = rand.nextInt(n);
+        nueva.set(0, c);
+        marcaf[c] = true;
+
+        // 3. Construir el resto de la ruta
+        for (int k = 1; k < n; k++) {
+            long menor = -1;
+            int ultimaCiudad = nueva.get(k - 1);
+
+            for (int i = 0; i < n; i++) {
+                if (!marcaf[i] && memoria[ultimaCiudad][i] > menor) {
+                    menor = memoria[ultimaCiudad][i];
+                    c = i;
+                }
+            }
+
+            nueva.set(k, c);
+            marcaf[c] = true;
+            solucion = nueva;
+        }
+    }
+    private void menosvisitados(ArrayList<Integer> solucion, int n){
+
+    }
     private void exploracionEntorno(ArrayList<Integer> solucion) {
         mejoraGlobal = false;
         boolean[] vmascara = new boolean[n];

@@ -106,7 +106,7 @@ public class Algoritmos {
         MedidorTiempos.finalizarYMostrar("Greedy");
 
         // Devolvemos la ruta de las ciudades ordenadas
-        Log.print("\t Coste total: " + costeTotal);
+        System.out.println("\t Coste total: " + costeTotal);
 
 
         return ciudadesOrdenadas;
@@ -157,7 +157,7 @@ public class Algoritmos {
         Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
-        Log.print("\t Coste total: " + costeTotal);
+        System.out.println("\t Coste total: " + costeTotal);
 
 
         //se devuelve la solucion

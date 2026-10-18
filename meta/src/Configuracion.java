@@ -14,9 +14,9 @@ public class Configuracion {
     Integer indiceSemilla;
     Integer k;
     Integer limitIteraciones;
-    Integer porcentaje_estancamiento;
+    Double porcentaje_estancamiento;
     Integer tenencia_tabu;
-    Integer oscilacionEstragegica;
+    Double oscilacionEstragegica;
 
     public Configuracion(String ruta){
         archivos= new ArrayList<>();
@@ -60,13 +60,13 @@ public class Configuracion {
                         limitIteraciones = Integer.parseInt(split[1]);
                         break;
                     case "porEstancamiento":
-                        porcentaje_estancamiento = Integer.parseInt(split[1]);
+                        porcentaje_estancamiento = Double.parseDouble(split[1]);
                         break;
                     case "tenenciaTabu":
                         tenencia_tabu = Integer.parseInt(split[1]);
                         break;
                     case "osEstrategica":
-                        oscilacionEstragegica = Integer.parseInt(split[1]);
+                        oscilacionEstragegica = Double.parseDouble(split[1]);
                         break;
                 }
             }
