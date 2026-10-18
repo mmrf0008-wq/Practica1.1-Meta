@@ -20,9 +20,10 @@ public class Tabu {
     private double porcentaje_estancamiento;
     private double prob_oscilamiento;
     private int limite_it;
+    private ArrayList<Integer> mejorSolucion;
 
 
-    public void tabu(ArrayList<Integer> solucion, int limiteIteraciones, double coste_Total,
+    public void tabu(ArrayList<Integer> solucion, int limiteIteraciones,
                      int tenenciaTabu, double por_os, double por_est) {
 
         MedidorTiempos.empezarContador();
@@ -38,11 +39,10 @@ public class Tabu {
         porcentaje_estancamiento = por_est;
         pv_actual_i = -1; // peor vecina actual (i)
         pv_actual_j = -1;  //(j)
-        nuevo_inicio = -1;
         numIteraciones = 0;
         mp_coste = Double.MAX_VALUE;
         mejorCosteGlobal = costeTotal;
-        costeTotal = coste_Total;
+        costeTotal = Algoritmos.calculoCosteTotal();
         costemejorAnterior = costeTotal;
         nuevo_inicio =0;
 
@@ -51,161 +51,172 @@ public class Tabu {
             exploracionEntorno(solucion);
 
             decisionMovimientoAplicar(solucion);
-
-
             estancamiento(solucion);
 
         }
         MedidorTiempos.finalizarYMostrar("Busqueda tabu");
-        System.out.println("Coste total " + costeTotal);
+        System.out.println("Coste total " + Algoritmos.calculoCosteTotal(solucion));
 
     }
 
     private void actualizaMemorias(ArrayList<Integer>solucion, int i, int j) {
 
-        int c1 = solucion.get(n - 1);
-        int c2 = solucion.get(0);
-        memoria[Math.max(c1, c2)][Math.min(c1, c2)]++;
-
-        // aseguramos orden para la diagonal superior (MCP)
-        int p1t = Math.min(i, j);
-        int p2t = Math.max(i, j);
-
-// prohibir el movimiento actual por X iteraciones
-        memoria[p1t][p2t] = tenencia;
-
-// dfecrementar la tenencia de los elementos antiguos
-        for (int r = 0; r < n; r++) {
-            for (int c = r + 1; c < n; c++) {
-                if (memoria[r][c] > 0 && !(r == p1t && c == p2t)) {
-                    memoria[r][c]--;
-                }
-            }
+        // largo plazo: frecuencia de cada arista de la solución actual (diagonal inferior)
+        for (int k = 0; k < n; k++) {
+            int a = solucion.get(k), b = solucion.get((k + 1) % n);
+            memoria[Math.max(a, b)][Math.min(a, b)]++;
         }
-
+        // corto plazo: tabú hasta la iteración numIteraciones + tenencia (diagonal superior)
+        memoria[Math.min(i, j)][Math.max(i, j)] = numIteraciones + tenencia;
         numIteraciones++;
     }
 
     private void decisionMovimientoAplicar(ArrayList<Integer> solucion) {
-        int mov1 = -1;
-        int mov2 = -1;
-        if (mejoraGlobal) { // aplicamos los movimientos encontrados antes
+        int mov1, mov2;
+        double delta;
+        if (mejoraGlobal) {
             mov1 = mv_actual_i;
             mov2 = mv_actual_j;
-        } else { // si no hubo mejora se elije el mejor de los peores
+            delta = mp_coste;
+        } else {
             mov1 = pv_actual_i;
             mov2 = pv_actual_j;
+            delta = mp_coste;
         }
-        costeTotal += mp_coste;
 
-        if (mov1 != -1) {
-            Algoritmos.cambio(solucion, mov1, mov2);
+        if (mov1 == -1) {          // no hay movimientos permitidos
+            numIteraciones++;
+            return;
+        }
 
-            if (mp_coste < mejorCosteGlobal) {
-                mejorCosteGlobal = mp_coste;
-            }
-            if (costemejorAnterior > mp_coste) {
-                cantEmpeoramiento = 0;
-                costemejorAnterior = mp_coste;
-            } else {
-                cantEmpeoramiento++;
-            }
+        Algoritmos.cambio(solucion, mov1, mov2);
+        costeTotal += delta;
+
+        if (costeTotal < mejorCosteGlobal - 1e-9) {
+            mejorCosteGlobal = costeTotal;
+            mejorSolucion = new ArrayList<>(solucion);
+            cantEmpeoramiento = 0;
+        } else {
+            cantEmpeoramiento++;
         }
         actualizaMemorias(solucion, mov1, mov2);
     }
 
     private void estancamiento(ArrayList<Integer> solucion ) {
-        if(cantEmpeoramiento >= porcentaje_estancamiento && numIteraciones < limite_it){
-            cantEmpeoramiento =0;
+            if (cantEmpeoramiento >= porcentaje_estancamiento && numIteraciones < limite_it) {
+                cantEmpeoramiento = 0;
+                Random proba = new Random();
+                int p = proba.nextInt(1, 100);
 
-            Random proba = new Random();
+                if (p <= prob_oscilamiento) {
+                    masvisitados(solucion, n);
+                } else {
+                    menosvisitados(solucion, n);
+                }
 
-            int p = proba.nextInt(1,100);
+                // vaciar la memoria a corto plazo (diagonal superior)
+                for (int r = 0; r < n; r++)
+                    for (int c = r + 1; c < n; c++)
+                        memoria[r][c] = 0;
 
-            if(p <= prob_oscilamiento){
-                masvisitados(solucion, n);
-            }else{
-                menosvisitados(solucion, n);
+
+                costemejorAnterior = costeTotal;
+                mp_coste = Double.MAX_VALUE;
+                nuevo_inicio = proba.nextInt(0, n);
+                numIteraciones++;
             }
-            mejorCosteGlobal = mp_coste;
-            nuevo_inicio = proba.nextInt(0, n-1);
 
-            numIteraciones++;
-
-        }
     }
     private void masvisitados(ArrayList<Integer> solucion, int n){
-        ArrayList<Integer> nueva = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            nueva.add(0);
-        }
+            ArrayList<Integer> nueva = new ArrayList<>(n);
+            boolean[] marcaf = new boolean[n];
+            Random rand = new Random();
 
-        Random rand = new Random();
-        // Vector de visitados (marcaf)
-        boolean[] marcaf = new boolean[n];
+            int c = rand.nextInt(n);
+            nueva.add(c);
+            marcaf[c] = true;
 
-        // 2. Elegir una ciudad inicial aleatoria (equivalente a Randint(0, tam - 1))
-        int c = rand.nextInt(n);
-        nueva.set(0, c);
-        marcaf[c] = true;
+            for (int k = 1; k < n; k++) {
+                int ultima = nueva.get(k - 1);
+                int mayor = -1;
+                c = -1;
 
-        // 3. Construir el resto de la ruta
-        for (int k = 1; k < n; k++) {
-            long menor = -1;
-            int ultimaCiudad = nueva.get(k - 1);
-
-            for (int i = 0; i < n; i++) {
-                if (!marcaf[i] && memoria[ultimaCiudad][i] > menor) {
-                    menor = memoria[ultimaCiudad][i];
-                    c = i;
+                for (int i = 0; i < n; i++) {
+                    if (!marcaf[i]) {
+                        // frecuencia de la arista en la diagonal inferior
+                        int f = memoria[Math.max(ultima, i)][Math.min(ultima, i)];
+                        if (f > mayor) {
+                            mayor = f;
+                            c = i;
+                        }
+                    }
                 }
+                nueva.add(c);
+                marcaf[c] = true;
             }
 
-            nueva.set(k, c);
-            marcaf[c] = true;
-            solucion = nueva;
-        }
+            solucion.clear();
+            solucion.addAll(nueva);
+
     }
     private void menosvisitados(ArrayList<Integer> solucion, int n){
+        ArrayList<Integer> nueva = new ArrayList<>(n);
+        boolean[] marcaf = new boolean[n];
+        Random rand = new Random();
 
-    }
-    private void exploracionEntorno(ArrayList<Integer> solucion) {
-        mejoraGlobal = false;
-        boolean[] vmascara = new boolean[n];
+        int c = rand.nextInt(n);
+        nueva.add(c);            // <-- esta línea faltaba
+        marcaf[c] = true;
 
-        int j;
-        double[] coste;
-        boolean mejora = false;
-        for (int i = nuevo_inicio, contador = 0; contador < n && !mejoraGlobal; i++, contador++) {
+        for (int k = 1; k < n; k++) {
+            int ultima = nueva.get(k - 1);
+            int menor = Integer.MAX_VALUE;
+            c = -1;
 
-            if (vmascara[i]) { //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
-                i = (i + 1) % n;
-                continue;
-            }
-            j = (i + 1) % n; //j = i+1
-            mejora = false;
-
-            if (!esTabu(memoria, i, j)) { //si el movimiento no es tabu, lo evaluamos
-                coste = Algoritmos.calculoCoste(i, j, solucion, n);
-                if (Algoritmos.factorizacion(i, j, n, coste)) { // si hay mejora
-                    mejora = true;
-                    vmascara[i] = false;
-                    vmascara[j] = false;
-                    mv_actual_i = i;//almacenamos el mejor actual
-                    mv_actual_j = j;
-                    nuevo_inicio = i;
-                } else { // si no hubo mejora. seleccionamos al mejor de los peores
-                    if (coste[1] < mp_coste) { //guardo el nuevo mejor peor coste
-                        mp_coste = coste[1];
-                        pv_actual_j = j;
-                        pv_actual_i = i;
+            for (int i = 0; i < n; i++) {
+                if (!marcaf[i]) {
+                    int f = memoria[Math.max(ultima, i)][Math.min(ultima, i)];
+                    if (f < menor) {
+                        menor = f;
+                        c = i;
                     }
                 }
             }
-            if (!mejora) {
-                vmascara[i] = true;
+            nueva.add(c);
+            marcaf[c] = true;
+        }
+
+        solucion.clear();
+        solucion.addAll(nueva);
+    }
+    private void exploracionEntorno(ArrayList<Integer> solucion) {
+        mejoraGlobal = false;
+        mv_actual_i = mv_actual_j = -1;
+        pv_actual_i = pv_actual_j = -1;
+        mp_coste = Double.MAX_VALUE;     // mejor variación entre los no mejorantes
+
+        for (int contador = 0; contador < n && !mejoraGlobal; contador++) {
+            int i = (nuevo_inicio + contador) % n;
+
+            for (int j = i + 2; j < n && !mejoraGlobal; j++) {
+                if (i == 0 && j == n - 1) continue;     // adyacentes (cierre del ciclo)
+                if (esTabu(memoria, i, j)) continue;
+
+                double[] coste = Algoritmos.calculoCoste(i, j, solucion, n);
+                double delta = coste[1] - coste[0];
+
+                if (delta < 0) {                         // mejora: la aplicamos
+                    mejoraGlobal = true;
+                    mv_actual_i = i;
+                    mv_actual_j = j;
+                    mp_coste = delta;
+                    nuevo_inicio = i;
+                } else if (delta < mp_coste) {           // mejor de los peores
+                    mp_coste = delta;
+                    pv_actual_i = i;
+                    pv_actual_j = j;
+                }
             }
-            if (i + 1 == n) i = 0;
         }
     }
 

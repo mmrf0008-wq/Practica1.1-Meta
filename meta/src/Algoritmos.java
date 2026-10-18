@@ -106,7 +106,8 @@ public class Algoritmos {
         MedidorTiempos.finalizarYMostrar("Greedy");
 
         // Devolvemos la ruta de las ciudades ordenadas
-        System.out.println("\t Coste total: " + costeTotal);
+        //System.out.println("\t Coste total: " + costeTotal);
+        System.out.println("coste total " + calculoCosteTotal(ciudadesOrdenadas));
 
 
         return ciudadesOrdenadas;
@@ -157,13 +158,33 @@ public class Algoritmos {
         Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("Greedy Aleatorio");
 
-        System.out.println("\t Coste total: " + costeTotal);
+        System.out.println("\t Coste total: " + calculoCosteTotal(vsolAlea));
 
 
         //se devuelve la solucion
         return vsolAlea;
     }
 
+    public static double calculoCosteTotal(){
+
+        double num =0;
+        for(int i =0; i < matriz.length; i++){
+            for(int j =0; j < matriz.length; j++){
+                num += distancia_euclidea(i, j);
+            }
+        }
+        return num;
+    }
+    public static double calculoCosteTotal(ArrayList<Integer> solucion) {
+        int n = solucion.size();
+        double total = 0;
+        for (int k = 0; k < n; k++) {
+            int a = solucion.get(k);
+            int b = solucion.get((k + 1) % n);   // el último se une con el primero
+            total += distancia_euclidea(a, b);
+        }
+        return total;
+    }
     public void DontLookbits(ArrayList<Integer> solucion, double costeAnterior) {
         MedidorTiempos.empezarContador();
 

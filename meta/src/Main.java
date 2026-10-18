@@ -85,7 +85,7 @@ public class Main {
                         System.out.println("********************* SEMILLA " + j + " *********************");
                         Algoritmos.setMatriz(archivosDatos.getMatriz1());
                         solucion = algoritmos.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
-                        t.tabu(solucion,config.limitIteraciones, costeTotal, config.tenencia_tabu, config.oscilacionEstragegica, config.porcentaje_estancamiento);
+                        t.tabu(solucion,config.limitIteraciones, config.tenencia_tabu, config.oscilacionEstragegica, config.porcentaje_estancamiento);
 
                     }
                 }
