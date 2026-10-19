@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
+/*
  * @file Tabu.java
  * @brief Implementación del algoritmo de Metaheurística de Búsqueda Tabú para optimización de rutas (TSP).
  */
@@ -12,7 +12,7 @@ import java.util.Random;
  * estrategias de intensificación, diversificación por oscilación y criterios de estancamiento.
  */
 public class Tabu {
-    private int n;                      /** Tamaño del problema (número de ciudades o nodos). */
+    private int n;                      /* Tamaño del problema (número de ciudades o nodos). */
 
     /**
      * Matriz de memoria combinada:
@@ -38,7 +38,7 @@ public class Tabu {
     private double porcentaje_estancamiento;    /** Umbral o porcentaje de empeoramientos permitidos antes de activar el mecanismo de estancamiento. */
     private double prob_oscilamiento;           /** Probabilidad de optar por intensificación (más visitados) frente a diversificación (menos visitados). */
     private boolean mejorpendiente;             /** Bandera que indica si hay una mejora pendiente por registrar como mejor solución. */
-    private int limite_it;                      /** Límite máximo global de iteraciones del algoritmo. */
+    private int limite_it;                      /* Límite máximo global de iteraciones del algoritmo. */
 
 
     /**
@@ -100,8 +100,8 @@ public class Tabu {
             int a = solucion.get(k), b = solucion.get((k + 1) % n);
             memoria[Math.max(a, b)][Math.min(a, b)]++;
         }
-        // corto plazo: tabú hasta la iteración numIteraciones + tenencia (diagonal superior)
-        memoria[Math.min(i, j)][Math.max(i, j)] = numIteraciones + tenencia;
+
+        memoria[Math.min(i, j)][Math.max(i, j)] = numIteraciones + tenencia; //actaulizamos segun la tenencia
         numIteraciones++;
     }
     /**
@@ -132,13 +132,13 @@ public class Tabu {
         Algoritmos.cambio(solucion, mov1, mov2);
         costeTotal += delta;
 
-        if (costeTotal < mejorCosteGlobal - 1e-9) {
+        if (costeTotal < mejorCosteGlobal ) {
             mejorCosteGlobal = costeTotal;
             mejorpendiente = true;
         }
-        if (costeTotal < costemejorAnterior - 1e-9) {   // mejor de la tanda actual
+        if (costeTotal < costemejorAnterior ) {   // mejor de la tanda actual
             costemejorAnterior = costeTotal;
-            cantEmpeoramiento = 0;
+            cantEmpeoramiento = 0; //reestablecemos el numero de empeoramientos
         } else {
             cantEmpeoramiento++;
         }
@@ -256,29 +256,48 @@ public class Tabu {
         mv_actual_i = mv_actual_j = -1;
         pv_actual_i = pv_actual_j = -1;
         mp_coste = Double.MAX_VALUE;     // mejor variación entre los no mejorantes
+        int j;
+        boolean []vmascara = new boolean[n];
+        int i =0;
 
-        for (int contador = 0; contador < n && !mejoraGlobal; contador++) {
-            int i = (nuevo_inicio + contador) % n;
+        boolean mejora = false;
+        while (i < n && !mejoraGlobal && numIteraciones < limite_it) {
 
-            for (int j = i + 2; j < n && !mejoraGlobal; j++) {
+            if (vmascara[i]) { //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
+                i = (i + 1) % n;
+                continue;
+            }
+            mejora = false;
+            j = (i + 1) % n; //j = i+1
+            while (i != j && !mejora) {
                 if (i == 0 && j == n - 1) continue;     // adyacentes (cierre del ciclo)
-                if (esTabu(memoria, i, j)) continue;
+                if (esTabu(memoria, i, j)) continue; //si la solucion es tabu se descarta
 
                 double[] coste = Algoritmos.calculoCoste(i, j, solucion, n);
                 double delta = coste[0] - coste[1];
 
                 if (delta < 0) {                         // mejora: la aplicamos
                     mejoraGlobal = true;
+                    mejora = true;
                     mv_actual_i = i;
                     mv_actual_j = j;
                     mp_coste = delta;
+                    vmascara[i] = false;
+                    vmascara[j] = false;
                     nuevo_inicio = i;
                 } else if (delta < mp_coste) {           // mejor de los peores
                     mp_coste = delta;
                     pv_actual_i = i;
                     pv_actual_j = j;
                 }
+
+                if (!mejora) j = (j + 1) % n;
             }
+            if (!mejora) {
+                vmascara[i] = true;
+            }
+            i = (nuevo_inicio + i) % n; //iterado ciclico
+
         }
     }
 
@@ -292,7 +311,7 @@ public class Tabu {
     private boolean esTabu(int[][] memoria, int i, int j) {
 
         //verificamos en la diagonal superior si el vecino generado es tabu
-        int v1, v2 = -1;
+        int v1, v2 ;
         if (i < j) { //ponemos los valores para que esten dentro de la diagonal princial
             v1 = i;
             v2 = j;
