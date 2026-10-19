@@ -3,7 +3,12 @@ import java.util.Collections;
 
 import static java.lang.Math.*;
 
+/**
+ * @file Algoritmos.java
+ * @brief Clase que contiene algoritmos de optimización para el problema del viajante de comercio (TSP) o similares.
+ */
 public class Algoritmos {
+    /** Matriz de coordenadas/distancias de las ciudades. */
     private static double[][] matriz;
 
 
@@ -35,14 +40,24 @@ public class Algoritmos {
         }
     }
 
-
+    /**
+     * @brief calcula la distancia euclidea segun dos indices
+     * @param i primera ciudad a evaluar
+     * @param j segunda ciudad a evaluar
+     * @return valor decimal de la distancia euclidea entre los puntos
+     */
     private static double distancia_euclidea(int i, int j) {
         double dx = matriz[i][1] - matriz[j][1];
         double dy = matriz[i][2] - matriz[j][2];
         return sqrt(dx * dx + dy * dy);
     }
 
-
+    /**
+     * @brief Algoritmo Voraz (Greedy) para construir una ruta inicial.
+     * @details Selecciona primero la ciudad con menor sumatoria total de distancias y,
+     * a partir de ella, añade iterativamente la ciudad no visitada más cercana.
+     * @return ArrayList con el orden de índices de las ciudades que forman la ruta.
+     */
     public ArrayList<Integer> greedy() {
 
         MedidorTiempos.empezarContador();
@@ -113,7 +128,13 @@ public class Algoritmos {
         return ciudadesOrdenadas;
     }
 
-
+    /**
+     * @brief Algoritmo Greedy Aleatorizado para introducir estocasticidad en la construcción de la solución.
+     * @param semilla Semilla para la generación de números aleatorios.
+     * @param k Tamaño del conjunto de candidatos restrictivo (LRC) a considerar en cada paso.
+     * @param costeTotal Acumulador inicial para el coste total.
+     * @return Ruta aleatorizada construida a partir de la solución Greedy.
+     */
     public ArrayList<Integer> greedyAleatorio(long semilla, int k, double costeTotal) {
         MedidorTiempos.empezarContador();
 
@@ -164,7 +185,10 @@ public class Algoritmos {
         //se devuelve la solucion
         return vsolAlea;
     }
-
+    /**
+     * @brief Calcula el coste total combinatorio de todas las distancias cruzadas en la matriz.
+     * @return Suma decimal de todas las distancias euclídeas de la matriz.
+     */
     public static double calculoCosteTotal(){
 
         double num =0;
@@ -185,6 +209,11 @@ public class Algoritmos {
         }
         return total;
     }
+    /**
+     * @brief Búsqueda Local aplicando la técnica "Don't Look Bits" (DLB) para acelerar la exploración de vecindarios.
+     * @param solucion Solución de entrada que se mejorará mediante la búsqueda local.
+     * @param costeAnterior Valor inicial del coste del recorrido.
+     */
     public void DontLookbits(ArrayList<Integer> solucion, double costeAnterior) {
         MedidorTiempos.empezarContador();
 
@@ -308,7 +337,12 @@ public class Algoritmos {
 
         return costes;
     }
-
+/**
+ * @brief Intercambia los elementos en los índices i y j del vector de soluciones.
+ * @param vsolGA Lista sobre la cual se realiza el intercambio.
+ * @param i Primer índice a intercambiar.
+ * @param j Segundo índice a intercambiar.
+ */
     public static void cambio(ArrayList<Integer> vsolGA, int i, int j) {
         int a = vsolGA.get(i);
         int b = vsolGA.get(j);
@@ -319,7 +353,15 @@ public class Algoritmos {
     }
 
 
-
+    /**
+     * @brief Búsqueda Local con Primer Mejor (BLPM).
+     * @details Modifica la solución aplicando el primer movimiento de intercambio que genere una mejora real,
+     * deteniéndose tras alcanzar un límite de iteraciones o un óptimo local.
+     * @param solucion Solución inicial a optimizar.
+     * @param limitIteracc Límite máximo de iteraciones permitidas.
+     * @param costeActual Coste actual de la solución.
+     * @return Solución optimizada.
+     */
     public ArrayList<Integer> blpm(ArrayList<Integer> solucion, int limitIteracc, double costeActual) {
 
         MedidorTiempos.empezarContador();
@@ -371,7 +413,13 @@ public class Algoritmos {
 
         return solucion;
     }
-
+    /**
+     * @brief Comprueba si dos posiciones son contiguas dentro del ciclo o son la misma.
+     * @param i Primer índice.
+     * @param j Segundo índice.
+     * @param tam Tamaño total de la secuencia.
+     * @return `true` si las posiciones son iguales o adyacentes; `false` en caso contrario.
+     */
     private static boolean adyacentes(int i, int j, int tam) {
         if (i == j) {
             return true;
@@ -383,11 +431,22 @@ public class Algoritmos {
 
         return false;
     }
-
+    /**
+     * @brief Establece la matriz global de distancias/coordenadas.
+     * @param matriz Matriz bidimensional de datos para los cálculos del algoritmo.
+     */
     public static void setMatriz(double[][] matriz) {
         Algoritmos.matriz = matriz;
     }
 
+    /**
+     * @brief Comprueba si el cambio o movimiento propuesto representa una mejora efectiva en el coste.
+     * @param i Primer índice del movimiento.
+     * @param j Segundo índice del movimiento.
+     * @param n Tamaño de la solución.
+     * @param costes Array con el coste nuevo [0] y el coste anterior [1].
+     * @return `true` si el nuevo coste es estrictamente menor al anterior y los nodos no son adyacentes; `false` en caso contrario.
+     */
     public static boolean factorizacion(int i, int j, int n, double[] costes) {
 
         Log.print("    [Evaluando Factorización] i=" + i + ", j=" + j);
