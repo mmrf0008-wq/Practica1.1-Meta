@@ -366,7 +366,7 @@ public class Algoritmos {
 
         Log.print("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-");
         MedidorTiempos.finalizarYMostrar("BLPM");
-        System.out.println("Coste total " + costeActual);
+        System.out.println("Coste total " + calculoCosteTotal(solucion));
 
 
         return solucion;

@@ -19,6 +19,7 @@ public class Tabu {
     private int tenencia;
     private double porcentaje_estancamiento;
     private double prob_oscilamiento;
+    private boolean mejorpendiente;
     private int limite_it;
     private ArrayList<Integer> mejorSolucion;
 
@@ -42,18 +43,21 @@ public class Tabu {
         numIteraciones = 0;
         mp_coste = Double.MAX_VALUE;
         mejorCosteGlobal = costeTotal;
-        costeTotal = Algoritmos.calculoCosteTotal();
+        costeTotal = Algoritmos.calculoCosteTotal(solucion);
         costemejorAnterior = costeTotal;
         nuevo_inicio =0;
 
 
         while (numIteraciones < limiteIteraciones) {
+
             exploracionEntorno(solucion);
 
             decisionMovimientoAplicar(solucion);
+
             estancamiento(solucion);
 
         }
+
         MedidorTiempos.finalizarYMostrar("Busqueda tabu");
         System.out.println("Coste total " + Algoritmos.calculoCosteTotal(solucion));
 
@@ -88,13 +92,20 @@ public class Tabu {
             numIteraciones++;
             return;
         }
+        if (mejorpendiente && delta >= 0) {
+            mejorSolucion = new ArrayList<>(solucion);
+            mejorpendiente = false;
+        }
 
         Algoritmos.cambio(solucion, mov1, mov2);
         costeTotal += delta;
 
         if (costeTotal < mejorCosteGlobal - 1e-9) {
             mejorCosteGlobal = costeTotal;
-            mejorSolucion = new ArrayList<>(solucion);
+            mejorpendiente = true;
+        }
+        if (costeTotal < costemejorAnterior - 1e-9) {   // mejor de la tanda actual
+            costemejorAnterior = costeTotal;
             cantEmpeoramiento = 0;
         } else {
             cantEmpeoramiento++;
@@ -103,28 +114,29 @@ public class Tabu {
     }
 
     private void estancamiento(ArrayList<Integer> solucion ) {
-            if (cantEmpeoramiento >= porcentaje_estancamiento && numIteraciones < limite_it) {
-                cantEmpeoramiento = 0;
-                Random proba = new Random();
-                int p = proba.nextInt(1, 100);
 
-                if (p <= prob_oscilamiento) {
-                    masvisitados(solucion, n);
-                } else {
-                    menosvisitados(solucion, n);
-                }
+        if (cantEmpeoramiento >= porcentaje_estancamiento && numIteraciones < limite_it) {
+            cantEmpeoramiento = 0;
 
-                // vaciar la memoria a corto plazo (diagonal superior)
-                for (int r = 0; r < n; r++)
-                    for (int c = r + 1; c < n; c++)
-                        memoria[r][c] = 0;
-
-
-                costemejorAnterior = costeTotal;
-                mp_coste = Double.MAX_VALUE;
-                nuevo_inicio = proba.nextInt(0, n);
-                numIteraciones++;
+            if (mejorpendiente) {
+                mejorSolucion = new ArrayList<>(solucion);
+                mejorpendiente = false;
             }
+
+            Random proba = new Random();
+            int p = proba.nextInt(1, 100);
+            if (p <= prob_oscilamiento) {
+                masvisitados(solucion, n);
+            } else {
+                menosvisitados(solucion, n);
+            }
+
+            costeTotal = Algoritmos.calculoCosteTotal(solucion);
+            costemejorAnterior = costeTotal;
+            mp_coste = Double.MAX_VALUE;
+            nuevo_inicio = proba.nextInt(0, n);
+            numIteraciones++;
+        }
 
     }
     private void masvisitados(ArrayList<Integer> solucion, int n){
@@ -203,7 +215,7 @@ public class Tabu {
                 if (esTabu(memoria, i, j)) continue;
 
                 double[] coste = Algoritmos.calculoCoste(i, j, solucion, n);
-                double delta = coste[1] - coste[0];
+                double delta = coste[0] - coste[1];
 
                 if (delta < 0) {                         // mejora: la aplicamos
                     mejoraGlobal = true;
