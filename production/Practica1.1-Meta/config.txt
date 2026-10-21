@@ -1,0 +1,9 @@
+Archivos=a280.tsp ch130.tsp d18512.tsp pr144.tsp u1060.tsp prueba.tsp
+Semilla=79701583 97031587 38150797
+Algoritmos=greedy greedyAleatorio
+Parametros=4
+K=5
+limitIterac=10000
+porEstancamiento=0.05
+tenenciaTabu=10
+osEstrategica=0.5
