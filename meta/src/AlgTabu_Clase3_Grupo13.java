@@ -141,6 +141,7 @@ public class AlgTabu_Clase3_Grupo13 {
             mejorpendiente = false;
         }
 
+        Log.print("Movimiento a aplicar " + mov1 + " y " + mov2 + " numero iteracion "+ numIteraciones);
         FuncionesAux.cambio(solucion, mov1, mov2);
         costeTotal += delta;
 
