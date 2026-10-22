@@ -4,14 +4,20 @@ public class Main {
     public static void main(String[] args){
 
         String rutaRelativa = "src/config.txt";
-        System.out.println("Ruta actual de ejecución: " + new java.io.File(".").getAbsolutePath());
+        Log.print("Ruta actual de ejecución: " + new java.io.File(".").getAbsolutePath());
         Configuracion config = new Configuracion(rutaRelativa);
 
         int algoritmo=config.parametros;
-        Algoritmos algoritmos= new Algoritmos();
+        FuncionesAux algoritmos= new FuncionesAux();
         double costeTotal=0.0;
         ArrayList<Integer> solucion;
         Log.inicializar();
+        AlgGreedy_Clase3_Grupo13 g = new AlgGreedy_Clase3_Grupo13();
+        AlgGreedyAl_Clase3_Grupo13 ga = new AlgGreedyAl_Clase3_Grupo13();
+        AlgTabu_Clase3_Grupo13 ta = new AlgTabu_Clase3_Grupo13();
+        AlgDLB_Clase3_Grupo13 dlb = new AlgDLB_Clase3_Grupo13();
+        AlgBusqLocal_Clase3_Grupo13 bl = new AlgBusqLocal_Clase3_Grupo13();
+
 
         //comando terminal sacar logs  javac *.java && java Main >> log.txt
         switch(algoritmo) {
@@ -19,10 +25,10 @@ public class Main {
 
                 for (int i = 0; i < config.archivos.size(); i++) {
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
-                    System.out.println("-------------------GREEDY -------------------");
-                    System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
-                    Algoritmos.setMatriz(archivosDatos.getMatriz1());
-                    algoritmos.greedy();
+                    Log.print("-------------------GREEDY -------------------");
+                    Log.print("***************** Archivo  " + config.getArchivo(i) + "*****************");
+                    FuncionesAux.setMatriz(archivosDatos.getMatriz1());
+                    g.greedy();
 
                 }
                 break;
@@ -30,13 +36,13 @@ public class Main {
 
                 for (int i = 0; i < config.archivos.size(); i++) {
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
-                    System.out.println("-------------------GREEDY ALEATORIO -------------------");
-                    System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
+                    Log.print("-------------------GREEDY ALEATORIO -------------------");
+                    Log.print("***************** Archivo  " + config.getArchivo(i) + "*****************");
 
                     for (int j = 0; j < config.semillas.size(); j++) {
-                        System.out.println("********************* SEMILLA " + j + " *********************");
-                        Algoritmos.setMatriz(archivosDatos.getMatriz1());
-                         algoritmos.greedyAleatorio( config.getSemilla(j), config.getK(), costeTotal);
+                        Log.print("********************* SEMILLA " + j + " *********************");
+                        FuncionesAux.setMatriz(archivosDatos.getMatriz1());
+                         ga.greedyAleatorio( config.getSemilla(j), config.getK(), costeTotal);
                     }
                 }
                 break;
@@ -45,14 +51,14 @@ public class Main {
                 //int i = 5;
 
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
-                    System.out.println("-------------------Dont look bit -------------------");
-                    System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
+                    Log.print("-------------------Dont look bit -------------------");
+                    Log.print("***************** Archivo  " + config.getArchivo(i) + "*****************");
 
                     for (int j = 0; j < config.semillas.size(); j++) {
-                        System.out.println("********************* SEMILLA " + j + " *********************");
-                        Algoritmos.setMatriz(archivosDatos.getMatriz1());
-                        solucion=  algoritmos.greedyAleatorio( config.getSemilla(j), config.getK(), costeTotal);
-                        algoritmos.DontLookbits(solucion, costeTotal );
+                        Log.print("********************* SEMILLA " + j + " *********************");
+                        FuncionesAux.setMatriz(archivosDatos.getMatriz1());
+                        solucion=  ga.greedyAleatorio( config.getSemilla(j), config.getK(), costeTotal);
+                        dlb.DontLookbits(solucion, costeTotal );
                     }
                 }
                 break;
@@ -60,31 +66,31 @@ public class Main {
                 for (int i = 0; i < config.archivos.size(); i++) {
                //int i = 5;
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
-                    System.out.println("-------------------Busqueda Local Primero Mejor -------------------");
-                    System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
+                    Log.print("-------------------Busqueda Local Primero Mejor -------------------");
+                    Log.print("***************** Archivo  " + config.getArchivo(i) + "*****************");
 
                     for (int j = 0; j < config.semillas.size(); j++) {
-                        System.out.println("********************* SEMILLA " + j + " *********************");
-                        Algoritmos.setMatriz(archivosDatos.getMatriz1());
-                        solucion = algoritmos.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
-                        solucion = algoritmos.blpm(solucion, config.getLimitIteraciones(), costeTotal);
+                        Log.print("********************* SEMILLA " + j + " *********************");
+                        FuncionesAux.setMatriz(archivosDatos.getMatriz1());
+                        solucion = ga.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
+                        solucion = bl.blpm(solucion, config.getLimitIteraciones(), costeTotal);
 
                     }
                 }
             break;
             case 4: //tabu
-                Tabu t = new Tabu();
+                AlgTabu_Clase3_Grupo13 t = new AlgTabu_Clase3_Grupo13();
 
                 for (int i = 0; i < config.archivos.size(); i++) {
                     //int i = 5;
                     ArchivoDatos archivosDatos = new ArchivoDatos("src/" + config.getArchivo(i));
-                    System.out.println("-------------------Busqueda Tabú -------------------");
-                    System.out.println("***************** Archivo  " + config.getArchivo(i) + "*****************");
+                    Log.print("-------------------Busqueda Tabú -------------------");
+                    Log.print("***************** Archivo  " + config.getArchivo(i) + "*****************");
 
                     for (int j = 0; j < config.semillas.size(); j++) {
-                        System.out.println("********************* SEMILLA " + j + " *********************");
-                        Algoritmos.setMatriz(archivosDatos.getMatriz1());
-                        solucion = algoritmos.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
+                        Log.print("********************* SEMILLA " + j + " *********************");
+                        FuncionesAux.setMatriz(archivosDatos.getMatriz1());
+                        solucion = ga.greedyAleatorio(config.getSemilla(j), config.getK(), costeTotal);
                         t.tabu(solucion, config.limitIteraciones, config.tenencia_tabu, config.oscilacionEstragegica, config.porcentaje_estancamiento);
 
                     }

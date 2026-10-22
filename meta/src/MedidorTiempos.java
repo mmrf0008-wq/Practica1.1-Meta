@@ -25,6 +25,6 @@ public  class MedidorTiempos {
      */
     public static void finalizarYMostrar(String nombreProceso) {
         double milisegundos = finalizarContador();
-        System.out.printf("[%s] Tiempo de ejecución: %.4f ms%n", nombreProceso, milisegundos);
+        Log.print("[%s] Tiempo de ejecución: "+ nombreProceso+ milisegundos);
     }
 }

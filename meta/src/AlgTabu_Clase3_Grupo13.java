@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 /*
@@ -11,7 +12,7 @@ import java.util.Random;
  * @brief Clase que gestiona el proceso de Búsqueda Tabú con memoria a corto y largo plazo,
  * estrategias de intensificación, diversificación por oscilación y criterios de estancamiento.
  */
-public class Tabu {
+public class AlgTabu_Clase3_Grupo13 {
     private int n;                      /* Tamaño del problema (número de ciudades o nodos). */
 
     /**
@@ -39,7 +40,11 @@ public class Tabu {
     private double prob_oscilamiento;           /** Probabilidad de optar por intensificación (más visitados) frente a diversificación (menos visitados). */
     private boolean mejorpendiente;             /** Bandera que indica si hay una mejora pendiente por registrar como mejor solución. */
     private int limite_it;                      /* Límite máximo global de iteraciones del algoritmo. */
-
+    private int cantEvaluacionesEntorno;
+    private int cantEstancamiento;
+    private int cantDecidirMov;
+    private int cantExplotacion ;
+    private int cantIntensificacion;
 
     /**
      * @brief Ejecuta el algoritmo principal de Búsqueda Tabú.
@@ -57,6 +62,7 @@ public class Tabu {
         memoria = new int[n][n]; // diagonal superior memoria corto plazo. Diagonal inferior memori
 
         cantEmpeoramiento = 0;
+        cantEstancamiento = cantEvaluacionesEntorno = cantDecidirMov = cantIntensificacion = cantExplotacion=0;
         tenencia = tenenciaTabu;
         mv_actual_i = -1;  //mejor vecino actual (i)
         mv_actual_j = -1; //(j)
@@ -68,7 +74,7 @@ public class Tabu {
         numIteraciones = 0;
         mp_coste = Double.MAX_VALUE;
         mejorCosteGlobal = costeTotal;
-        costeTotal = Algoritmos.calculoCosteTotal(solucion);
+        costeTotal = FuncionesAux.calculoCosteTotal(solucion);
         costemejorAnterior = costeTotal;
         nuevo_inicio =0;
 
@@ -84,7 +90,12 @@ public class Tabu {
         }
 
         MedidorTiempos.finalizarYMostrar("Busqueda tabu");
-        System.out.println("Coste total " + Algoritmos.calculoCosteTotal(solucion));
+       Log.print("Coste total " + FuncionesAux.calculoCosteTotal(solucion));
+        Log.print("Cant evaluaciones de entorno " + cantEvaluacionesEntorno);
+        Log.print("Cantidad de veces que se ha producido estancamiento " + cantEstancamiento);
+        Log.print("Cantidad de veces que se ha decidido movimiento " + cantDecidirMov);
+        Log.print("Cantidad de veces que se ha optado por la intensificacion " + cantIntensificacion);
+        Log.print("Cantidad de veces que se ha optaddo por la explotación " + cantExplotacion);
 
     }
     /**
@@ -109,6 +120,7 @@ public class Tabu {
      * @param solucion Vector de la solución actual sobre el cual se aplicará el cambio.
      */
     private void decisionMovimientoAplicar(ArrayList<Integer> solucion) {
+       cantDecidirMov++;
         int mov1, mov2;
         double delta;
         if (mejoraGlobal) {
@@ -129,10 +141,10 @@ public class Tabu {
             mejorpendiente = false;
         }
 
-        Algoritmos.cambio(solucion, mov1, mov2);
+        FuncionesAux.cambio(solucion, mov1, mov2);
         costeTotal += delta;
 
-        if (costeTotal < mejorCosteGlobal ) {
+        if (costeTotal < mejorCosteGlobal  ) {
             mejorCosteGlobal = costeTotal;
             mejorpendiente = true;
         }
@@ -150,8 +162,9 @@ public class Tabu {
      * @param solucion Solución actual que será reconstruida si existe estancamiento.
      */
     private void estancamiento(ArrayList<Integer> solucion ) {
-
+        cantEstancamiento++;
         if (cantEmpeoramiento >= porcentaje_estancamiento && numIteraciones < limite_it) {
+
             cantEmpeoramiento = 0;
 
             if (mejorpendiente) {
@@ -159,14 +172,16 @@ public class Tabu {
             }
 
             Random proba = new Random();
-            int p = proba.nextInt(1, 100);
-            if (p <= prob_oscilamiento) {
+            double p = proba.nextInt(1, 100);
+             p= p/100;
+            if (p < prob_oscilamiento) {
                 masvisitados(solucion, n);
             } else {
+
                 menosvisitados(solucion, n);
             }
 
-            costeTotal = Algoritmos.calculoCosteTotal(solucion);
+            costeTotal = FuncionesAux.calculoCosteTotal(solucion);
             costemejorAnterior = costeTotal;
             mp_coste = Double.MAX_VALUE;
             nuevo_inicio = proba.nextInt(0, n);
@@ -179,7 +194,8 @@ public class Tabu {
      * @param solucion Solución actual que será reconstruida si existe estancamiento.
      */
     private void masvisitados(ArrayList<Integer> solucion, int n){
-            ArrayList<Integer> nueva = new ArrayList<>(n);
+        cantExplotacion++;
+        ArrayList<Integer> nueva = new ArrayList<>(n);
             boolean[] marcaf = new boolean[n];
             Random rand = new Random();
 
@@ -217,6 +233,7 @@ public class Tabu {
      * @param n Número de ciudades/nodos.
      */
     private void menosvisitados(ArrayList<Integer> solucion, int n){
+       cantIntensificacion++;
         ArrayList<Integer> nueva = new ArrayList<>(n);
         boolean[] marcaf = new boolean[n];
         Random rand = new Random();
@@ -252,28 +269,33 @@ public class Tabu {
      * @param solucion Solución actual desde donde se genera el vecindario.
      */
     private void exploracionEntorno(ArrayList<Integer> solucion) {
+       cantEvaluacionesEntorno++;
         mejoraGlobal = false;
         mv_actual_i = mv_actual_j = -1;
         pv_actual_i = pv_actual_j = -1;
         mp_coste = Double.MAX_VALUE;     // mejor variación entre los no mejorantes
         int j;
         boolean []vmascara = new boolean[n];
-        int i =0;
+        int i = nuevo_inicio;
+        int contador =0;
 
         boolean mejora = false;
-        while (i < n && !mejoraGlobal && numIteraciones < limite_it) {
+        while (contador < n &&!mejoraGlobal && numIteraciones < limite_it) {
 
             if (vmascara[i]) { //si la casilla ha sido marcada como que no tiene mejora continuamos con el siguiente
                 i = (i + 1) % n;
+                contador++;
                 continue;
             }
             mejora = false;
             j = (i + 1) % n; //j = i+1
             while (i != j && !mejora) {
-                if (i == 0 && j == n - 1) continue;     // adyacentes (cierre del ciclo)
-                if (esTabu(memoria, i, j)) continue; //si la solucion es tabu se descarta
+                if(FuncionesAux.adyacentes(i,j,n) || (esTabu(memoria, i, j))) {
+                    j = (j + 1) % n;
+                    continue;     // adyacentes (cierre del ciclo)
+                }
 
-                double[] coste = Algoritmos.calculoCoste(i, j, solucion, n);
+                double[] coste = FuncionesAux.calculoCoste(i, j, solucion, n);
                 double delta = coste[0] - coste[1];
 
                 if (delta < 0) {                         // mejora: la aplicamos
@@ -297,8 +319,10 @@ public class Tabu {
                 vmascara[i] = true;
             }
             i = (nuevo_inicio + i) % n; //iterado ciclico
+            contador++;
 
         }
+        if(!mejoraGlobal) Arrays.fill(vmascara, false);
     }
 
     /**

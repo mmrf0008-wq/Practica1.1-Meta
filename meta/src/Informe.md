@@ -4,7 +4,7 @@
 
 ## 1- Clases creadas
 - Configurador 
-- Algoritmos 
+- FuncionesAux 
 - MedidorTiempos
 
 
@@ -21,7 +21,7 @@
   - 38150797
 
 
-## 3- Algoritmos 
+## 3- FuncionesAux 
 ### Algoritmo greedy
 ### Algoritmo greedy aleatorio 
 
